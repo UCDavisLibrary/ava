@@ -20,10 +20,17 @@ identifier | type | description
 ---| --- | ---
 identifier | integer | Local identifier for the AVA
 Name | text | The official name for the AVA
-AKAs | list | comma seperated list of AKAs for the identifier
-Start date | date | Date the pro
-End Date | date | If the 
-Textual description | text | the Federal registration description,
+Synonyms | list | comma seperated list of other or previous official names for the identifier
+Start date | date | Date the final rule was published
+End Date | date | If the AVA designation was removed
+County | text | The county the AVA is in
+State | text | The state the AVA is in (relevant later if the database expands to other states)
+Document Number | text | The Federal Register document number that approved the AVA
+Petitioner | text | The name of the person who petitioned for the AVA
+Petitioner Affiliation | text | The affiliation or company of the person who petitioned for the AVA
+Principle Author | text | The name of the person who wrote the Federal Register document
+Approved Maps | text | The maps used as a reference for the boundary description
+Textual description | text | the Federal registration description
 CFR Index | float | The CFR Registry code location
 LOC Index | string | The Library of Congress 
 Wiki data | url | Link to wikidata AVA description 
@@ -35,6 +42,9 @@ Wiki data | url | Link to wikidata AVA description
 ``` json
 ```
 
-
+### Methods Considerations
+Minimum mapping unit
+Snapping to reference layers like roads, rivers, etc.
+Topology
 
 
