@@ -10,6 +10,7 @@ gj <- list.files(path=".", pattern = "*json$", full.names = "TRUE")
 
 # exclude the all.geojson file... probably a more elegant way to do this, but this works:
 gj <- gj[gj != "./all.geojson"]
+gj <- gj[gj != "./TEMPLATE_AVA.geojson"]
 
 #read all the geojson files with readOGR? or geojsonio package
 vects <- lapply(gj, geojson_read, what="sp")
