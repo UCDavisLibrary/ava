@@ -1,5 +1,41 @@
 # AVAs
 
+## Schema
+
+The current schema for the AVAs as postgis is below:
+
+#+name: avas
+#+header: :engine postgresql
+#+header: :database quinn
+#+BEGIN_SRC sql
+create table avas (
+ava_id text primary key,
+name text,
+aka text,
+creation_date date,
+removal_date date,
+county text,
+state text,
+within text,
+contains text,
+petitioner text,
+cfr_author text,
+cfr_index text,
+cfr_revision_history text,
+boundary_description text,
+boundary geometry('MultiPolygon',4269),
+valid_start date,
+valid_end date,
+lcsh text,
+sameAs text
+);
+#+END_SRC
+
+#+RESULTS: avas
+| CREATE TABLE |
+|--------------|
+
+
 ## AVA Centroids
 
 I created a CSV file from the latest AVA list, where multiples are seperated by
@@ -67,6 +103,124 @@ select name,cfr,a.state,a.county,within,contains,
 (coalesce(st_setsrid(geom,4269),centroid)) as boundary
 from ava_list a left join napa_shape using (name) left join ava_centroid using (name);
 #+END_SRC
+
+## Template Polygons
+
+The problem with using centroids, is that for users ready to make some
+modifications, they need to convert the point to a polygon, and that's a pain in
+qgis.  So instead, lets create triangles as place holders for the polygons.
+
+This query creates
+
+#+header: :engine postgresql
+#+header: :database quinn
+#+BEGIN_SRC sql
+insert into avas (ava_id,name,cfr_index,within,contains,county,state,boundary)
+select regexp_replace(lower(name),'[^a-z]','_','g') as ava_id,
+name,cfr,within,contains,county,state,
+case when (st_geometrytype(boundary) = 'ST_Point')
+then
+st_multi(
+st_transform(st_setsrid(
+st_makepolygon(
+st_makeline(ARRAY[
+ st_makepoint(st_x(st_transform(boundary,3857)),
+              st_y(st_transform(boundary,3857))+4000),
+ st_makepoint(st_x(st_transform(boundary,3857))-4000*sin(pi()/3),
+              st_y(st_transform(boundary,3857))-1000*cos(pi()/3)),
+ st_makepoint(st_x(st_transform(boundary,3857))+4000*sin(pi()/3),
+              st_y(st_transform(boundary,3857))-1000*cos(pi()/3)),
+ st_makepoint(st_x(st_transform(boundary,3857)),
+              st_y(st_transform(boundary,3857))+4000)
+])),3857),4269))
+else
+ st_multi(boundary)
+end as boundary
+from ava_geojson
+#+END_SRC
+
+#+RESULTS:
+| INSERT 0 239 |
+|--------------|
+
+## GeoJSON files
+
+Now we want to save these files as a proper GeoJSON file.  This is a bit tricky,
+but using the example at: [[http://www.postgresonline.com/journal/archives/267-Creating-GeoJSON-Feature-Collections-with-JSON-and-PostGIS-functions.html][PostgresOnline]], it's pretty tractable
+
+#+header: :engine postgresql
+#+header: :database quinn
+#+BEGIN_SRC sql
+create function geojson (avas)
+returns json as $$
+with
+p as (
+ select row_to_json((SELECT l FROM (
+  SELECT
+   $1.ava_id,$1.name,$1.aka,$1.created,$1.removed,$1.county,$1.state,
+   $1.within,$1.contains,$1.petitioner,$1.cfr_author,$1.cfr_index,
+   $1.cfr_revision_history,$1.boundary_description,$1.valid_start,
+   $1.valid_end,$1.lcsh,$1.sameAs) As l)
+ ) as properties,
+ $1.boundary
+),
+f as (
+ select 'Feature' As type,
+ ST_AsGeoJSON(boundary)::json As geometry,
+ properties
+ from p
+),
+fc as (
+ select 'FeatureCollection' as type,
+ array_to_json(array_agg(f)) as features
+ from f
+)
+SELECT row_to_json(fc) as geojson
+from fc;
+$$ language sql immutable;
+#+END_SRC
+
+#+RESULTS:
+| CREATE FUNCTION |
+|-----------------|
+
+#+header: :engine postgresql
+#+header: :database quinn
+#+BEGIN_SRC sql
+create materialized view avas_as_geojson as
+with
+p as (
+ select row_to_json((SELECT l FROM (
+  SELECT
+   ava_id,name,aka,created,removed,county,state,
+   within,contains,petitioner,cfr_author,cfr_index,
+   cfr_revision_history,boundary_description,valid_start,
+   valid_end,lcsh,sameAs) As l)
+ ) as properties,
+ boundary
+ from avas
+),
+f as (
+ select 'Feature' As type,
+ ST_AsGeoJSON(boundary)::json As geometry,
+ properties
+ from p
+),
+fc as (
+ select 'FeatureCollection' as type,
+ array_to_json(array_agg(f)) as features
+ from f
+)
+SELECT row_to_json(fc) as geojson
+from fc;
+#+END_SRC
+
+#+RESULTS:
+| SELECT 1 |
+|----------|
+
+
+## Individual files.
 
 
 ## Github Issues
