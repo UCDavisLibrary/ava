@@ -1,12 +1,136 @@
 # AVAs
 
+## Issues
+
+#+BEGIN_SRC bash
+wget -O ava_list.html 'https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=371db32ecca6629af6dccad2a39d7833&mc=true&n=sp27.1.9.c'
+pup 'text{}' < ava_list.html > ava_list.txt
+#+END_SRC
+
+#+RESULTS:
+
+Then we need to get a quick
+
+#+BEGIN_SRC bash
+for cfr in `psql -At -c 'select cfr_index from avas order by cfr_index' -d avas`; do \
+ desc=`perl -n -e "BEGIN { \\$cfr='$cfr';}" -e '$p++ if (/^§$cfr/);' \
+       -e 'if ($p>1) { exit if /Back to Top/; print} ' < ava_list.txt |\
+       tr "\n" '|' | sed -e 's/"/\"/g' -e 's/^/"/' -e 's/$/"/'`;
+ echo $cfr,$desc;
+done  > ava_list.csv
+#+END_SRC
+
+#+RESULTS:
+
+
+Now that we have the compelete description in there, we can quickly get the
+boundary values, and the like:
+
+#+name: ava_desc_text
+#+header: :engine postgresql
+#+header: :database avas
+#+BEGIN_SRC sql
+--\COPY ava_desc from desc.csv with csv;
+create view ava_desc_text  as
+with r as (
+ select cfr_index,l,n
+ from ava_desc,unnest(string_to_array(d,'|')) with ordinality as d(l,n)
+),m as (
+ select
+ cfr_index,l,
+ n as map_row from r
+ where l~*'^\s*Approved\s+maps?.?\s*$'
+),b as (
+ select
+ cfr_index,l,
+ n as boundary_row
+ from r where l~*'^\s*Boundar'
+),
+v as (
+ select
+ cfr_index,l as version,
+ n as version_row
+ from r where l~*'^\s*\[.*\]\s*$'
+),
+a as (
+ select
+ cfr_index,name,
+ m.map_row,
+ boundary_row,
+ version_row,
+ version
+ from avas left join m using (cfr_index)
+ left join b using (cfr_index)
+ left join v using (cfr_index)
+),
+f as (select
+ cfr_index,name,version,version_row,
+ min(map_row) as map_row,
+ min(boundary_row) as boundary_row
+ from a
+ group by 1,2,3,4
+)
+select * from f;
+#+END_SRC
+
+#+RESULTS: ava_desc_text
+
+#+name: ava_map
+#+header: :engine postgresql
+#+header: :database avas
+#+BEGIN_SRC sql
+create or replace view ava_map_bound as
+with r as (
+ select cfr_index,l,n
+ from ava_desc,unnest(string_to_array(d,'|')) with ordinality as d(l,n)
+),
+m as (
+select cfr_index,trim(both ' ' from string_agg(' ',l order by n)) as maps
+from ava_desc_text join r using (cfr_index)
+where n>map_row and n<boundary_row and length(l)>4
+group by cfr_index
+),
+b as (
+select cfr_index,trim(both ' ' from string_agg(' ',l order by n)) as boundary_desc
+from ava_desc_text join r using (cfr_index)
+where n>boundary_row and n<version_row and length(l)>4
+group by cfr_index
+)
+select cfr_index,version,maps,boundary_desc
+from avas a
+left join ava_desc_text using (cfr_index)
+left join m using (cfr_index)
+left join b using (cfr_index)
+
+#+END_SRC
+
+
+#+name: ava_map
+#+header: :engine postgresql
+#+header: :database avas
+#+BEGIN_SRC sql
+update avas a
+set boundary_description=m.boundary_desc,
+cfr_revision_history=version,
+approved_maps=m.maps
+from ava_map_bound m
+where a.cfr_index=m.cfr_index;
+#+END_SRC
+
+#+RESULTS: ava_map
+| UPDATE 239 |
+|------------|
+
+
+
+
 ## Schema
 
 The current schema for the AVAs as postgis is below:
 
 #+name: avas
 #+header: :engine postgresql
-#+header: :database quinn
+#+header: :database avas
 #+BEGIN_SRC sql
 create table avas (
 ava_id text primary key,
@@ -22,8 +146,10 @@ petitioner text,
 cfr_author text,
 cfr_index text,
 cfr_revision_history text,
+approved_maps text,
 boundary_description text,
 boundary geometry('MultiPolygon',4269),
+used_maps text,
 valid_start date,
 valid_end date,
 lcsh text,
@@ -149,9 +275,9 @@ Now we want to save these files as a proper GeoJSON file.  This is a bit tricky,
 but using the example at: [[http://www.postgresonline.com/journal/archives/267-Creating-GeoJSON-Feature-Collections-with-JSON-and-PostGIS-functions.html][PostgresOnline]], it's pretty tractable
 
 #+header: :engine postgresql
-#+header: :database quinn
+#+header: :database avas
 #+BEGIN_SRC sql
-create function geojson (avas)
+create or replace function geojson (avas)
 returns json as $$
 with
 p as (
@@ -159,8 +285,9 @@ p as (
   SELECT
    $1.ava_id,$1.name,$1.aka,$1.created,$1.removed,$1.county,$1.state,
    $1.within,$1.contains,$1.petitioner,$1.cfr_author,$1.cfr_index,
-   $1.cfr_revision_history,$1.boundary_description,$1.valid_start,
-   $1.valid_end,$1.lcsh,$1.sameAs) As l)
+   $1.cfr_revision_history,$1.approved_maps,$1.boundary_description,
+   $1.used_maps,
+   $1.valid_start,$1.valid_end,$1.lcsh,$1.sameAs) As l)
  ) as properties,
  $1.boundary
 ),
@@ -185,7 +312,7 @@ $$ language sql immutable;
 |-----------------|
 
 #+header: :engine postgresql
-#+header: :database quinn
+#+header: :database avas
 #+BEGIN_SRC sql
 create materialized view avas_as_geojson as
 with
@@ -194,8 +321,8 @@ p as (
   SELECT
    ava_id,name,aka,created,removed,county,state,
    within,contains,petitioner,cfr_author,cfr_index,
-   cfr_revision_history,boundary_description,valid_start,
-   valid_end,lcsh,sameAs) As l)
+   cfr_revision_history,approved_maps,boundary_description,
+   used_maps,valid_start,valid_end,lcsh,sameAs) As l)
  ) as properties,
  boundary
  from avas
@@ -222,6 +349,14 @@ from fc;
 
 ## Individual files.
 
+Now that we have a geojson maker, we can save all the files individually.
+
+#+BEGIN_SRC bash
+for i in `psql -At -c 'select ava_id from avas' -d avas`; do
+ echo $i;
+ psql -At -c "select geojson(a) from avas a where ava_id='$i'" -d avas > tbd/$i.geojson;
+done
+#+END_SRC
 
 ## Github Issues
 
