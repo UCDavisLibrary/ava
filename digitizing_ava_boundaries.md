@@ -70,7 +70,7 @@ ii.	If the AVA you are digitizing is very close to another that has already been
 7.	Toggle Editing off.
 8.	Close QGIS if you’re done making new AVAs, or start over from Step 3e above to make another.
 
-[Example of a completed AVA boundary](https://github.com/UCDavisLibrary/ava/tree/master/images/Example_AVA_Coombsville.PNG)
+![alt text](https://github.com/UCDavisLibrary/ava/blob/master/images/Example_AVA_Coombsville.PNG "Example of a completed AVA boundary")
 
 ## Submit your changes to the AVA GitHub Repository
 1.	In GitHub for Desktop, you should see a list of changes you’ve made to the files.  Fill in the Summary and Description fields at the bottom of the window and then click the Commit button.  https://guides.github.com/activities/forking/#making-changes 
