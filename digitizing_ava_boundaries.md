@@ -16,7 +16,7 @@ Alcohol and Tobacco Tax and Trade Bureau’s (TTB) list of currently established
 
 ### Update the Issues Tracker
 1. In the Issues section of the AVA project GitHub page, you should find an Issue for each AVA. In the text, you will find the boundary description you should use as well as the list of Approved Maps.  Other attribute information will be found in the Federal Register documents.
-  2. Write a comment for your chosen AVA that you are working on the boundary.  If possible, assign the task to yourself (on the top of the right side panel of options).  Add additional comments if any issues or questions arise about this particular AVA.
+  2. Add the "In Progress" label to the Issue.  Write a comment for your chosen AVA that you are working on the boundary.  If possible, assign the task to yourself (on the top of the right side panel of options).  Add additional comments if any issues or questions arise about this particular AVA.
 
 ## Download the Approved Maps
 1. Go to the USGS National Geologic Map Database’s topoView: https://ngmdb.usgs.gov/maps/TopoView/viewer 
