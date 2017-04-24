@@ -1,4 +1,4 @@
-# American Viticultural Areas (ava) Project
+# American Viticultural Areas (AVA) Project
 
 The UC Davis library, in conjuction with partner organizations and contributions from the general public, will create a publically accessable version American Viticultural Areas boundaries.  Using the text descriptions from the ATPF Code of regulations, we will build this data from the official descriptions.  These data will be made freely availabe.  This dataset will provide wine researchers with an important tool as they examine the scientific, economic and historical aspects of viticulture.
 
@@ -18,8 +18,8 @@ TTB: https://www.ttb.gov/wine/ava.shtml
 Wine Institute: https://www.wineinstitute.org/resources/avas
 
 ## How Can You Contribute?
-1. Read the GettingStarted.md & digitizing_ava_boundaries.md files to familiarize yourself with the policies and procedures for this project.
-1. Fork the repository.
+1. Read the [GettingStarted.md](https://github.com/UCDavisLibrary/ava/blob/master/GettingStarted.md) & [digitizing_ava_boundaries.md](https://github.com/UCDavisLibrary/ava/blob/master/digitizing_ava_boundaries.md) files to familiarize yourself with the policies and procedures for this project.
+1. Fork this repository.
 1. Check the Issues list to see which AVAs are available and claim the one you want to work on.
 1. Make a boundary
 1. Create a Pull Request
