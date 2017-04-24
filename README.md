@@ -58,7 +58,7 @@ boundary_description | text | the official boundary description |
 used_maps	| text | the maps used to digitize the boundary |
 last_revised | date | the last revision that applies to this boundary |
 lcsh	| text | Library of Congress Subject Heading |
-sameas	| linked data URIs for terms that are identical to this AVA |
+sameas	| text | linked data URIs for terms that are identical to this AVA |
 
 
 # UC Davis Library Project Team:
