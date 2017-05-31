@@ -43,7 +43,7 @@ identifier | type | description | example
 ava_id | text | an identification string prescribed in the Issue for each AVA |	leona_valley
 name | text | the legal name given to the AVA |	Leona Valley
 aka	| text | other names, including historical names, and terms used for the AVA | |
-created	| date | the date of the first publication creating the AVA |
+created	| date | YYYY-MM-DD format; the date of the first publication creating the AVA | 2017-06-01 |
 removed	| date | the date the AVA designation was removed from an area |
 county | text | the county, or list of counties separated by a comma, in which the AVA exists |	Los Angeles, Ventura
 state	| text | the state, or list of states separated by a comma, in which the AVA exists | CA, NV
