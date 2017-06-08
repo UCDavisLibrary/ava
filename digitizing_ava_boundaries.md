@@ -11,7 +11,7 @@ Hein Online Federal Register Library: http://heinonline.org/HOL/Index?collection
 
 Wine Institute’s list of documents establishing the original AVA boundaries:	https://www.wineinstitute.org/resources/avas
 
-Alcohol and Tobacco Tax and Trade Bureau’s (TTB) list of currently established AVAs:	https://www.ttb.gov/appellation/us_by_ava.pdf 
+Alcohol and Tobacco Tax and Trade Bureau’s (TTB) list of currently established AVAs:	https://www.ttb.gov/wine/us_by_ava.shtml 
 
 
 ### Review the available Federal Register document for your AVA of interest  
