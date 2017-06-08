@@ -44,32 +44,33 @@ We’ll describe how to do this with the GitHub for Desktop tool, but you may us
 
 ## Digitizing the Boundary
 ### Set Up Your Project File:
+1.  In your file browser, move the geojson file for your chosen AVA (for example, coombsville.geojson) from the "tbd" (stands for "to be determined") folder to the "ava" folder.
 1.	Open QGIS
-2.	Load data:
-i.	All.geojson
-ii.	Your AVA geojson file
-iii.	Approved Maps
-
-### Set Parameters:
-1.	Projection
-i. Open the Project Properties (Project menu → Project Properties)
-ii. Set the Coordinate Reference System to NAD83 (EPSG:4269)
-2.	Snapping
-i.	In the Layers Panel (Table of Contents), select the all.geojson layer.
-ii.	Open the Snapping Options (Settings menu → Snapping Options)
-iii. Set Layer Selection to “Current Layer” (the all.geojson layer you selected earlier in the Layers Panel), Snap To “To Vertex and Segment”, Tolerance to 20 Pixels (adjust this as needed), and finally check the boxes for “Enable topological editing” and “Enable snapping on intersection”.
+1.	Load data:
+    * All.geojson - for reference and snapping to shared boundaries
+    * Your AVA geojson file - the file you will edit; example: coombsville.geojson
+    * Approved Maps
+1.	Set Project Projection
+    * Open the Project Properties (Project menu → Project Properties)
+    * Set the Coordinate Reference System to NAD83 (EPSG:4269)
+1.  Set Snapping
+    * In the Layers Panel (Table of Contents), select the all.geojson layer.
+    * Open the Snapping Options (Settings menu → Snapping Options)
+    * Set Layer Selection to “Current Layer” (the all.geojson layer you selected earlier in the Layers Panel), Snap To “To Vertex and Segment”, Tolerance to 20 Pixels (adjust this as needed), and finally check the boxes for “Enable topological editing” and “Enable snapping on intersection”.
 
 The AVA Project team has made a [Video](https://drive.google.com/open?id=0B9xw97DGLpqATk9sTUFiM2ZuUFk) of the process of setting up your project file. 
 
 ### Digitizing the Boundary:
+Each AVA has a template generated automatically and placed at the centroid of the county that the AVA resides in.
 1.	Toggle Editing on for the new AVA GeoJSON file.
 2.	You have two options for digitizing the boundary: 
-3.	Add new polygon with the Add Feature tool (and delete the triangle from the template). Digitize the boundary adding vertices according to the Federal Register Boundary description at a scale sufficient to identify the features needed from the topoquads.  You can switch between the Add Feature tool and navigating tools as needed.  Right click to finish.  
-ii.	Add nodes to the triangle moving them to the places described in the boundary description.
+    1. Add new polygon with the Add Feature tool. Digitize the boundary adding vertices according to the Federal Register Boundary description at a scale sufficient to identify the features needed from the topoquads.  You can switch between the Add Feature tool and navigating tools as needed.  Right click to finish.  Finally, delete the triangle template.
+    2. Add nodes to the triangle moving them to the places described in the boundary description.
 4.	Some things to keep in mind:
-i.	Note that as you near the edge of a map, you may need to turn off or reorder some of the maps to adjust for the white edges of the scanned maps that obscure the maps underneath.
-ii.	If the AVA you are digitizing is very close to another that has already been digitized, read the boundary descriptions for both and determine if they share a boundary.  If they share a boundary, make sure you snap your vertices to the vertices of the other boundary.
-5.	When you are done digitizing, fill out the attribute data.
+    * Note that as you near the edge of a map, you may need to turn off or reorder some of the maps to adjust for the white edges of the scanned maps that obscure the maps underneath.
+    * If the AVA you are digitizing is very close to another that has already been digitized, read the boundary descriptions for both and determine if they share a boundary.  If they share a boundary, make sure you snap your vertices to the vertices of the other boundary.
+    * Pay close attention to the wording describing the boundaries.  Some require a straight line between points and use language like "the next point is a straight line to the peak at 1700 feet".  Others require you to digitize along a feature and use language like "follow along Cold Creek until it crosses J Street".
+5.	When you are done digitizing, fill out the attribute data based on the text of the official Federal Register documents.  The definitions of the attributes are found in the [README.md file](https://github.com/UCDavisLibrary/ava/blob/master/README.md).
 6.	Save Layer Edits.
 7.	Toggle Editing off.
 8.	Close QGIS if you’re done making new AVAs, or start over from Step 3e above to make another.
