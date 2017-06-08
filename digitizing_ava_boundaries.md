@@ -1,6 +1,10 @@
 # Instructions & Methods for Digitizing AVA Boundaries
 
 ## Getting Started:
+### Start with the Issues Tracker
+1. In the Issues section of the AVA project GitHub page, you should find an Issue for each AVA.  All AVAs in need of digitizing have an issue open on the github repository.  The issues are closed for AVAs as they are finished.  AVAs are given labels to indicate their status.  Open issues labeled as "In Progress" are currently being digitized by a contributor.  Choose an AVA that does not have an "In Progress" label.  Labels for partner organizations such as "UC Davis" or "UC Santa Barbara" indicate that the project coordinators expect these boundaries to be completed by the organization indicated.
+1. In the text of each issue, you will find the boundary description you should use as well as the list of Approved Maps.  Other attribute information will be found in the Federal Register documents.  Occasionally, the text in the issue is missing either the Approved Maps or the starting point for the boundary description (due to the automated process that generated this text).  To find the missing text, refer to the "src" link (meaning "source") to the official Federal Register text.
+  2. Add the "In Progress" label to the Issue for the AVA you've chosen to work on.  Write a comment for your chosen AVA that you are working on the boundary.  If possible, assign the task to yourself (on the top of the right side panel of options).  Add additional comments if any issues or questions arise about this particular AVA.
 
 ### Resources:
 Hein Online Federal Register Library: http://heinonline.org/HOL/Index?collection=fedreg&set_as_cursor=clear 
@@ -13,10 +17,6 @@ Alcohol and Tobacco Tax and Trade Bureau’s (TTB) list of currently established
 ### Review the available Federal Register document for your AVA of interest  
   1. Search the Hein Online Federal Register Library for the name of your chosen AVA (the text search box is at the top of the page near the logo).  Many of the documents you will need are available there.  
   2. Check the TTB’s list linked above for a citation of the revision history of the AVA found at the bottom of the page in brackets.  Hardcopies of the Federal Register documents are also available in the UC Davis Library.  
-
-### Update the Issues Tracker
-1. In the Issues section of the AVA project GitHub page, you should find an Issue for each AVA. In the text, you will find the boundary description you should use as well as the list of Approved Maps.  Other attribute information will be found in the Federal Register documents.
-  2. Add the "In Progress" label to the Issue.  Write a comment for your chosen AVA that you are working on the boundary.  If possible, assign the task to yourself (on the top of the right side panel of options).  Add additional comments if any issues or questions arise about this particular AVA.
 
 ## Download the Approved Maps
 1. Go to the USGS National Geologic Map Database’s topoView: https://ngmdb.usgs.gov/maps/TopoView/viewer 
