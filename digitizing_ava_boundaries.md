@@ -32,6 +32,8 @@ ii. In the event that the specific year for the Approved Map is not available, y
 9. Navigate to the folder where you saved the file.  Right click the file and select “Extract All”.  Browse to the folder you would like to unzip the folder to, then click the “Extract” button.  The new unzipped folder should contain 4 files.
 10. Repeat all the substeps for Step 2 for each of the Approved Maps needed for your AVA before you move on to the digitizing process in Step 3.
 
+The AVA Project team has made a [Video](https://drive.google.com/open?id=0B9xw97DGLpqAVEpYTzhfWm00TTg) of the process of downloading the Approved Maps. 
+
  
 ## Get the most recent project files from GitHub 
 We’ll describe how to do this with the GitHub for Desktop tool, but you may use the tool of your choice.  We’ll also assume you’ve already set up your GitHub account and the GitHub for Desktop program.:
@@ -57,6 +59,8 @@ i.	In the Layers Panel (Table of Contents), select the all.geojson layer.
 ii.	Open the Snapping Options (Settings menu → Snapping Options)
 iii. Set Layer Selection to “Current Layer” (the all.geojson layer you selected earlier in the Layers Panel), Snap To “To Vertex and Segment”, Tolerance to 20 Pixels (adjust this as needed), and finally check the boxes for “Enable topological editing” and “Enable snapping on intersection”.
 
+The AVA Project team has made a [Video](https://drive.google.com/open?id=0B9xw97DGLpqATk9sTUFiM2ZuUFk) of the process of setting up your project file. 
+
 ### Digitizing the Boundary:
 1.	Toggle Editing on for the new AVA GeoJSON file.
 2.	You have two options for digitizing the boundary: 
@@ -69,6 +73,8 @@ ii.	If the AVA you are digitizing is very close to another that has already been
 6.	Save Layer Edits.
 7.	Toggle Editing off.
 8.	Close QGIS if you’re done making new AVAs, or start over from Step 3e above to make another.
+
+The AVA Project team has made a [Video](https://drive.google.com/open?id=0B9xw97DGLpqAMkNOc05GOGhoZ2M) of the process of digitzing an AVA boundary.
 
 ![alt text](https://github.com/UCDavisLibrary/ava/blob/master/images/Example_AVA_Coombsville.PNG "Example of a completed AVA boundary")
 
