@@ -25,12 +25,13 @@ Wine Institute: https://www.wineinstitute.org/resources/avas
 1. Create a Pull Request
 
 ## Progress
+As of June 14, 2017, 21 AVAs in California were completed.
 
 ### UC Davis
-UC Davis anticipates contributing boundaries for the northern California AVAs.
+UC Davis anticipates contributing boundaries for the northern California AVAs (marked with the "UC Davis" label in the Issues list).
 
 ### UC Santa Barbara
-UC Santa Barbara anticipates contributing boundaries for the southern California AVAs.
+UC Santa Barbara anticipates contributing boundaries for the southern California AVAs (marked with the "UC Santa Barbara" label in the Issues list).
 
 ### Additional Partnerships
 University entities (departments, labs, research groups, etc.) or other organizations interested in becoming project partners should contact us.  We're happy to discuss new partnerships in building this and similar datasets!  A partnership is not necessary, however, to contribute.
