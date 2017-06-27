@@ -44,10 +44,10 @@ We’ll describe how to do this with the GitHub for Desktop tool, but you may us
 
 ## Digitizing the Boundary
 ### Set Up Your Project File:
-1.  In your file browser, move the geojson file for your chosen AVA (for example, coombsville.geojson) from the "tbd" (stands for "to be determined") folder to the "ava" folder.
+1.  In your file browser, move the geojson file for your chosen AVA (for example, coombsville.geojson) from the "tbd" (stands for "to be determined") folder to the "avas" folder.
 1.	Open QGIS
 1.	Load data:
-    * All.geojson - for reference and snapping to shared boundaries
+    * avas.geojson - for reference and snapping to shared boundaries
     * Your AVA geojson file - the file you will edit; example: coombsville.geojson
     * Approved Maps
 1.	Set Project Projection
