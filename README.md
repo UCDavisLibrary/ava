@@ -43,13 +43,13 @@ identifier | type | description | example
 ---| --- | --- | ---
 ava_id | text | an identification string prescribed in the Issue for each AVA |	leona_valley
 name | text | the legal name given to the AVA |	Leona Valley
-aka	| text | other names, including historical names, and terms used for the AVA | |
-created	| date | YYYY/MM/DD format; the date of the first publication creating the AVA | 2017-06-01 |
-removed	| date | the date the AVA designation was removed from an area |
+aka	| text | (optional) other names, including historical names, and terms used for the AVA | |
+created	| date | YYYY-MM-DD format; the date of the first publication creating the AVA | 2017-06-01 |
+removed	| date | (optional) the date the AVA designation was removed from an area |
 county | text | the county, or list of counties separated by a comma, in which the AVA exists |	Los Angeles, Ventura
-state	| text | the state, or list of states separated by a comma, in which the AVA exists | CA, NV
-within	| text | used for smaller AVAs that fit inside of larger AVAs; the larger AVA that this AVA sits inside | 
-contains	| text | used for larger AVAs that contain smaller AVAs; the smaller AVAs that fit inside this AVA |
+state	| text | the state, or list of states separated by a comma, using the two-letter postal abbreviation, in which the AVA exists | CA, NV
+within	| text | (if applicable) used for smaller AVAs that fit inside of larger AVAs; the larger AVA that this AVA sits inside | 
+contains	| text | (if applicable) used for larger AVAs that contain smaller AVAs; the smaller AVAs that fit inside this AVA |
 petitioner	| text | the name of the person who initiated the petition and their affiliation separated by a comma | Jane Smith, Smith Family Wineries
 cfr_author	
 cfr_index	9.212
@@ -58,8 +58,8 @@ approved_maps | text | the approved maps listed for the boundary defintion |(1) 
 boundary_description | text | the official boundary description |
 used_maps	| text | the maps used to digitize the boundary |
 last_revised | date | the last revision that applies to this boundary |
-lcsh	| text | Library of Congress Subject Heading |
-sameas	| text | linked data URIs for terms that are identical to this AVA |
+lcsh	| text | (optional) Library of Congress Subject Heading |
+sameas	| text | (optional) linked data URIs for terms that are identical to this AVA |
 
 
 # UC Davis Library Project Team:
