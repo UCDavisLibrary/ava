@@ -20,7 +20,9 @@ Wine Institute: https://www.wineinstitute.org/resources/avas
 ## How Can You Contribute?
 1. Read the [GettingStarted.md](https://github.com/UCDavisLibrary/ava/blob/master/GettingStarted.md) & [digitizing_ava_boundaries.md](https://github.com/UCDavisLibrary/ava/blob/master/digitizing_ava_boundaries.md) files to familiarize yourself with the policies and procedures for this project.
 1. Fork this repository.
-1. Check the Issues list to see which AVAs are available and claim the one you want to work on.
+1. Pick a boundary to work on:
+    * Check the Issues list to see which AVAs are available and claim the one you want to work on.
+    * When viewed online in GitHub, the [avas.geojson file](https://github.com/UCDavisLibrary/ava/blob/master/avas.geojson) will show you a map of what's completed (complicated boundaries) and in need of work (triangles at the county's centroid). This is helpful for finding the general location of an AVA.
 1. Make a boundary
 1. Create a Pull Request
 
