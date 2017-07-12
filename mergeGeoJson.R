@@ -21,4 +21,8 @@ vects <- lapply(gj, geojson_read, what="sp")
 #combine all the vectors together, bind is from the raster package
 #probably could just rbind geojson lists too, but thats harder to plot
 all <- do.call(bind, vects)
+
+#Change any "N/A" data to nulls
+all@data[all@data=="N/A"]<- NA
+
 geojson_write(all, file="avas.geojson", overwrite=TRUE, convert_wgs84 = TRUE)
