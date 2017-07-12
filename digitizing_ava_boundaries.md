@@ -19,18 +19,24 @@ Alcohol and Tobacco Tax and Trade Bureau’s (TTB) list of currently established
   2. Check the TTB’s list linked above for a citation of the revision history of the AVA found at the bottom of the page in brackets.  Hardcopies of the Federal Register documents are also available in the UC Davis Library.  
 
 ## Download the Approved Maps
+*Note* These instructions are a little out of date because topoView recently changed it's interface, however, the instructions should still be helpful with the new interface until we get a chance to update them.
 1. Go to the USGS National Geologic Map Database’s topoView: https://ngmdb.usgs.gov/maps/TopoView/viewer 
 2. On the right side of the map in the Map Scales box, select the scale of the Approved Map.
 3.	Zoom into the general region of the AVA, and the names of the maps will appear inside the index bounding boxes.
 4. Select the map of interest by clicking inside the box.
 5. On the lower left of the window, a dialog box should appear with details about the map you selected.  On the right side of this dialog, a section will indicate how many maps are available for the area.  For example, the Mount George quad near Napa says “5 Maps”.  Click on the number to see details about the maps available.
 6. On the table that appears, you will see a column for “Date” and another for “Edition”.  Click on the date and edition that corresponds to the Approved Map listed in the Federal Register document.  
-i. For example, one of the Approved Maps for the Coombsville AVA is listed as “Napa Quadrangle, California-Napa Co., 1951, Photorevised 1980”.  For this map, select the Napa map with a date of 1951 and edition of 1980.  
-ii. In the event that the specific year for the Approved Map is not available, you may need to download one or two maps that are of a similar age and determine which has the landmarks indicated in the description.
+
+    i. For example, one of the Approved Maps for the Coombsville AVA is listed as “Napa Quadrangle, California-Napa Co., 1951, Photorevised 1980”.  For this map, select the Napa map with a date of 1951 and edition of 1980.  
+    
+    ii. In the event that the specific year for the Approved Map is not available, you may need to download one or two maps that are of a similar age and determine which has the landmarks indicated in the description.
+    
 7. Make sure the text in the dialog reflects the map you want to download, then click the GEOTIFF download option.
 8. Save the file to your local computer.  The file saved will be a zipped folder containing GeoTIFF files.
 9. Navigate to the folder where you saved the file.  Right click the file and select “Extract All”.  Browse to the folder you would like to unzip the folder to, then click the “Extract” button.  The new unzipped folder should contain 4 files.
 10. Repeat all the substeps for Step 2 for each of the Approved Maps needed for your AVA before you move on to the digitizing process in Step 3.
+
+Further assistance in interpreting which scale of map to use can be found in the [USGS' Map Scales Report](https://pubs.usgs.gov/fs/2002/0015/report.pdf).
 
 The AVA Project team has made a [Video](https://drive.google.com/open?id=0B9xw97DGLpqAVEpYTzhfWm00TTg) of the process of downloading the Approved Maps. 
 
@@ -70,7 +76,7 @@ Each AVA has a template generated automatically and placed at the centroid of th
     * Note that as you near the edge of a map, you may need to turn off or reorder some of the maps to adjust for the white edges of the scanned maps that obscure the maps underneath.
     * If the AVA you are digitizing is very close to another that has already been digitized, read the boundary descriptions for both and determine if they share a boundary.  If they share a boundary, make sure you snap your vertices to the vertices of the other boundary.
     * Pay close attention to the wording describing the boundaries.  Some require a straight line between points and use language like "the next point is a straight line to the peak at 1700 feet".  Others require you to digitize along a feature and use language like "follow along Cold Creek until it crosses J Street".
-5.	When you are done digitizing, fill out the attribute data based on the text of the official Federal Register documents.  The definitions of the attributes are found in the [README.md file](https://github.com/UCDavisLibrary/ava/blob/master/README.md).
+5.	When you are done digitizing, fill out the attribute data based on the text of the official Federal Register documents.  The definitions of the attributes are found in the [README.md file](https://github.com/UCDavisLibrary/ava/blob/master/README.md).  *Note:* Contributors using QGIS 2.18.10 or older with GDAL 2.2.0 should fill in any blanks in their attribute table with N/A due to a known issue with how unset values are handled. A [more permanent fix](https://issues.qgis.org/issues/16812) is in the works.
 6.	Save Layer Edits.
 7.	Toggle Editing off.
 8.	Close QGIS if you’re done making new AVAs, or start over from Step 3e above to make another.
@@ -81,7 +87,7 @@ The AVA Project team has made a [Video](https://drive.google.com/open?id=0B9xw97
 
 ## Submit your changes to the AVA GitHub Repository
 1.	In GitHub for Desktop, you should see a list of changes you’ve made to the files.  Fill in the Summary and Description fields at the bottom of the window and then click the Commit button.  https://guides.github.com/activities/forking/#making-changes 
-2.	If you are ready to incorporate your changes into the main branch, submit a pull request for your fork: https://guides.github.com/activities/forking/#making-a-pull-request 
+2.	If you are ready to incorporate your changes into the main branch, submit a pull request for your fork: https://help.github.com/articles/creating-a-pull-request-from-a-fork/ 
 3.  If your changes are accepted, project adminsitrators will incorporated your changes and close the issue for your AVA.  If there is any problems or questions, the project administrators will contact you.
 
 ## Additional Reference Material:
