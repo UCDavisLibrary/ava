@@ -48,6 +48,8 @@ We’ll describe how to do this with the GitHub for Desktop tool, but you may us
 3.	Select the forked AVA repository on the left sides of the window.
 4.	In your computer’s file navigation system, navigate to your GitHub folder and open the AVAs folder.  Inside the folder for AVAs that haven’t been completed, find the AVA you want to work on and move the .geojson file to the “avas” folder.
 
+Once you've set up your fork, you'll need to update it regularly to make sure you have all the current files.  **Instructions for how to do this are coming soon!**
+
 ## Digitizing the Boundary
 ### Set Up Your Project File:
 1.  In your file browser, move the geojson file for your chosen AVA (for example, coombsville.geojson) from the "tbd" (stands for "to be determined") folder to the "avas" folder.
