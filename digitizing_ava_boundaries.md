@@ -52,7 +52,7 @@ Once you've set up your fork, you'll need to update it regularly to make sure yo
 1. Open GitHub Desktop
 1. Click on your fork to open it.
 1. Right click on the name of the fork and select "Open Command Prompt" or "Open in Git Shell" (depending on the version you have the text will be different).  A command line shell will open.  The path before the > should be where you store your data (probably the GitHub folder on your computer).
-1. You will now run a few commands to update your fork.
+1. You will now run a few commands to update your fork ([reference](https://gist.github.com/CristinaSolana/1885435).
     1. The first time you'll need to set an upstream repository for your fork:
     ```
         git remote add upstream git://github.com/UCDavisLibrary/ava.git
