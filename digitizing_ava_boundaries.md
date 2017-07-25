@@ -48,6 +48,27 @@ We’ll describe how to do this with the GitHub for Desktop tool, but you may us
 3.	Select the forked AVA repository on the left sides of the window.
 4.	In your computer’s file navigation system, navigate to your GitHub folder and open the AVAs folder.  Inside the folder for AVAs that haven’t been completed, find the AVA you want to work on and move the .geojson file to the “avas” folder.
 
+Once you've set up your fork, you'll need to update it regularly to make sure you have all the current files.  There is unfortunately no way to do this with the GitHub Desktop tool, but it's not too complicated to update it.
+1. Open GitHub Desktop
+1. Click on your fork to open it.
+1. Right click on the name of the fork and select "Open Command Prompt" or "Open in Git Shell" (depending on the version you have the text will be different).  A command line shell will open.  The path before the > should be where you store your data (probably the GitHub folder on your computer).
+1. You will now run a few commands to update your fork ([reference](https://gist.github.com/CristinaSolana/1885435)).
+    1. The first time you'll need to set an upstream repository for your fork:
+    ```
+        git remote add upstream git://github.com/UCDavisLibrary/ava.git
+    ```
+        
+    2. Now you'll fetch any changes:
+    ```
+        git fetch upstream
+    ```
+    
+    3. Finally, you'll update your folder with the changes you just fetched:
+    ```
+        git pull upstream master
+    ```
+
+
 ## Digitizing the Boundary
 ### Set Up Your Project File:
 1.  In your file browser, move the geojson file for your chosen AVA (for example, coombsville.geojson) from the "tbd" (stands for "to be determined") folder to the "avas" folder.
