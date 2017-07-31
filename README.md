@@ -27,7 +27,7 @@ Wine Institute: https://www.wineinstitute.org/resources/avas
 1. Create a Pull Request
 
 ## Progress
-As of June 14, 2017, 21 AVAs in California were completed.
+As of July 31, 2017, 43 AVAs in California were completed.
 
 ### UC Davis
 UC Davis anticipates contributing boundaries for the northern California AVAs (marked with the "UC Davis" label in the Issues list).
