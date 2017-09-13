@@ -70,13 +70,13 @@ Vessela Ensberg  (Program Director, Data Management Program)
 
 [Michele Tobias](https://github.com/micheletobias) (GIS Data Curator, Data Management Program)
 
-[Amber Reyes](https://github.com/amberreyes) (Student Employee, Data Management Program)
-
 [Quinn Hart](https://github.com/qjhart) (Digital Applications)
 
 Axel Borg (Wine Librarian) 
 
 David Michalski (Geography Librarian)
+
+[Amber Reyes](https://github.com/amberreyes) (Student Employee, Data Management Program, April - July 2017)
 
 # Disclaimer
 The American Viticulture Areas (AVA) Project data is provided for educational purposes only. Data and materials may not be accurate or complete, and are provided as-is, without warranties of any kind. Please note that while every effort was made to digitize the data from the maps designated in the official descriptions of the boundaries from the Alcohol and Tobacco Tax and Trade Bureau, some substitutions were made and are noted in the attribute table.
