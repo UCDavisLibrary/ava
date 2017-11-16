@@ -72,11 +72,13 @@ Vessela Ensberg  (Program Director, Data Management Program)
 
 [Quinn Hart](https://github.com/qjhart) (Digital Applications)
 
-Axel Borg (Wine Librarian) 
+[Axel Borg](https://www.library.ucdavis.edu/author/axel-borg/) (Wine Librarian) 
 
-David Michalski (Geography Librarian)
+[David Michalski](https://www.library.ucdavis.edu/author/david-michalski/) (Geography Librarian)
 
-[Amber Reyes](https://github.com/amberreyes) (Student Employee, Data Management Program, April - July 2017)
+[Yao Fang](https://github.com/fyfangyao) (Student Employee, Data Management Program, beginning October 2017)
+
+[Amber Reyes](https://github.com/amberreyes) (Student Employee, Data Management Program, from April - July 2017)
 
 # UCSB Library Project Team:
 [Tom Brittnacher](https://github.com/tbrittnacher) (Geospatial Data Curator)
