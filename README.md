@@ -72,13 +72,21 @@ sameas	| text | (optional) linked data URIs for terms that are identical to this
 
 [Quinn Hart](https://github.com/qjhart) (Digital Applications)
 
-[Axel Borg](https://www.library.ucdavis.edu/author/axel-borg/) (Wine Librarian) 
+[Axel Borg](https://www.library.ucdavis.edu/author/axel-borg/) (Wine Librarian, Research Support Services) 
 
-[David Michalski](https://www.library.ucdavis.edu/author/david-michalski/) (Geography Librarian)
+[David Michalski](https://www.library.ucdavis.edu/author/david-michalski/) (Geography Librarian, Research Support Services)
+
+[Michael Colby](https://www.library.ucdavis.edu/author/michael-colby/) (Librarian, Content Support Services)
 
 [Yao Fang](https://github.com/fyfangyao) (Student Employee, Data Management Program, beginning October 2017)
 
 [Amber Reyes](https://github.com/amberreyes) (Student Employee, Data Management Program, from April - July 2017)
+
+**Consultants:**
+
+[Jennifer Harbster](https://www.library.ucdavis.edu/author/jennifer-jj-harbster/) (Librarian, Research Support Services)
+
+[Michael Wolfe](https://www.library.ucdavis.edu/author/michael-wolfe/) (Scholarly Communications Officer)
 
 # UCSB Library Project Team:
 [Tom Brittnacher](https://github.com/tbrittnacher) (Geospatial Data Curator)
