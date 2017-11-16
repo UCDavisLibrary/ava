@@ -66,7 +66,7 @@ sameas	| text | (optional) linked data URIs for terms that are identical to this
 *Note:* Contributors using QGIS 2.18.10 or older with GDAL 2.2.0 should fill in any blanks in their attribute table with N/A due to a known issue with how unset values are handled. A [more permanent fix](https://issues.qgis.org/issues/16812) is in the works.
 
 # UC Davis Library Project Team:
-Vessela Ensberg  (Program Director, Data Management Program)
+[Vessela Ensberg](https://www.library.ucdavis.edu/author/vessela-ensberg/)  (Program Director, Data Management Program)
 
 [Michele Tobias](https://github.com/micheletobias) (GIS Data Curator, Data Management Program)
 
