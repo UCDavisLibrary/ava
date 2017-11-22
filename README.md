@@ -1,6 +1,6 @@
 # American Viticultural Areas (AVA) Project
 
-The UC Davis library, in conjuction with UCSB, other partner organizations, and contributions from the general public, will create a publically accessable version American Viticultural Areas boundaries.  Using the text descriptions from the ATPF Code of regulations, we will build this data from the official descriptions.  These data will be made freely availabe.  This dataset will provide wine researchers with an important tool as they examine the scientific, economic and historical aspects of viticulture.
+The UC Davis library, in conjunction with UCSB, other partner organizations, and contributions from the general public, will create a publically accessible version American Viticultural Areas boundaries.  Using the text descriptions from the ATPF Code of regulations, we will build this data from the official descriptions.  These data will be made freely availabe.  This dataset will provide wine researchers with an important tool as they examine the scientific, economic and historical aspects of viticulture.
 
 Anyone can contribute to this project.
 
@@ -27,13 +27,13 @@ Wine Institute: https://www.wineinstitute.org/resources/avas
 1. Create a Pull Request
 
 ## Progress
-As of July 31, 2017, 43 AVAs in California were completed.
+As of November 16, 2017, 83 AVAs in California were completed.  156 remain to be completed nation-wide.
 
 ### UC Davis
-UC Davis anticipates contributing boundaries for the northern California AVAs (marked with the "UC Davis" label in the Issues list).
+UC Davis will contribute boundaries for the northern California AVAs (marked with the "UC Davis" label in the Issues list).
 
 ### UC Santa Barbara
-UC Santa Barbara anticipates contributing boundaries for the southern California AVAs (marked with the "UC Santa Barbara" label in the Issues list).
+UC Santa Barbara completed boundaries for the southern California AVAs (marked with the "UC Santa Barbara" label in the Issues list) November 2017.
 
 ### Additional Partnerships
 University entities (departments, labs, research groups, etc.) or other organizations interested in becoming project partners should contact us.  We're happy to discuss new partnerships in building this and similar datasets!  A partnership is not necessary, however, to contribute.
@@ -66,17 +66,27 @@ sameas	| text | (optional) linked data URIs for terms that are identical to this
 *Note:* Contributors using QGIS 2.18.10 or older with GDAL 2.2.0 should fill in any blanks in their attribute table with N/A due to a known issue with how unset values are handled. A [more permanent fix](https://issues.qgis.org/issues/16812) is in the works.
 
 # UC Davis Library Project Team:
-Vessela Ensberg  (Program Director, Data Management Program)
+[Vessela Ensberg](https://www.library.ucdavis.edu/author/vessela-ensberg/)  (Program Director, Data Management Program)
 
 [Michele Tobias](https://github.com/micheletobias) (GIS Data Curator, Data Management Program)
 
 [Quinn Hart](https://github.com/qjhart) (Digital Applications)
 
-Axel Borg (Wine Librarian) 
+[Axel Borg](https://www.library.ucdavis.edu/author/axel-borg/) (Wine Librarian, Research Support Services) 
 
-David Michalski (Geography Librarian)
+[David Michalski](https://www.library.ucdavis.edu/author/david-michalski/) (Geography Librarian, Research Support Services)
 
-[Amber Reyes](https://github.com/amberreyes) (Student Employee, Data Management Program, April - July 2017)
+[Michael Colby](https://www.library.ucdavis.edu/author/michael-colby/) (Librarian, Content Support Services)
+
+[Yao Fang](https://github.com/fyfangyao) (Student Employee, Data Management Program, beginning October 2017)
+
+[Amber Reyes](https://github.com/amberreyes) (Student Employee, Data Management Program, from April - July 2017)
+
+**Consultants:**
+
+[Jennifer Harbster](https://www.library.ucdavis.edu/author/jennifer-jj-harbster/) (Librarian, Research Support Services)
+
+[Michael Wolfe](https://www.library.ucdavis.edu/author/michael-wolfe/) (Scholarly Communications Officer)
 
 # UCSB Library Project Team:
 [Tom Brittnacher](https://github.com/tbrittnacher) (Geospatial Data Curator)
