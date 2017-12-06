@@ -15,8 +15,17 @@ gj <- c(avas, tbd)
 gj <- gj[gj != "./avas.geojson"]
 gj <- gj[gj != "./tbd/avas.geojson"]
 
+#### Start the sp way of doing it ####
+a <- Sys.time()
 #read all the geojson files
 vects <- lapply(gj, geojson_read, what="sp")
+
+# for debugging which layer is breaking the loading
+# for (each in gj){
+#   print(each)
+#   x <- geojson_read(each,what="sp")
+#   plot(x)
+# }
 
 #combine all the vectors together, bind is from the raster package
 #probably could just rbind geojson lists too, but thats harder to plot
@@ -25,6 +34,7 @@ all <- do.call(bind, vects)
 #Change any "N/A" data to nulls
 all@data[all@data=="N/A"]<- NA
 
+
 #Calculate area of polygons
 #Example: x$area_sqkm <- area(x)
 #all$area<-area(all)
@@ -32,9 +42,9 @@ all@data[all@data=="N/A"]<- NA
 #all@data$area <- sapply(slot(ploygons, "polygons"), function(i) slot(i, "area"))
 all@data$area<-sapply(slot(all, "polygons"), function(i){slot(i, "area")})
 
+
 #add the row names in a column
 all$rows<-row.names(all)
-
 
 #Order by area
 #Example: meuse <- meuse[match(x[order(x$IDS),]$r, row.names(meuse@data)),]
@@ -43,7 +53,6 @@ all$rows<-row.names(all)
 #all<-all[order(all$area),]
 
 all<-all[match(all[order(all$area, decreasing = TRUE),]$rows, row.names(all@data)),]
-
 
 #add new ID column
 all$newid<-1:length(all)
@@ -57,3 +66,27 @@ for (i in 1:nrow(all@data)){
 all@data<-all@data[,1:(ncol(all@data)-3)]
 
 geojson_write(all, file="avas.geojson", overwrite=TRUE, convert_wgs84 = TRUE)
+b <- Sys.time()
+#### Same thing with sf ####
+#OR with sf
+library(sf)
+library(dplyr)
+
+c <- Sys.time()
+vectsf <- lapply(gj, read_sf)
+
+allsf <- do.call(rbind, vectsf)
+
+allsf <- mutate_if(allsf, is.character, gsub, pattern="N/A", replacement=NA) 
+
+allsf$area <- st_area(allsf)
+
+allsf <- arrange(allsf,desc(area))
+
+write_sf(allsf, dsn="avas-sf.geojson", driver="GeoJSON", delete_dsn=TRUE)
+#geojson_write(allsf, file="avas-sf.geojson", overwrite=TRUE, convert_wgs84 = TRUE)
+
+d <- Sys.time()
+
+b-a
+d-c
