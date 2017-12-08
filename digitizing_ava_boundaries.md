@@ -115,7 +115,7 @@ If a pull request cannot be merged automatically by GitHub, you can remove or mo
 
 Step 1: In the command line tool, from your project repository, check out a new branch and test the changes.
 ```
-git checkout -b gdmf-master master
+git checkout -b [repository user name]-master master
 git pull https://github.com/gdmf/ava.git master
 ```
 
@@ -126,7 +126,7 @@ Step 3: Committ the changes.
 Step 4: Merge the changes and update on GitHub.
 ```
 git checkout master
-git merge --no-ff gdmf-master
+git merge --no-ff [repository user name]-master
 git push origin master
 ```
 
