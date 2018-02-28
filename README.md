@@ -65,6 +65,21 @@ sameas	| text | (optional) linked data URIs for terms that are identical to this
 
 *Note:* Contributors using QGIS 2.18.10 or older with GDAL 2.2.0 should fill in any blanks in their attribute table with N/A due to a known issue with how unset values are handled. A [more permanent fix](https://issues.qgis.org/issues/16812) is in the works.
 
+# How can you access the data?
+
+## Download the whole repository
+You can use the green download button on the Code tab of this repository to download all of the files in this repository or you can fork this repository.
+
+## Download just the AVAs file or individual AVA boundaries
+You can download single .geojson files (including the avas.geojson file that has all of the boundaries) by:
+1. On the Code tab, navigate to the file you would like to download, and click on the file name.
+1. Click the Download button, which will take you to a page that displays the text of the document.
+1. Right click anywhere on the page, and select "Save as..." 
+1. Save the file where you would like to keep it.  You may need to remove an additional .txt extension that may get automatically added to the file name.  You file extension should be .geojson
+
+# What is the long-term plan for this data?
+Version 1.0 will be released once all of the AVAs in California are completed.  The data will be offered as a fixed set of boundaries (no longer updated) here on our GitHub site but also in the UC Davis Library Digital Asset Management System.  Work will continue on additional AVA boundaries.  Definitions for additional versions will depend on partnerships and resource availability.
+
 # UC Davis Library Project Team:
 [Vessela Ensberg](https://www.library.ucdavis.edu/author/vessela-ensberg/)  (Program Director, Data Management Program)
 
