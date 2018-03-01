@@ -32,4 +32,4 @@ While the creators of this project assume contributors have a good understanding
    1. Public Land Survey System (PLSS): https://nationalmap.gov/small_scale/a_plss.html
    
 ## Getting Help
-Don't hesitate to ask questions as you're getting started or at any point in the process.
+Don't hesitate to ask questions as you're getting started or at any point in the process.   
