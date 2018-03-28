@@ -106,7 +106,11 @@ Version 1.0 will be released once all of the AVAs in California are completed.  
 # UCSB Library Project Team:
 [Tom Brittnacher](https://github.com/tbrittnacher) (Geospatial Data Curator)
 
-[Andrew Jessup](https://github.com/andrewjessup) (Aerial Photography Cataloger)
+[Andrew Jessup](https://github.com/andrewjessup) (Collaboratory Services Specialist)
+
+Maga Kim (Undergraduate; Collaboratory Staff)
+
+Timothy Kwong (Undergraduate; Collaboratory Staff)
 
 # Other Contributors
 [Alex Mandel](https://github.com/wildintellect)
