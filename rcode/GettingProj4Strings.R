@@ -3,9 +3,20 @@
 library(raster)
 library(rgdal)
 
-setwd("C:\\Users\\mmtobias\\Documents\\WineData\\Topos\\Yadkin")
-topo<-raster("NC_Winston-Salem_164064_1953_250000_geo.tif")
-crs(topo)
+#set your working directory to the folder you put your topos in:
+setwd("C:\\Users\\mmtobias\\Documents\\WineData\\Topos")
+
+#gets the list of all the .tif files in your folder
+all.topos <- list.files(path="./Sonoita", pattern = "*.tif$", full.names = "TRUE")
+
+#Lists the name of the .tif and then the proj.4 string for each file
+for (i in all.topos){
+  topo<-raster(i)
+  topo.crs<-crs(topo)
+  print(i) 
+  print(topo.crs)
+}
+
 
 #paste the results into the proj.4 string for your topo in the layer properties to set the correct CRS.
 
