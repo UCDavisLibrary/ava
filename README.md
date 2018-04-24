@@ -65,6 +65,21 @@ sameas	| text | (optional) linked data URIs for terms that are identical to this
 
 *Note:* Contributors using QGIS 2.18.10 or older with GDAL 2.2.0 should fill in any blanks in their attribute table with N/A due to a known issue with how unset values are handled. A [more permanent fix](https://issues.qgis.org/issues/16812) is in the works.
 
+# How can you access the data?
+
+## Download the whole repository
+You can use the green download button on the Code tab of this repository to download all of the files in this repository or you can fork this repository.
+
+## Download just the AVAs file or individual AVA boundaries
+You can download single .geojson files (including the avas.geojson file that has all of the boundaries) by:
+1. On the Code tab, navigate to the file you would like to download, and click on the file name.
+1. Click the Download button, which will take you to a page that displays the text of the document.
+1. Right click anywhere on the page, and select "Save as..." 
+1. Save the file where you would like to keep it.  You may need to remove an additional .txt extension that may get automatically added to the file name.  You file extension should be .geojson
+
+# What is the long-term plan for this data?
+Version 1.0 will be released once all of the AVAs in California are completed.  The data will be offered as a fixed set of boundaries (no longer updated) here on our GitHub site but also in the UC Davis Library Digital Asset Management System.  Work will continue on additional AVA boundaries.  Definitions for additional versions will depend on partnerships and resource availability.
+
 # UC Davis Library Project Team:
 [Vessela Ensberg](https://www.library.ucdavis.edu/author/vessela-ensberg/)  (Program Director, Data Management Program)
 
@@ -91,14 +106,24 @@ sameas	| text | (optional) linked data URIs for terms that are identical to this
 # UCSB Library Project Team:
 [Tom Brittnacher](https://github.com/tbrittnacher) (Geospatial Data Curator)
 
-[Andrew Jessup](https://github.com/andrewjessup) (Aerial Photography Cataloger)
+[Andrew Jessup](https://github.com/andrewjessup) (Collaboratory Services Specialist)
+
+Maga Kim (Undergraduate; Collaboratory Staff)
+
+Timothy Kwong (Undergraduate; Collaboratory Staff)
 
 # Other Contributors
-[Alex Mandel](https://github.com/wildintellect)
+[Alex Mandel](https://github.com/wildintellect) (UC Davis Center for Spatial Sciences)
 
 [Grant Miller-Francisco](https://github.com/gdmf)
 
 [Kyle W. Smith](https://github.com/KyleWSmith)
+
+[ouwxmaniac](https://github.com/ouwxmaniac)
+
+[Arielle Rose](https://github.com/ariellerose) (Intern, UC Davis Center for Spatial Sciences)
+
+[Sierra Mabanta](https://github.com/sierramabanta) (Intern, UC Davis Center for Spatial Sciences)
 
 # Disclaimer
 The American Viticulture Areas (AVA) Project data is provided for educational purposes only. Data and materials may not be accurate or complete, and are provided as-is, without warranties of any kind. Please note that while every effort was made to digitize the data from the maps designated in the official descriptions of the boundaries from the Alcohol and Tobacco Tax and Trade Bureau, some substitutions were made and are noted in the attribute table.
