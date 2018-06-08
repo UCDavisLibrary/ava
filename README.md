@@ -113,11 +113,17 @@ Maga Kim (Undergraduate; Collaboratory Staff)
 Timothy Kwong (Undergraduate; Collaboratory Staff)
 
 # Other Contributors
-[Alex Mandel](https://github.com/wildintellect)
+[Alex Mandel](https://github.com/wildintellect) (UC Davis Center for Spatial Sciences)
 
 [Grant Miller-Francisco](https://github.com/gdmf)
 
 [Kyle W. Smith](https://github.com/KyleWSmith)
+
+[ouwxmaniac](https://github.com/ouwxmaniac)
+
+[Arielle Rose](https://github.com/ariellerose) (Intern, UC Davis Center for Spatial Sciences)
+
+[Sierra Mabanta](https://github.com/sierramabanta) (Intern, UC Davis Center for Spatial Sciences)
 
 # Disclaimer
 The American Viticulture Areas (AVA) Project data is provided for educational purposes only. Data and materials may not be accurate or complete, and are provided as-is, without warranties of any kind. Please note that while every effort was made to digitize the data from the maps designated in the official descriptions of the boundaries from the Alcohol and Tobacco Tax and Trade Bureau, some substitutions were made and are noted in the attribute table.
