@@ -1,6 +1,6 @@
 # American Viticultural Areas (AVA) Project
 
-The UC Davis library, in conjunction with UCSB, other partner organizations, and contributions from the general public, will create a publically accessible version American Viticultural Areas boundaries.  Using the text descriptions from the ATPF Code of regulations, we will build this data from the official descriptions.  These data will be made freely availabe.  This dataset will provide wine researchers with an important tool as they examine the scientific, economic and historical aspects of viticulture.
+The UC Davis library, in conjunction with UCSB, other partner organizations, and contributions from the general public, will create a publicly accessible version American Viticultural Areas boundaries.  Using the text descriptions from the ATPF Code of regulations, we will build this data from the official descriptions.  These data will be made freely available.  This dataset will provide wine researchers with an important tool as they examine the scientific, economic and historical aspects of viticulture.
 
 Anyone can contribute to this project.
 
