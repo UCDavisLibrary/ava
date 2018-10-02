@@ -127,5 +127,15 @@ Timothy Kwong (Undergraduate; Collaboratory Staff)
 
 [Brian Lee](https://github.com/bsllee) (UC Davis Economics Alumni)
 
+# Awards & Publications
+
+2018 [Sautter Award](https://www.ucop.edu/information-technology-services/initiatives/sautter-award-program/award-winners-and-applications/2018.html) - Silver - for Innovation in Information Technologies, awarded by the University of California Office of the President.
+
+Have you used the AVA project in your work?  Please let us know! mmtobias [at] ucdavis.edu
+
+# License
+The licence for this data is [Creative Commons CC0](https://creativecommons.org/share-your-work/public-domain/cc0/).  We encourage citation of this dataset when it is used in academic works.
+
+
 # Disclaimer
 The American Viticulture Areas (AVA) Project data is provided for educational purposes only. Data and materials may not be accurate or complete, and are provided as-is, without warranties of any kind. Please note that while every effort was made to digitize the data from the maps designated in the official descriptions of the boundaries from the Alcohol and Tobacco Tax and Trade Bureau, some substitutions were made and are noted in the attribute table.
