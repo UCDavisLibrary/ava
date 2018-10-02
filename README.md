@@ -68,7 +68,7 @@ sameas	| text | (optional) linked data URIs for terms that are identical to this
 # How can you access the data?
 
 ## Download the whole repository
-You can use the green download button on the Code tab of this repository to download all of the files in this repository or you can fork this repository.
+You can use the green download button on the Code tab of this repository to download all of the files in this repository or you can fork this repository.  Finished states are available for download in the AVAs By State folder.
 
 ## Download just the AVAs file or individual AVA boundaries
 You can download single .geojson files (including the avas.geojson file that has all of the boundaries) by:
