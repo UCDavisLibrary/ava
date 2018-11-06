@@ -31,7 +31,7 @@ As of November 6, 2018, 179 AVAs are complete.  62 remain to be completed nation
 AVAs for California and Arizona are complete.
 
 ### UC Davis
-UC Davis completed boundaries for the northern California AVAs (marked with the "UC Davis" label in the Issues list).  They will continue adding AVAs moving east across the county.
+UC Davis completed boundaries for the northern California, Arizona, and Colorado AVAs.  Issues marked with the "UC Davis" label are designated for UC Davis to work on.  They will continue adding AVAs moving east across the county.
 
 ### UC Santa Barbara
 UC Santa Barbara completed boundaries for the southern California AVAs (marked with the "UC Santa Barbara" label in the Issues list) November 2017.  They are currently working on boundaries for Oregon and Washigton.
