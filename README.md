@@ -27,8 +27,8 @@ Wine Institute: https://www.wineinstitute.org/resources/avas
 1. Create a Pull Request
 
 ## Progress
-As of November 6, 2018, 179 AVAs are complete.  62 remain to be completed nation-wide.
-AVAs for California and Arizona are complete.
+As of November 6, 2018, 180 AVAs are complete.  61 remain to be completed nation-wide.
+AVAs for California, Arizona, & Colorado are complete.
 
 ### UC Davis
 UC Davis completed boundaries for the northern California, Arizona, and Colorado AVAs.  Issues marked with the "UC Davis" label are designated for UC Davis to work on.  They will continue adding AVAs moving east across the county.
