@@ -1,4 +1,8 @@
+# Rstudio files
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+# R History Files
+.Rhistory
+
