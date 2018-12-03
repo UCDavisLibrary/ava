@@ -1,5 +1,8 @@
-
+# Rstudio files
+.Rproj.user
 .Rhistory
-.DS_Store
-avas/.DS_Store
-tbd/.DS_Store
+.RData
+.Ruserdata
+# R History Files
+.Rhistory
+

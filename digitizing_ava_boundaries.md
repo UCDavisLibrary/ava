@@ -2,9 +2,9 @@
 
 ## Getting Started:
 ### Start with the Issues Tracker
-1. In the Issues section of the AVA project GitHub page, you should find an Issue for each AVA.  All AVAs in need of digitizing have an issue open on the github repository.  The issues are closed for AVAs as they are finished.  AVAs are given labels to indicate their status.  Open issues labeled as "In Progress" are currently being digitized by a contributor.  Choose an AVA that does not have an "In Progress" label.  Labels for partner organizations such as "UC Davis" or "UC Santa Barbara" indicate that the project coordinators expect these boundaries to be completed by the organization indicated.
+1. In the Issues section of the AVA project GitHub page, you should find an Issue for each AVA.  All AVAs in need of digitizing have an issue open on the github repository.  The issues are closed for AVAs as they are finished.  AVAs are given labels to indicate their status.  Open issues labeled as "In Progress" are currently being digitized by a contributor.  Choose an AVA that does not have an "In Progress" label.  Labels for partner organizations such as "UC Davis" or "UC Santa Barbara" indicate that the project coordinators expect these boundaries to be completed by the organization indicated.  As we discuss our future partnership with Virginia Tech, the remaining Viriginia and Maryland AVAs have been marked with a label for "Virigina Tech" as we anticipate that they will provide data for these AVAs in the near future.
 1. In the text of each issue, you will find the boundary description you should use as well as the list of Approved Maps.  Other attribute information will be found in the Federal Register documents.  Occasionally, the text in the issue is missing either the Approved Maps or the starting point for the boundary description (due to the automated process that generated this text).  To find the missing text, refer to the "src" link (meaning "source") to the official Federal Register text.
-  2. Add the "In Progress" label to the Issue for the AVA you've chosen to work on.  Write a comment for your chosen AVA that you are working on the boundary.  If possible, assign the task to yourself (on the top of the right side panel of options).  Add additional comments if any issues or questions arise about this particular AVA.
+  2. Write a comment for your chosen AVA that you are working on the boundary.  Michele will change the status to "In Progress" when she sees the comment.  Add additional comments if any issues or questions arise about this particular AVA.  The issue for [Arroyo Seco](https://github.com/UCDavisLibrary/ava/issues/24) is a good example of the kinds of troubles and questions to track on an issue for an AVA.
 
 ### Resources:
 Hein Online Federal Register Library: http://heinonline.org/HOL/Index?collection=fedreg&set_as_cursor=clear 
@@ -24,7 +24,7 @@ Alcohol and Tobacco Tax and Trade Bureau’s (TTB) list of currently established
 2. On the right side of the map in the side panel, select the scale of the Approved Map.
 3.	Zoom into the general region of the AVA, and the names of the maps will appear inside the index bounding boxes.  Alternatively you can search for the name of the approved map with the Map Name search at the top of the side panel.
 4. Select the map of interest by clicking inside the box.
-5. In the lower section of the side panel, a dialog box should appear with details about the map you selected and the maps that are available.  Identify the option with date and edition that corresponds to the Approved Map listed in the Federal Register document.  
+5. In the lower section of the side panel, a dialog box should appear with details about the map you selected and the maps that are available.  Identify the option with date and edition that corresponds to the Approved Map listed in the Federal Register document.  Note that TopoView lists the date the original map was created and the year it was printed, NOT the revision year. If you really want to be sure you're getting the exact map, you can preview the map by downloading the .jpg or .pdf option and then look at the lower right corner of the map for the revision informatiomation.  
 
     i. For example, one of the Approved Maps for the Coombsville AVA is listed as “Napa Quadrangle, California-Napa Co., 1951, Photorevised 1980”.  For this map, select the Napa map with a date of 1951 and edition of 1980.  
     
@@ -67,6 +67,22 @@ Once you've set up your fork, you'll need to update it regularly to make sure yo
         git pull upstream master
     ```
 
+In the event that your fork gets too messy, you can do a **hard reset** to remove everything from your fork and replace it with what is on the UC Davis AVA repository. 
+1. Copy any data you've been working on into a folder not affected by git. 
+2. Run a few lines of code to reset your repository:
+    1. The first time you'll need to set an upstream repository for your fork:
+    ```
+        git remote add upstream git://github.com/UCDavisLibrary/ava.git
+    ```
+    
+    2. Now the reset:
+    ```
+    git fetch upstream
+    git checkout master
+    git reset --hard upstream/master  
+    git push origin master --force
+    ```
+3. Finally, move any data you've been working on back into it's folder.  Now you can do a pull request like you normally would.
 
 ## Digitizing the Boundary
 ### Set Up Your Project File:
@@ -107,11 +123,31 @@ The AVA Project team has made a [Video](https://drive.google.com/open?id=0B9xw97
 
 ## Submit your changes to the AVA GitHub Repository
 1.	In GitHub for Desktop, you should see a list of changes you’ve made to the files.  Fill in the Summary and Description fields at the bottom of the window and then click the Commit button.  https://guides.github.com/activities/forking/#making-changes 
-2.	If you are ready to incorporate your changes into the main branch, submit a pull request for your fork: https://help.github.com/articles/creating-a-pull-request-from-a-fork/ 
+2.  You should now see the "Push" button at the top of your GitHub for Desktop Screen.  Click the "Push" button to send your changes to YOUR online repository.
+2.	If you are ready to incorporate your changes into the main branch (i.e. send finished data to the UC Davis repository), submit a pull request for your fork: https://help.github.com/articles/creating-a-pull-request-from-a-fork/ 
 3.  If your changes are accepted, project adminsitrators will incorporated your changes and close the issue for your AVA.  If there is any problems or questions, the project administrators will contact you.
 
 ## Notes for pull request reviewers:
-If you want to accept only some of the changes offered in a pull request, you will need to use the command line to [cherry-pick](https://mattstauffer.co/blog/how-to-merge-only-specific-commits-from-a-pull-request) the committs that you want to keep.
+If a pull request cannot be merged automatically by GitHub, you can remove or modify files before you merge them into the main repository.
+
+Step 1: In the command line tool, from your project repository, check out a new branch and test the changes.
+```
+git checkout -b [repository user name]-master master
+git pull https://github.com/gdmf/ava.git master
+```
+
+Step 2: Remove or modify files on your computer.
+
+Step 3: Committ the changes.
+
+Step 4: Merge the changes and update on GitHub.
+```
+git checkout master
+git merge --no-ff [repository user name]-master
+git push origin master
+```
+
+Another Option: If you want to accept only some of the changes offered in a pull request, you will need to use the command line to [cherry-pick](https://mattstauffer.co/blog/how-to-merge-only-specific-commits-from-a-pull-request) the committs that you want to keep.
 
 ## Additional Reference Material:
 1.	QGIS editing geometry manual: http://docs.qgis.org/2.14/en/docs/user_manual/working_with_vector/editing_geometry_attributes.html 

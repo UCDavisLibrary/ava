@@ -18,7 +18,7 @@ While the creators of this project assume contributors have a good understanding
    1. [GitHub Desktop](https://desktop.github.com/)
 
 1. __Tutorials__:
-   1. QGIS: http://docs.qgis.org/2.14/en/docs/training_manual/map_composer/index.html
+   1. QGIS: https://docs.qgis.org/2.18/en/docs/training_manual/
       1. Section 2: The Interface
       1. Section 3 (just the basics, not the SVG fill section): Creating a Basic Map
       1. Section 6 (through 6.2.2): Creating Vector Data
@@ -32,4 +32,4 @@ While the creators of this project assume contributors have a good understanding
    1. Public Land Survey System (PLSS): https://nationalmap.gov/small_scale/a_plss.html
    
 ## Getting Help
-Don't hesitate to ask questions as you're getting started or at any point in the process.
+Don't hesitate to ask questions as you're getting started or at any point in the process.   
