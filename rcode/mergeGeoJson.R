@@ -75,7 +75,14 @@ library(dplyr)
 c <- Sys.time()
 vectsf <- lapply(gj, read_sf)
 
-allsf <- do.call(rbind, vectsf)
+#Bug, if date field has NA it's a char but valid dates are doubles, can't bind those
+#Option convert after reading to char, or read as char to begin with
+vectsf2 <- lapply(vectsf, function(d){
+  d$created <- as.character(d$created)
+  return(d)
+  })
+
+allsf <- do.call(rbind, vectsf2)
 
 allsf <- mutate_if(allsf, is.character, gsub, pattern="N/A", replacement=NA) 
 
