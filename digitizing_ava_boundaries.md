@@ -47,7 +47,7 @@ We’ll describe how to do this with the GitHub for Desktop tool, but you may us
 3.	Select the forked AVA repository on the left sides of the window.
 4.	In your computer’s file navigation system, navigate to your GitHub folder and open the AVAs folder.  Inside the folder for AVAs that haven’t been completed, find the AVA you want to work on and move the .geojson file to the “avas” folder.
 
-Once you've set up your fork, you'll need to update it regularly to make sure you have all the current files.  There is unfortunately no way to do this with the GitHub Desktop tool, but it's not too complicated to update it.
+***After your pull request is accepted OR it's been a while since you've updated your fork*** Once you've set up your fork, you'll need to update it regularly to make sure you have all the current files.  There is unfortunately no way to do this with the GitHub Desktop tool, but it's not too complicated to update it.
 1. Open GitHub Desktop
 1. Click on your fork to open it.
 1. Right click on the name of the fork and select "Open Command Prompt" or "Open in Git Shell" (depending on the version you have the text will be different).  A command line shell will open.  The path before the > should be where you store your data (probably the GitHub folder on your computer).
@@ -67,7 +67,7 @@ Once you've set up your fork, you'll need to update it regularly to make sure yo
         git pull upstream master
     ```
 
-In the event that your fork gets too messy, you can do a **hard reset** to remove everything from your fork and replace it with what is on the UC Davis AVA repository. 
+***When things go wrong*** In the event that your fork gets too messy (such as you have too many differences in your fork and you can't sort it out), you can do a **hard reset** to remove everything from your fork and replace it with what is on the UC Davis AVA repository. 
 1. Copy any data you've been working on into a folder not affected by git. 
 2. Run a few lines of code to reset your repository:
     1. The first time you'll need to set an upstream repository for your fork:
