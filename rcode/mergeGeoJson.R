@@ -5,6 +5,7 @@
 library(sf)
 library(dplyr)
 library(rgdal)
+library(lwgeom)
 
 # probably want to change the pattern to exclude or filter after to drop the all.geojson file
 avas <- list.files(path="./avas", pattern = "*json$", full.names = "TRUE")
