@@ -94,9 +94,11 @@ Version 1.0 will be released once all of the AVAs in California are completed.  
 
 [Michael Colby](https://www.library.ucdavis.edu/author/michael-colby/) (Librarian, Content Support Services)
 
+[Amber Reyes](https://github.com/amberreyes) (Student Employee, Data Management Program, from April - July 2017)
+
 [Yao Fang](https://github.com/fyfangyao) (Student Employee, Data Management Program, from October 2017 - June 2018)
 
-[Amber Reyes](https://github.com/amberreyes) (Student Employee, Data Management Program, from April - July 2017)
+[Soo Min Hur](https://github.com/SoominHur) (Student Employee, Data management PRogram, beginning in November 2019)
 
 **Consultants:**
 
@@ -127,6 +129,8 @@ Timothy Kwong (Undergraduate; Collaboratory Staff)
 [Sierra Mabanta](https://github.com/sierramabanta) (Intern, UC Davis Center for Spatial Sciences)
 
 [Brian Lee](https://github.com/bsllee) (UC Davis Economics Alumni)
+
+[Innisfree McKinnon](https://github.com/InnisfreeM) (Assistant Professor, University of Wisconsin, Stout)
 
 # Awards & Publications
 
