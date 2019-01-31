@@ -132,6 +132,8 @@ Timothy Kwong (Undergraduate; Collaboratory Staff)
 
 [Innisfree McKinnon](https://github.com/InnisfreeM) (Assistant Professor, University of Wisconsin, Stout)
 
+[Daniel O'Brien](https://github.com/UCDavisLibrary/ava/pulls?q=is%3Apr+author%3Adannyo33)
+
 # Awards & Publications
 
 2018 [Sautter Award](https://www.ucop.edu/information-technology-services/initiatives/sautter-award-program/award-winners-and-applications/2018.html) - Silver - for Innovation in Information Technologies, awarded by the University of California Office of the President.
