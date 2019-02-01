@@ -132,7 +132,9 @@ Timothy Kwong (Undergraduate; Collaboratory Staff)
 
 [Innisfree McKinnon](https://github.com/InnisfreeM) (Assistant Professor, University of Wisconsin, Stout)
 
-[Daniel O'Brien](https://github.com/UCDavisLibrary/ava/pulls?q=is%3Apr+author%3Adannyo33)
+[Daniel O'Brien](https://github.com/dannyo33) (Intern, UC Davis Center for Spatial Sciences)
+
+[Anna Gard](https://github.com/amgard) (Intern, UC Davis Center for Spatial Sciences)
 
 # Awards & Publications
 
