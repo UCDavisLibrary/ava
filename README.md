@@ -136,9 +136,13 @@ Timothy Kwong (Undergraduate; Collaboratory Staff)
 
 [Anna Gard](https://github.com/amgard) (Intern, UC Davis Center for Spatial Sciences)
 
+[Alexenia Aldape](https://github.com/Alexenia) (UC Davis Alumni & Intern, UC Davis Center for Spatial Sciences)
+
 # Awards & Publications
 
 2018 [Sautter Award](https://www.ucop.edu/information-technology-services/initiatives/sautter-award-program/award-winners-and-applications/2018.html) - Silver - for Innovation in Information Technologies, awarded by the University of California Office of the President.
+
+Myles, C.C., M.M. Tobias, & I. McKinnon. 2019. “‘A big fish in a small pond’: How Arizona wine country was made” in *Agritourism, Wine Tourism, Craft Beer Tourism: Local Responses to peripherality through tourism niches.*  Maria Giulia Pezzi (GSSI), Alessandra Faggian (GSSI), Neil Reid (University of Toledo, OH), eds.  **In press.**
 
 Have you used the AVA project in your work?  Please let us know! mmtobias [at] ucdavis.edu
 
