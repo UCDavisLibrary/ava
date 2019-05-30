@@ -59,12 +59,13 @@ cfr_index	9.212
 cfr_revision_history | text | the string of text citing the documents that currently apply to this boundary definition |	[T.D. TTB-71, 73 FR 64202, Oct. 29, 2008]
 approved_maps | text | the approved maps listed for the boundary defintion |(1) Ritter Ridge, Calif., 1958; Photorevised 1974; (2) Sleepy Valley, CA, 1995; (3) Del Sur, CA, 1995; and (4) Lake Hughes, CA, 1995.
 boundary_description | text | the official boundary description |
-used_maps	| text | the maps used to digitize the boundary |
-last_revised | date | the last revision that applies to this boundary |
-lcsh	| text | (optional) Library of Congress Subject Heading |
+used_maps	| text | the maps the digitizer used to digitize the boundary |
+valid_start | date | the date this boundary revision began (applies only if there were revisions to the boundary) |
+valid_end | date | the last date this revision was valid (applies only if there were revisions to the boundary) |
+lcsh	| text | (optional) Library of Congress Subject Heading; Generally UCD Library staff has filled these in and will add them as new subject headings are approved |
 sameas	| text | (optional) linked data URIs for terms that are identical to this AVA |
 
-*Note:* Contributors using QGIS 2.18.10 or older with GDAL 2.2.0 should fill in any blanks in their attribute table with N/A due to a known issue with how unset values are handled. A [more permanent fix](https://issues.qgis.org/issues/16812) is in the works.
+*Note:* Contributors using QGIS 2.18.10 or older with GDAL 2.2.0 should fill in any blanks in their attribute table with N/A due to a known issue with how unset values are handled. A [more permanent fix](https://issues.qgis.org/issues/16812) is in the works.  Contributors using QGIS 3.0 have not experienced this issue and it is now the version we recommend.
 
 # How can you access the data?
 
