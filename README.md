@@ -27,14 +27,17 @@ Wine Institute: https://www.wineinstitute.org/resources/avas
 1. Create a Pull Request
 
 ## Progress
-As of November 6, 2018, 180 AVAs are complete.  61 remain to be completed nation-wide.
-AVAs for California, Arizona, & Colorado are complete.
+As of May 30, 2019, 198 AVAs are complete.  43 remain to be completed nation-wide.
+AVAs for California, Arizona, & Colorado are complete.  California's boundaries are undergoing a quality control process to ensure the boundaries are as correct as we can make them.
 
 ### UC Davis
 UC Davis completed boundaries for the northern California, Arizona, and Colorado AVAs.  Issues marked with the "UC Davis" label are designated for UC Davis to work on.  They will continue adding AVAs moving east across the county.
 
 ### UC Santa Barbara
-UC Santa Barbara completed boundaries for the southern California AVAs (marked with the "UC Santa Barbara" label in the Issues list) November 2017.  They are currently working on boundaries for Oregon and Washigton.
+UC Santa Barbara completed boundaries for the southern California AVAs (marked with the "UC Santa Barbara" label in the Issues list) November 2017 and have subsequently contributed many boundaries in Oregon and Washigton.
+
+### Virginia Tech
+Virginia Tech plans to complete boundaries in and around Virginia.  These boundaries are marked with the "Virginia Tech" label in the Issues list.
 
 ### Additional Partnerships
 University entities (departments, labs, research groups, etc.) or other organizations interested in becoming project partners should contact us.  We're happy to discuss new partnerships in building this and similar datasets!  A partnership is not necessary, however, to contribute.
@@ -80,7 +83,7 @@ You can download single .geojson files (including the avas.geojson file that has
 1. Save the file where you would like to keep it.  You may need to remove an additional .txt extension that may get automatically added to the file name.  You file extension should be .geojson
 
 # What is the long-term plan for this data?
-Version 1.0 will be released once all of the AVAs in California are completed.  The data will be offered as a fixed set of boundaries (no longer updated) here on our GitHub site but also in the UC Davis Library Digital Asset Management System.  Work will continue on additional AVA boundaries.  Definitions for additional versions will depend on partnerships and resource availability.
+Version 1.0 will be released once all of the AVAs in California are completed and proofed for quality.  The data will be offered as a fixed set of boundaries (no longer updated) here on our GitHub site but also in the UC Davis Library Digital Asset Management System.  Work will continue on additional AVA boundaries.  Definitions for additional versions will depend on partnerships and resource availability.
 
 # UC Davis Library Project Team:
 [Vessela Ensberg](https://www.library.ucdavis.edu/author/vessela-ensberg/)  (Program Director, Data Management Program)
