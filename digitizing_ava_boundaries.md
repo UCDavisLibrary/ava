@@ -163,7 +163,7 @@ git push origin master
 Another Option: If you want to accept only some of the changes offered in a pull request, you will need to use the command line to [cherry-pick](https://mattstauffer.co/blog/how-to-merge-only-specific-commits-from-a-pull-request) the committs that you want to keep.
 
 ## Additional Reference Material:
-1.	QGIS editing geometry manual: http://docs.qgis.org/2.14/en/docs/user_manual/working_with_vector/editing_geometry_attributes.html 
+1.	QGIS editing geometry manual: http://docs.qgis.org/3.4/en/docs/user_manual/working_with_vector/editing_geometry_attributes.html 
 2.	Understanding the GitHub Flow: https://guides.github.com/introduction/flow/
 3.	USGS Topographic Map Symbols: https://pubs.usgs.gov/gip/TopographicMapSymbols/topomapsymbols.pdf 
 
