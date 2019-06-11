@@ -39,6 +39,14 @@ allsf <- arrange(allsf,desc(area))
 write_sf(allsf, dsn="avas.geojson", driver="GeoJSON", delete_dsn=TRUE)
 #geojson_write(allsf, file="avas-sf.geojson", overwrite=TRUE, convert_wgs84 = TRUE)
 
+
+# write a file with just the current AVAs ---------------------------------
+
+allsf[which(is.na(allsf$valid_end)),]
+
+
+
+
 d <- Sys.time()
 
 d-c
