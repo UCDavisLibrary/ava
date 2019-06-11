@@ -119,6 +119,8 @@ Each AVA has a template generated automatically and placed at the centroid of th
 
 The AVA Project team has made a [Video](https://drive.google.com/open?id=0B9xw97DGLpqAMkNOc05GOGhoZ2M) of the process of digitzing an AVA boundary.
 
+![alt text](https://github.com/UCDavisLibrary/ava/blob/master/images/Example_AVA_Coombsville.PNG "Example of a completed AVA boundary")
+
 ### Adding Historical AVA Boundaries
 This project currently is only creating the boundaries described in the Issues tab of our repository, however, we anticipate beginning to add historical boundaries in the near future.  This is how we anticipate dealing with those boundaries.
 
@@ -129,10 +131,12 @@ Within the file for an AVA, we will create polygons for each official boundary r
  * `removed`: the date the **AVA** was terminated
  * `valid_start`: the date the **boundary** officially began
  * `valid_end`: the last date the **boundary** was in use (typically the day before the next revision took effect)
+ * 'ava_id': for non-current boundaries, append and underscore and the date for the 'valid_start' in YYYYMMDD format.  Example: redwood_valley_19970221
  
  We will process the data to offer the avas.geojson file with only the current polygons, but the historical boundaries will be available as well.
+ 
+ An example of a completed AVA with historical boundaries can be found in the Redwood Valley AVA boundary in the [history-example Branch](https://github.com/UCDavisLibrary/ava/tree/history-example) of this repository.
 
-![alt text](https://github.com/UCDavisLibrary/ava/blob/master/images/Example_AVA_Coombsville.PNG "Example of a completed AVA boundary")
 
 ## Submit your changes to the AVA GitHub Repository
 1.	In GitHub for Desktop, you should see a list of changes you’ve made to the files.  Fill in the Summary and Description fields at the bottom of the window and then click the Commit button.  https://guides.github.com/activities/forking/#making-changes 
