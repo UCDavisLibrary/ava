@@ -45,7 +45,7 @@ allsf <- arrange(allsf,desc(area))
 current.avas<-allsf[which(is.na(allsf$valid_end)),]
 write_sf(current.avas, dsn="avas.geojson", driver="GeoJSON", delete_dsn=TRUE)
 
-historic.avas<-allsf[which(is.na(allsf$valid_end)),]
+historic.avas<-allsf[which(!is.na(allsf$valid_end)),]
 write_sf(historic.avas, dsn="avas_historic.geojson", driver="GeoJSON", delete_dsn=TRUE)
 
 write_sf(allsf, dsn="avas_allboundaries.geojson", driver="GeoJSON", delete_dsn=TRUE)
