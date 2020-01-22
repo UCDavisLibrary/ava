@@ -147,6 +147,8 @@ Timothy Kwong (Undergraduate; Collaboratory Staff)
 
 [Steve De Long](https://github.com/sdelong)
 
+[Arturo P. Rios](https://github.com/APRios)
+
 # Awards, Publications, & Projects Using Our Data
 
 2018 [Sautter Award](https://www.ucop.edu/information-technology-services/initiatives/sautter-award-program/award-winners-and-applications/2018.html) - Silver - for Innovation in Information Technologies, awarded by the University of California Office of the President.
