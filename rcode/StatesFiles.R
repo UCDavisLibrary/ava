@@ -16,7 +16,7 @@ temp.directory<-"C:/Users/mmtobias/Downloads/avas_by_state"
 avas<-geojson_read("avas.geojson", what="sp")
 
 #List of states
-states<-c("AZ", "CA", "CO")
+states<-c("AR", "AZ", "CA", "CO", "CT", "GA", "IA", "IL", "IN", "LA", "KY", "MD", "MI", "MO", "MS", "NC", "NJ", "NY", "OH", "PA", "RI", "TN", "VA", "WA", "WI", "WV")
 
 #Loop thought states
 for (i in 1:length(states)){
