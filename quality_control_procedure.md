@@ -11,4 +11,4 @@ The process should proceed as follows:
   * the boundary follows the description as best it can.  Make changes as necessary.
 5. Update the Used Maps column to add any additional resources you used.  Whenever possible, please only use the Approved Maps.
 1. Post any questions or discussion points on the issue for the boundary you are reviewing.
-1. Submit a pull request for changes you made - please submit each boundary in it's own pull request.
+1. Submit a pull request for changes you made - please submit each boundary in it's own pull request.  Or, if the boundary and attribute table don't need edits, comment on the Issue for the boundary that you've checked it and it doesn't need edits.
