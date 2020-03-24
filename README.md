@@ -82,9 +82,9 @@ You can download single .geojson files (including the avas.geojson file that has
 # What is the long-term plan for this data?
 Version 1.0 will be released once all of the AVAs in California are completed and proofed for quality.  The data will be offered as a fixed set of boundaries (no longer updated) here on our GitHub site but also in the UC Davis Library Digital Asset Management System.  Work will continue on additional AVA boundaries.  Definitions for additional versions will depend on partnerships and resource availability.
 
-# UC Davis Library Project Team:
+# UC Davis DataLab & Library Project Team:
 
-[Michele Tobias](https://github.com/micheletobias) (GIS Data Curator, DataLab, Data & Digital Scholarship)
+[Michele Tobias](https://github.com/micheletobias) (Geospatial Data Specialist, DataLab, Data & Digital Scholarship)
 
 [Vessela Ensberg](https://www.library.ucdavis.edu/author/vessela-ensberg/)  (Online Strategies)
 
@@ -118,6 +118,12 @@ Version 1.0 will be released once all of the AVAs in California are completed an
 Maga Kim (Undergraduate; Collaboratory Staff)
 
 Timothy Kwong (Undergraduate; Collaboratory Staff)
+
+# Virginia Tech Project Team:
+
+[Peter Sforza](https://www.cgit.vt.edu/people/biographies/peter-sforza.html) (Director, Center for Geospatial Information Technology)
+
+[Eric West](https://github.com/ericallanwest) (Geospatial Analyst, Center for Geospatial Information Technology)
 
 # Other Contributors
 [Alex Mandel](https://github.com/wildintellect) (UC Davis Center for Spatial Sciences)
