@@ -18,17 +18,14 @@ TTB: https://www.ttb.gov/wine/ava.shtml
 Wine Institute: https://www.wineinstitute.org/resources/avas
 
 ## How Can You Contribute?
-1. Read the [GettingStarted.md](https://github.com/UCDavisLibrary/ava/blob/master/GettingStarted.md) & [digitizing_ava_boundaries.md](https://github.com/UCDavisLibrary/ava/blob/master/digitizing_ava_boundaries.md) files to familiarize yourself with the policies and procedures for this project.
-1. Fork this repository.
-1. Pick a boundary to work on:
-    * Check the Issues list to see which AVAs are available and claim the one you want to work on.
-    * When viewed online in GitHub, the [avas.geojson file](https://github.com/UCDavisLibrary/ava/blob/master/avas.geojson) will show you a map of what's completed (complicated boundaries) and in need of work (triangles at the county's centroid). This is helpful for finding the general location of an AVA.
-1. Make a boundary
-1. Create a Pull Request
+Read the [GettingStarted.md](https://github.com/UCDavisLibrary/ava/blob/master/GettingStarted.md), [digitizing_ava_boundaries.md](https://github.com/UCDavisLibrary/ava/blob/master/digitizing_ava_boundaries.md), and [quality control procedure.md](/quality_control_procedure.md) files to familiarize yourself with the policies and procedures for this project.
+
+The project will now shift to creating historical boundaries and to quality control.
 
 ## Progress
-As of May 30, 2019, 198 AVAs are complete.  43 remain to be completed nation-wide.
-AVAs for California, Arizona, & Colorado are complete.  California's boundaries are undergoing a quality control process to ensure the boundaries are as correct as we can make them.
+As of March 20, 2020, California's boundaries are complete and have undergone our quality control procedure. We feel that the current data for California is of high quality and suitable for use in academic research, however, please submit an Issue if you find additional areas of concern in the dataset so we can address them.
+
+Additionally, most of the remaining AVA boundaries outside of California have been completed and we are beginning quality control procedures on these data.
 
 ### UC Davis
 UC Davis completed boundaries for the northern California, Arizona, and Colorado AVAs.  Issues marked with the "UC Davis" label are designated for UC Davis to work on.  They will continue adding AVAs moving east across the county.
