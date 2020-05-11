@@ -25,7 +25,7 @@ The project will now shift to creating historical boundaries and to quality cont
 ## Progress
 As of March 20, 2020, California's boundaries are complete and have undergone our quality control procedure. We feel that the current data for California is of high quality and suitable for use in academic research, however, please submit an Issue if you find additional areas of concern in the dataset so we can address them.
 
-Additionally, most of the remaining AVA boundaries outside of California have been completed and we are beginning quality control procedures on these data.
+All the remaining AVA boundaries outside of California have been completed, as of May 11,2020, and we are beginning quality control procedures on these data.
 
 ### UC Davis
 UC Davis completed boundaries for the northern California, Arizona, and Colorado AVAs.  Issues marked with the "UC Davis" label are designated for UC Davis to work on.  They will continue adding AVAs moving east across the county.
@@ -156,7 +156,7 @@ Timothy Kwong (Undergraduate; Collaboratory Staff)
 
 2018 [Sautter Award](https://www.ucop.edu/information-technology-services/initiatives/sautter-award-program/award-winners-and-applications/2018.html) - Silver - for Innovation in Information Technologies, awarded by the University of California Office of the President.
 
-Myles, C.C., M.M. Tobias, & I. McKinnon. 2019. “‘A big fish in a small pond’: How Arizona wine country was made” in *Agritourism, Wine Tourism, Craft Beer Tourism: Local Responses to peripherality through tourism niches.*  Maria Giulia Pezzi (GSSI), Alessandra Faggian (GSSI), Neil Reid (University of Toledo, OH), eds.  **In press.**
+Myles, C.C., M.M. Tobias, & I. McKinnon. 2020. “‘A big fish in a small pond’: How Arizona wine country was made” in *Agritourism, Wine Tourism, Craft Beer Tourism: Local Responses to peripherality through tourism niches.*  Maria Giulia Pezzi (GSSI), Alessandra Faggian (GSSI), Neil Reid (University of Toledo, OH), eds.  **In press.**
 
 Bizou Wine's ["Mapping Our Wines"](http://www.bizouwines.com/mapping-our-wines)
 
