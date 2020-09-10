@@ -1,6 +1,6 @@
 # American Viticultural Areas (AVA) Project
 
-The UC Davis library, in conjunction with UCSB, other partner organizations, and contributions from the general public, will create a publicly accessible version American Viticultural Areas boundaries.  Using the text descriptions from the ATPF Code of regulations, we will build this data from the official descriptions.  These data will be made freely available.  This dataset will provide wine researchers with an important tool as they examine the scientific, economic and historical aspects of viticulture.
+The UC Davis library, in conjunction with UCSB, Virginia Tech, other partner organizations, and contributions from the general public, will create a publicly accessible version American Viticultural Areas boundaries.  Using the text descriptions from the ATPF Code of regulations, we will build this data from the official descriptions.  These data will be made freely available.  This dataset will provide wine researchers with an important tool as they examine the scientific, economic and historical aspects of viticulture.
 
 Anyone can contribute to this project.
 
@@ -18,17 +18,14 @@ TTB: https://www.ttb.gov/wine/ava.shtml
 Wine Institute: https://www.wineinstitute.org/resources/avas
 
 ## How Can You Contribute?
-1. Read the [GettingStarted.md](https://github.com/UCDavisLibrary/ava/blob/master/GettingStarted.md) & [digitizing_ava_boundaries.md](https://github.com/UCDavisLibrary/ava/blob/master/digitizing_ava_boundaries.md) files to familiarize yourself with the policies and procedures for this project.
-1. Fork this repository.
-1. Pick a boundary to work on:
-    * Check the Issues list to see which AVAs are available and claim the one you want to work on.
-    * When viewed online in GitHub, the [avas.geojson file](https://github.com/UCDavisLibrary/ava/blob/master/avas.geojson) will show you a map of what's completed (complicated boundaries) and in need of work (triangles at the county's centroid). This is helpful for finding the general location of an AVA.
-1. Make a boundary
-1. Create a Pull Request
+Read the [GettingStarted.md](https://github.com/UCDavisLibrary/ava/blob/master/GettingStarted.md), [digitizing_ava_boundaries.md](https://github.com/UCDavisLibrary/ava/blob/master/digitizing_ava_boundaries.md), and [quality control procedure.md](/quality_control_procedure.md) files to familiarize yourself with the policies and procedures for this project.
+
+The project will now shift to creating historical boundaries and to quality control and we welcome contributions to both of these efforts.
 
 ## Progress
-As of May 30, 2019, 198 AVAs are complete.  43 remain to be completed nation-wide.
-AVAs for California, Arizona, & Colorado are complete.  California's boundaries are undergoing a quality control process to ensure the boundaries are as correct as we can make them.
+As of March 20, 2020, California's boundaries are complete and have undergone our quality control procedure. We feel that the current data for California is of high quality and suitable for use in academic research, however, please submit an Issue if you find additional areas of concern in the dataset so we can address them.
+
+All the remaining AVA boundaries outside of California have been completed, as of May 11,2020, and we are beginning quality control procedures on these data.
 
 ### UC Davis
 UC Davis completed boundaries for the northern California, Arizona, and Colorado AVAs.  Issues marked with the "UC Davis" label are designated for UC Davis to work on.  They will continue adding AVAs moving east across the county.
@@ -85,10 +82,11 @@ You can download single .geojson files (including the avas.geojson file that has
 # What is the long-term plan for this data?
 Version 1.0 will be released once all of the AVAs in California are completed and proofed for quality.  The data will be offered as a fixed set of boundaries (no longer updated) here on our GitHub site but also in the UC Davis Library Digital Asset Management System.  Work will continue on additional AVA boundaries.  Definitions for additional versions will depend on partnerships and resource availability.
 
-# UC Davis Library Project Team:
-[Vessela Ensberg](https://www.library.ucdavis.edu/author/vessela-ensberg/)  (Program Director, Data Management Program)
+# UC Davis DataLab & Library Project Team:
 
-[Michele Tobias](https://github.com/micheletobias) (GIS Data Curator, Data Management Program)
+[Michele Tobias](https://github.com/micheletobias) (Geospatial Data Specialist, DataLab, Data & Digital Scholarship)
+
+[Vessela Ensberg](https://www.library.ucdavis.edu/author/vessela-ensberg/)  (Online Strategies)
 
 [Quinn Hart](https://github.com/qjhart) (Digital Applications)
 
@@ -102,7 +100,9 @@ Version 1.0 will be released once all of the AVAs in California are completed an
 
 [Yao Fang](https://github.com/fyfangyao) (Student Employee, Data Management Program, from October 2017 - June 2018)
 
-[Soo Min Hur](https://github.com/SoominHur) (Student Employee, Data management PRogram, beginning in November 2019)
+[Soo Min Hur](https://github.com/SoominHur) (Student Employee, Data Management Program, November 2018 - June 2019)
+
+[David Li](https://github.com/davidkli) (Student Employee, DataLab, starting October 2019)
 
 **Consultants:**
 
@@ -118,6 +118,12 @@ Version 1.0 will be released once all of the AVAs in California are completed an
 Maga Kim (Undergraduate; Collaboratory Staff)
 
 Timothy Kwong (Undergraduate; Collaboratory Staff)
+
+# Virginia Tech Project Team:
+
+[Peter Sforza](https://www.cgit.vt.edu/people/biographies/peter-sforza.html) (Director, Center for Geospatial Information Technology)
+
+[Eric West](https://github.com/ericallanwest) (Geospatial Analyst, Center for Geospatial Information Technology)
 
 # Other Contributors
 [Alex Mandel](https://github.com/wildintellect) (UC Davis Center for Spatial Sciences)
@@ -142,11 +148,15 @@ Timothy Kwong (Undergraduate; Collaboratory Staff)
 
 [Alexenia Aldape](https://github.com/Alexenia) (UC Davis Alumni & Intern, UC Davis Center for Spatial Sciences)
 
+[Steve De Long](https://github.com/sdelong)
+
+[Arturo P. Rios](https://github.com/APRios)
+
 # Awards, Publications, & Projects Using Our Data
 
 2018 [Sautter Award](https://www.ucop.edu/information-technology-services/initiatives/sautter-award-program/award-winners-and-applications/2018.html) - Silver - for Innovation in Information Technologies, awarded by the University of California Office of the President.
 
-Myles, C.C., M.M. Tobias, & I. McKinnon. 2019. “‘A big fish in a small pond’: How Arizona wine country was made” in *Agritourism, Wine Tourism, Craft Beer Tourism: Local Responses to peripherality through tourism niches.*  Maria Giulia Pezzi (GSSI), Alessandra Faggian (GSSI), Neil Reid (University of Toledo, OH), eds.  **In press.**
+Myles, C.C., M.M. Tobias, & I. McKinnon. 2020. “‘A big fish in a small pond’: How Arizona wine country was made” in *Agritourism, Wine Tourism, Craft Beer Tourism: Local Responses to peripherality through tourism niches.*  Maria Giulia Pezzi (GSSI), Alessandra Faggian (GSSI), Neil Reid (University of Toledo, OH), eds.  **In press.**
 
 Bizou Wine's ["Mapping Our Wines"](http://www.bizouwines.com/mapping-our-wines)
 

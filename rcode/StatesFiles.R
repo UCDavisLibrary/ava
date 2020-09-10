@@ -2,6 +2,7 @@
 
 #Load Libraries
 library(geojson)
+library(geojsonio)
 library(rgdal)
 library(zip)
 
@@ -15,7 +16,7 @@ temp.directory<-"C:/Users/mmtobias/Downloads/avas_by_state"
 avas<-geojson_read("avas.geojson", what="sp")
 
 #List of states
-states<-c("CA", "AZ")
+states<-c('AR', 'AZ', 'CA', 'CO', 'CT', 'GA', 'IA', 'ID', 'IL', 'IN', 'KY', 'LA', 'MA', 'MD', 'MI', 'MN', 'MO', 'MS', 'NC', 'NJ', 'NM', 'NY', 'OH', 'OR', 'PA', 'RI', 'TN', 'TX', 'VA', 'VI', 'WA', 'WI', 'WV')
 
 #Loop thought states
 for (i in 1:length(states)){
