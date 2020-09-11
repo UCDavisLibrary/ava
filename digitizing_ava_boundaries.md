@@ -115,14 +115,13 @@ Each AVA has a template generated automatically and placed at the centroid of th
 5.	When you are done digitizing, fill out the attribute data based on the text of the official Federal Register documents.  The definitions of the attributes are found in the [README.md file](https://github.com/UCDavisLibrary/ava/blob/master/README.md).  *Note:* Contributors using QGIS 3.x have reported an error saving .geojson files.  It appears as if QGIS does not save changes to geojson files, however changes to files get saved in a file with the extension .geojson.tmp in the same folder as the original .geojson file.  Remove the original .geojson file and change the extension of the .geojson.tmp to simply be .geojson.  Open this file in QGIS to make sure it is readable.  This solution solves the majority of the issues created by this bug.
 6.	Save Layer Edits.
 7.	Toggle Editing off.
-8.	Close QGIS if you’re done making new AVAs, or start over from Step 3e above to make another.
 
 The AVA Project team has made a [Video](https://drive.google.com/open?id=0B9xw97DGLpqAMkNOc05GOGhoZ2M) of the process of digitzing an AVA boundary.
 
 ![alt text](https://github.com/UCDavisLibrary/ava/blob/master/images/Example_AVA_Coombsville.PNG "Example of a completed AVA boundary")
 
 ### Adding Historical AVA Boundaries
-This project currently is only creating the boundaries described in the Issues tab of our repository, however, we anticipate beginning to add historical boundaries in the near future.  This is how we anticipate dealing with those boundaries.
+This project currently is only creating the boundaries described in the Issues tab of our repository, however, we anticipate beginning to add historical boundaries in the near future.  Historical boundaries should be submitted to the history-example branch.  This is how we anticipate dealing with those boundaries.
 
 We will retain our current structure of having one .geojson file for each named AVA.
 
