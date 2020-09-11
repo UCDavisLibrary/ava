@@ -27,6 +27,8 @@ As of March 20, 2020, California's boundaries are complete and have undergone ou
 
 All the remaining AVA boundaries outside of California have been completed, as of May 11,2020, and we are beginning quality control procedures on these data.
 
+New AVAs that were approved by the TTB between June and October 2020 are in the process of being added to our dataset.
+
 ### UC Davis
 UC Davis completed boundaries for the northern California, Arizona, and Colorado AVAs.  Issues marked with the "UC Davis" label are designated for UC Davis to work on.  They will continue adding AVAs moving east across the county.
 
