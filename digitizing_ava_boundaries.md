@@ -169,8 +169,3 @@ Another Option: If you want to accept only some of the changes offered in a pull
 1.	QGIS editing geometry manual: http://docs.qgis.org/3.4/en/docs/user_manual/working_with_vector/editing_geometry_attributes.html 
 2.	Understanding the GitHub Flow: https://guides.github.com/introduction/flow/
 3.	USGS Topographic Map Symbols: https://pubs.usgs.gov/gip/TopographicMapSymbols/topomapsymbols.pdf 
-
------------------------------------------------------------------------------------------------------
-Considerations for post-processing:
-1.	Densify the lines for areas with large distances between points so when people re-project the file it won’t distort.
-
