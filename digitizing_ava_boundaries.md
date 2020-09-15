@@ -134,7 +134,7 @@ Within the file for an AVA, we will create polygons for each official boundary r
  
  We will process the data to offer the avas.geojson file with only the current polygons, but the historical boundaries will be available as well.
  
- An example of a completed AVA with historical boundaries can be found in the Redwood Valley AVA boundary in the [history-example Branch](https://github.com/UCDavisLibrary/ava/tree/history-example) of this repository.
+ An example of completed AVAs with historical boundaries can be found in the Redwood Valley and Outer Coastal Plains AVA boundary in the [history-example Branch](https://github.com/UCDavisLibrary/ava/tree/history-example) of this repository.
 
 
 ## Submit your changes to the AVA GitHub Repository
