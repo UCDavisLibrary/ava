@@ -160,7 +160,7 @@ Timothy Kwong (Undergraduate; Collaboratory Staff)
 
 Myles, C.C., M.M. Tobias, & I. McKinnon. 2020. “‘A big fish in a small pond’: How Arizona wine country was made” in [*Agritourism, Wine Tourism, Craft Beer Tourism: Local Responses to peripherality through tourism niches.*](https://www.routledge.com/Agritourism-Wine-Tourism-and-Craft-Beer-Tourism-Local-Responses-to-Peripherality/Pezzi-Faggian-Reid/p/book/9781138614413)  Maria Giulia Pezzi (GSSI), Alessandra Faggian (GSSI), Neil Reid (University of Toledo, OH), eds.
 
-Cantu, et al. 2021. [Investigating the impact of regionality on the sensorial and chemical aging characteristics of Pinot noir grown throughout the U.S. West coast.](Investigating the impact of regionality on the sensorial and chemical aging characteristics of Pinot noir grown throughout the U.S. West coast).  *Food Chemistry* 337(2021).
+Cantu, et al. 2021. [Investigating the impact of regionality on the sensorial and chemical aging characteristics of Pinot noir grown throughout the U.S. West coast.](https://www.sciencedirect.com/science/article/abs/pii/S030881462031582X).  *Food Chemistry* 337(2021).
 
 Bizou Wine's ["Mapping Our Wines"](http://www.bizouwines.com/mapping-our-wines)
 
