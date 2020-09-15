@@ -7,11 +7,13 @@
   2. Write a comment for your chosen AVA that you are working on the boundary.  Michele will change the status to "In Progress" when she sees the comment.  Add additional comments if any issues or questions arise about this particular AVA.  The issue for [Arroyo Seco](https://github.com/UCDavisLibrary/ava/issues/24) is a good example of the kinds of troubles and questions to track on an issue for an AVA.
 
 ### Resources:
-Hein Online Federal Register Library: http://heinonline.org/HOL/Index?collection=fedreg&set_as_cursor=clear 
+[Hein Online Federal Register Library](http://heinonline.org/HOL/Index?collection=fedreg&set_as_cursor=clear) (UC Davis affiliates may need to log in to the campus VPN to get access)
 
-Wine Institute’s list of documents establishing the original AVA boundaries:	https://www.wineinstitute.org/resources/avas
+[GovInfo](https://www.govinfo.gov/) - free online source for governement documents
 
-Alcohol and Tobacco Tax and Trade Bureau’s (TTB) list of currently established AVAs:	https://www.ttb.gov/wine/us_by_ava.shtml 
+Wine Institute’s list of [documents establishing the original AVA boundaries](https://www.wineinstitute.org/resources/avas)
+
+Alcohol and Tobacco Tax and Trade Bureau’s (TTB) list of [currently established AVAs](https://www.ttb.gov/wine/us_by_ava.shtml)
 
 
 ### Review the available Federal Register document for your AVA of interest  
