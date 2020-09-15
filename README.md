@@ -27,6 +27,8 @@ As of March 20, 2020, California's boundaries are complete and have undergone ou
 
 All the remaining AVA boundaries outside of California have been completed, as of May 11,2020, and we are beginning quality control procedures on these data.
 
+New AVAs that were approved by the TTB between June and October 2020 are in the process of being added to our dataset.
+
 ### UC Davis
 UC Davis completed boundaries for the northern California, Arizona, and Colorado AVAs.  Issues marked with the "UC Davis" label are designated for UC Davis to work on.  They will continue adding AVAs moving east across the county.
 
@@ -54,8 +56,8 @@ state	| text | the state, or list of states separated by a comma, using the two-
 within	| text | (if applicable) used for smaller AVAs that fit inside of larger AVAs; the larger AVA that this AVA sits inside | 
 contains	| text | (if applicable) used for larger AVAs that contain smaller AVAs; the smaller AVAs that fit inside this AVA |
 petitioner	| text | the name of the person who initiated the petition and their affiliation separated by a comma | Jane Smith, Smith Family Wineries
-cfr_author	
-cfr_index	9.212
+cfr_author | text | the name of the TTB employee that authored the proposed and/or final rules in the Federal Register; typically found near the end of the document | Bob Jones	
+cfr_index | decimal number | the number code that indicates where the final rule document can be found; typically, it is in the section heading of the CFR entry online|	9.212
 cfr_revision_history | text | the string of text citing the documents that currently apply to this boundary definition |	[T.D. TTB-71, 73 FR 64202, Oct. 29, 2008]
 approved_maps | text | the approved maps listed for the boundary defintion |(1) Ritter Ridge, Calif., 1958; Photorevised 1974; (2) Sleepy Valley, CA, 1995; (3) Del Sur, CA, 1995; and (4) Lake Hughes, CA, 1995.
 boundary_description | text | the official boundary description |

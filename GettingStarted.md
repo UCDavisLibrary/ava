@@ -18,10 +18,10 @@ While the creators of this project assume contributors have a good understanding
    1. [GitHub Desktop](https://desktop.github.com/)
 
 1. __Tutorials__:
-   1. QGIS: https://docs.qgis.org/3.4/en/docs/training_manual/
-      1. Section 2: The Interface
-      1. Section 3: Creating a Basic Map (just the basics, not the SVG fill section)
-      1. Section 6: Creating Vector Data (through 6.2.2)
+   1. [QGIS Training Manual](https://docs.qgis.org/3.10/en/docs/training_manual/index.html) for version 3.10+:
+      1. Module 2: Creating and Exploring a Basic Map
+      1. Module 5: Creating Vector Data
+      1. *Optional:* If you're new to GIS or it's been a while, consider reviewing the [Intro to QGIS workshop](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS).
    1. GitHub (in general): https://guides.github.com/ 
       1. Understanding the GitHub Flow: https://guides.github.com/introduction/flow/
 	  1. Forking Projects: https://guides.github.com/activities/forking/
