@@ -158,7 +158,9 @@ Timothy Kwong (Undergraduate; Collaboratory Staff)
 
 2018 [Sautter Award](https://www.ucop.edu/information-technology-services/initiatives/sautter-award-program/award-winners-and-applications/2018.html) - Silver - for Innovation in Information Technologies, awarded by the University of California Office of the President.
 
-Myles, C.C., M.M. Tobias, & I. McKinnon. 2020. “‘A big fish in a small pond’: How Arizona wine country was made” in *Agritourism, Wine Tourism, Craft Beer Tourism: Local Responses to peripherality through tourism niches.*  Maria Giulia Pezzi (GSSI), Alessandra Faggian (GSSI), Neil Reid (University of Toledo, OH), eds.  **In press.**
+Myles, C.C., M.M. Tobias, & I. McKinnon. 2020. “‘A big fish in a small pond’: How Arizona wine country was made” in [*Agritourism, Wine Tourism, Craft Beer Tourism: Local Responses to peripherality through tourism niches.*](https://www.routledge.com/Agritourism-Wine-Tourism-and-Craft-Beer-Tourism-Local-Responses-to-Peripherality/Pezzi-Faggian-Reid/p/book/9781138614413)  Maria Giulia Pezzi (GSSI), Alessandra Faggian (GSSI), Neil Reid (University of Toledo, OH), eds.
+
+Cantu, et al. 2021. [Investigating the impact of regionality on the sensorial and chemical aging characteristics of Pinot noir grown throughout the U.S. West coast.](Investigating the impact of regionality on the sensorial and chemical aging characteristics of Pinot noir grown throughout the U.S. West coast).  *Food Chemistry* 337(2021).
 
 Bizou Wine's ["Mapping Our Wines"](http://www.bizouwines.com/mapping-our-wines)
 
