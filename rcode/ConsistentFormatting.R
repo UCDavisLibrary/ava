@@ -26,8 +26,6 @@ avas_path<-"/avas"
 #       - check date format
 #   9. lcsh - replace "" with NA
 #   10. sameas - replace "" with NA
-#   11. counties, contains, within
-#       - replace ", " with |
 
 
 
