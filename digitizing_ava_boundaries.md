@@ -2,16 +2,18 @@
 
 ## Getting Started:
 ### Start with the Issues Tracker
-1. In the Issues section of the AVA project GitHub page, you should find an Issue for each AVA.  All AVAs in need of digitizing have an issue open on the github repository.  The issues are closed for AVAs as they are finished.  AVAs are given labels to indicate their status.  Open issues labeled as "In Progress" are currently being digitized by a contributor.  Choose an AVA that does not have an "In Progress" label.  Labels for partner organizations such as "UC Davis" or "UC Santa Barbara" indicate that the project coordinators expect these boundaries to be completed by the organization indicated.  As we discuss our future partnership with Virginia Tech, the remaining Viriginia and Maryland AVAs have been marked with a label for "Virigina Tech" as we anticipate that they will provide data for these AVAs in the near future.
+1. In the Issues section of the AVA project GitHub page, you should find an Issue for each AVA.  All AVAs in need of digitizing have an issue open on the github repository.  The issues are closed for AVAs as they are finished.  AVAs are given labels to indicate their status.  Open issues labeled as "In Progress" are currently being digitized by a contributor.  Choose an AVA that does not have an "In Progress" label.  Labels for partner organizations such as "UC Davis" or "UC Santa Barbara" indicate that the project coordinators expect these boundaries to be completed by the organization indicated.  As we discuss our future partnership with Virginia Tech, the remaining Virginia and Maryland AVAs have been marked with a label for "Virginia Tech" as we anticipate that they will provide data for these AVAs in the near future.
 1. In the text of each issue, you will find the boundary description you should use as well as the list of Approved Maps.  Other attribute information will be found in the Federal Register documents.  Occasionally, the text in the issue is missing either the Approved Maps or the starting point for the boundary description (due to the automated process that generated this text).  To find the missing text, refer to the "src" link (meaning "source") to the official Federal Register text.
   2. Write a comment for your chosen AVA that you are working on the boundary.  Michele will change the status to "In Progress" when she sees the comment.  Add additional comments if any issues or questions arise about this particular AVA.  The issue for [Arroyo Seco](https://github.com/UCDavisLibrary/ava/issues/24) is a good example of the kinds of troubles and questions to track on an issue for an AVA.
 
 ### Resources:
-Hein Online Federal Register Library: http://heinonline.org/HOL/Index?collection=fedreg&set_as_cursor=clear 
+[Hein Online Federal Register Library](http://heinonline.org/HOL/Index?collection=fedreg&set_as_cursor=clear) (UC Davis affiliates may need to log in to the campus VPN to get access)
 
-Wine Institute’s list of documents establishing the original AVA boundaries:	https://www.wineinstitute.org/resources/avas
+[GovInfo](https://www.govinfo.gov/) - free online source for government documents
 
-Alcohol and Tobacco Tax and Trade Bureau’s (TTB) list of currently established AVAs:	https://www.ttb.gov/wine/us_by_ava.shtml 
+Wine Institute’s list of [documents establishing the original AVA boundaries](https://www.wineinstitute.org/resources/avas)
+
+Alcohol and Tobacco Tax and Trade Bureau’s (TTB) list of [currently established AVAs](https://www.ttb.gov/wine/us_by_ava.shtml)
 
 
 ### Review the available Federal Register document for your AVA of interest  
@@ -19,12 +21,12 @@ Alcohol and Tobacco Tax and Trade Bureau’s (TTB) list of currently established
   2. Check the TTB’s list linked above for a citation of the revision history of the AVA found at the bottom of the page in brackets.  Hardcopies of the Federal Register documents are also available in the UC Davis Library.  
 
 ## Download the Approved Maps
-*Note* Google Chrome browswer has occasionally had difficulties downloading files from topoView, resulting in an error message saying "Failed - Network error".  If this happens, try another browswer.  Microsoft Edge has worked well in the past.
+*Note* Google Chrome browser has occasionally had difficulties downloading files from topoView, resulting in an error message saying "Failed - Network error".  If this happens, try another browser.  Microsoft Edge has worked well in the past.
 1. Go to the USGS National Geologic Map Database’s topoView: https://ngmdb.usgs.gov/maps/TopoView/viewer 
 2. On the right side of the map in the side panel, select the scale of the Approved Map.
 3.	Zoom into the general region of the AVA, and the names of the maps will appear inside the index bounding boxes.  Alternatively you can search for the name of the approved map with the Map Name search at the top of the side panel.
 4. Select the map of interest by clicking inside the box.
-5. In the lower section of the side panel, a dialog box should appear with details about the map you selected and the maps that are available.  Identify the option with date and edition that corresponds to the Approved Map listed in the Federal Register document.  Note that TopoView lists the date the original map was created and the year it was printed, NOT the revision year. If you really want to be sure you're getting the exact map, you can preview the map by downloading the .jpg or .pdf option and then look at the lower right corner of the map for the revision informatiomation.  
+5. In the lower section of the side panel, a dialog box should appear with details about the map you selected and the maps that are available.  Identify the option with date and edition that corresponds to the Approved Map listed in the Federal Register document.  Note that TopoView lists the date the original map was created and the year it was printed, NOT the revision year. If you really want to be sure you're getting the exact map, you can preview the map by downloading the .jpg or .pdf option and then look at the lower right corner of the map for the revision information.  
 
     i. For example, one of the Approved Maps for the Coombsville AVA is listed as “Napa Quadrangle, California-Napa Co., 1951, Photorevised 1980”.  For this map, select the Napa map with a date of 1951 and edition of 1980.  
     
@@ -134,7 +136,7 @@ Within the file for an AVA, we will create polygons for each official boundary r
  
  We will process the data to offer the avas.geojson file with only the current polygons, but the historical boundaries will be available as well.
  
- An example of a completed AVA with historical boundaries can be found in the Redwood Valley AVA boundary in the [history-example Branch](https://github.com/UCDavisLibrary/ava/tree/history-example) of this repository.
+ An example of completed AVAs with historical boundaries can be found in the Redwood Valley and Outer Coastal Plains AVA boundary in the [history-example Branch](https://github.com/UCDavisLibrary/ava/tree/history-example) of this repository.
 
 
 ## Submit your changes to the AVA GitHub Repository
@@ -154,7 +156,7 @@ git pull https://github.com/gdmf/ava.git master
 
 Step 2: Remove or modify files on your computer.
 
-Step 3: Committ the changes.
+Step 3: Commit the changes.
 
 Step 4: Merge the changes and update on GitHub.
 ```
@@ -163,7 +165,7 @@ git merge --no-ff [repository user name]-master
 git push origin master
 ```
 
-Another Option: If you want to accept only some of the changes offered in a pull request, you will need to use the command line to [cherry-pick](https://mattstauffer.co/blog/how-to-merge-only-specific-commits-from-a-pull-request) the committs that you want to keep.
+Another Option: If you want to accept only some of the changes offered in a pull request, you will need to use the command line to [cherry-pick](https://mattstauffer.co/blog/how-to-merge-only-specific-commits-from-a-pull-request) the commits that you want to keep.
 
 ## Additional Reference Material:
 1.	QGIS editing geometry manual: http://docs.qgis.org/3.4/en/docs/user_manual/working_with_vector/editing_geometry_attributes.html 
