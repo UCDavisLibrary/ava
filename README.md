@@ -104,7 +104,9 @@ Version 1.0 will be released once all of the AVAs in California are completed an
 
 [Soo Min Hur](https://github.com/SoominHur) (Student Employee, Data Management Program, November 2018 - June 2019)
 
-[David Li](https://github.com/davidkli) (Student Employee, DataLab, starting October 2019)
+[David Li](https://github.com/davidkli) (Student Employee, DataLab, October 2019 - July 2020)
+
+[Elijah Stockwell](https://github.com/elistockwell) (Student Employee, DataLab, Starting October 2020)
 
 **Consultants:**
 
