@@ -31,13 +31,29 @@ vectsf2 <- lapply(vectsf, function(d){
 allsf <- do.call(rbind, vectsf2)
 
 allsf <- mutate_if(allsf, is.character, gsub, pattern="N/A", replacement=NA) 
+allsf$valid_end[allsf$valid_end=='']<-NA
+
 
 allsf$area <- st_area(allsf)
 
 allsf <- arrange(allsf,desc(area))
 
-write_sf(allsf, dsn="avas.geojson", driver="GeoJSON", delete_dsn=TRUE)
+#write_sf(allsf, dsn="avas.geojson", driver="GeoJSON", delete_dsn=TRUE)
 #geojson_write(allsf, file="avas-sf.geojson", overwrite=TRUE, convert_wgs84 = TRUE)
+
+
+# Separate the current & historic AVAs ---------------------------------
+
+current.avas<-allsf[which(is.na(allsf$valid_end)),]
+write_sf(current.avas, dsn="avas.geojson", driver="GeoJSON", delete_dsn=TRUE)
+
+historic.avas<-allsf[which(nchar(allsf$valid_end)>0),]
+write_sf(historic.avas, dsn="avas_historic.geojson", driver="GeoJSON", delete_dsn=TRUE)
+
+write_sf(allsf, dsn="avas_allboundaries.geojson", driver="GeoJSON", delete_dsn=TRUE)
+
+
+
 
 d <- Sys.time()
 
