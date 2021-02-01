@@ -156,6 +156,8 @@ Timothy Kwong (Undergraduate; Collaboratory Staff)
 
 [Arturo P. Rios](https://github.com/APRios)
 
+[Kurtis Houser](https://github.com/kurtishouser)
+
 # Awards, Publications, & Projects Using Our Data
 
 Tobias, M.M. & C.C. Myles. 2021. "Wine, culture, and environment: A study of the Sierra (Nevada) Foothills American Viticultural Area" in *Handbook of Wine and Culture*, Tim Unwin, ed. Routledge. (In progress)
