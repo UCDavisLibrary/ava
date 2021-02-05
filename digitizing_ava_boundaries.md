@@ -15,6 +15,8 @@ Wine Institute’s list of [documents establishing the original AVA boundaries](
 
 Alcohol and Tobacco Tax and Trade Bureau’s (TTB) list of [currently established AVAs](https://www.ttb.gov/wine/us_by_ava.shtml)
 
+Electronic Code of Federal Regulations (ECFR)'s [Approved American Viticultural Areas](https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=371db32ecca6629af6dccad2a39d7833&mc=true&n=sp27.1.9.c) - has the boundary descriptions, but not the full document
+
 
 ### Review the available Federal Register document for your AVA of interest  
   1. Search the Hein Online Federal Register Library for the name of your chosen AVA (the text search box is at the top of the page near the logo).  Many of the documents you will need are available there.  
