@@ -67,7 +67,7 @@ valid_end | date | the last date this revision was valid (applies only if there 
 lcsh	| text | (optional) Library of Congress Subject Heading; Generally UCD Library staff has filled these in and will add them as new subject headings are approved |
 sameas	| text | (optional) linked data URIs for terms that are identical to this AVA |
 
-*Note:* Contributors using QGIS 2.18.10 or older with GDAL 2.2.0 should fill in any blanks in their attribute table with N/A due to a known issue with how unset values are handled. A [more permanent fix](https://issues.qgis.org/issues/16812) is in the works.  Contributors using QGIS 3.0 have not experienced this issue and it is now the version we recommend.
+Any record with no data should use null (not N/A or blank).
 
 # How can you access the data?
 
