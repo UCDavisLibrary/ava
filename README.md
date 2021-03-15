@@ -50,7 +50,7 @@ ava_id | text | a unique identifier for each AVA polygon |	leona_valley
 name | text | the legal name given to the AVA; an identifier for each AVA |	Leona Valley
 aka	| text | (optional) other names, including historical names, and terms used for the AVA | |
 created	| date | YYYY-MM-DD format; the date of the first publication creating the AVA | 2017-06-01 |
-removed	| date | (optional) the date the AVA designation was removed from an area |
+removed	| date | (optional) YYYY-MM-DD format; the date the AVA designation was removed from an area | 2017-06-01 |
 county | text | the county, or list of counties separated by a pipe, in which the AVA exists |	Los Angeles&#124;Ventura
 state	| text | the state, or list of states separated by a pipe, using the two-letter postal abbreviation, in which the AVA exists | CA&#124;NV
 within	| text | (if applicable) used for smaller AVAs that fit inside of larger AVAs; the larger AVA that this AVA sits inside | 
@@ -62,12 +62,12 @@ cfr_revision_history | text | the string of text citing the documents that curre
 approved_maps | text | the approved maps listed for the boundary defintion |(1) Ritter Ridge, Calif., 1958; Photorevised 1974; (2) Sleepy Valley, CA, 1995; (3) Del Sur, CA, 1995; and (4) Lake Hughes, CA, 1995.
 boundary_description | text | the official boundary description |
 used_maps	| text | the maps the digitizer used to digitize the boundary |
-valid_start | date | the date this boundary revision began (applies only if there were revisions to the boundary) |
-valid_end | date | the last date this revision was valid (applies only if there were revisions to the boundary) |
+valid_start | date | YYYY-MM-DD format; the date this boundary revision began (applies only if there were revisions to the boundary) | 2017-06-01 |
+valid_end | date | YYYY-MM-DD format; the last date this revision was valid (applies only if there were revisions to the boundary) | 2017-06-01 |
 lcsh	| text | (optional) Library of Congress Subject Heading; Generally UCD Library staff has filled these in and will add them as new subject headings are approved |
 sameas	| text | (optional) linked data URIs for terms that are identical to this AVA |
 
-*Note:* Contributors using QGIS 2.18.10 or older with GDAL 2.2.0 should fill in any blanks in their attribute table with N/A due to a known issue with how unset values are handled. A [more permanent fix](https://issues.qgis.org/issues/16812) is in the works.  Contributors using QGIS 3.0 have not experienced this issue and it is now the version we recommend.
+Any record with no data should use null (not N/A or blank).
 
 # How can you access the data?
 
