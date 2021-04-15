@@ -138,25 +138,25 @@ Within the file for an AVA, we will create polygons for each official boundary r
  * `petitioner` and `cfr_author`:  The boundary update will most likely have a different petitioner and author, which can be found in the CFR document 
  * `cfr_revision_history`: the most updated version can be found on the e-CFR website, underneath the boundary instruction.  Example: [T.D. ATF-128, 48 FR 14375, Apr. 4, 1983, as amended by T.D. TTB-163, 85 FR 60361, Sept. 25, 2020]. Each revision should have the CFR history up to that revision (first version will and after the first date)
  
-###Instructions for creating and merging:
+### Instructions for creating and merging:
 
-	1. First, load the AVA into QGIS and use the boundary description field to figure out which revision it is.  Load the approved maps for this revision and CHECK THE BOUNDARY NOW, as any edits made later on will have to be made to all copies.
-	2. Find the AVA in the avas folder and make however many copies as there are revisions.  Rename the files to something like [ava]1.geojson, [ava]2.geojson, ... , [ava]n.geojson
-	4. Open the Federal Register for each revision.  The easiest way is through HeinOnline (requires UCD Library VPN), input volume and page from the revision history strings given in the history issue	
-	5. For each revision:
-		* Make updates to the boundary following the methods described in “Digitizing the Boundary” above
-		* Edit the attribute tables of both layers (fields described above)
-	6. When editing is complete, use the merge tool to combine layers:
-		* Open with Vector —> Data Management Tools —>  Merge Vector Layers
-		* Select [ava]1.geojson, [ava]2.geojson, ... , [ava]n.geojson as input layers
-		* Under merged, click the ellipses and select “Save to File”, navigate to avas folder and save as [ava].geojson
-		* Once merge is complete, double check that the attribute table for the new layer contains tabs for the original and the update
-		* The merge will have added extra fields at the bottom, delete these using the Delete Field tool in the attribute table menu (or Ctrl+L)
-	7. Delete [ava]1.geojson and [ava]2.geojson from the avas folder
+1. First, load the AVA into QGIS and use the boundary description field to figure out which revision it is.  Load the approved maps for this revision and CHECK THE BOUNDARY NOW, as any edits made later on will have to be made to all copies.
+2. Find the AVA in the avas folder and make however many copies as there are revisions.  Rename the files to something like [ava]1.geojson, [ava]2.geojson, ... , [ava]n.geojson
+4. Open the Federal Register for each revision.  The easiest way is through HeinOnline (requires UCD Library VPN), input volume and page from the revision history strings given in the history issue	
+5. For each revision:
+	* Make updates to the boundary following the methods described in “Digitizing the Boundary” above
+	* Edit the attribute tables of both layers (fields described above)
+6. When editing is complete, use the merge tool to combine layers:
+	* Open with Vector —> Data Management Tools —>  Merge Vector Layers
+	* Select [ava]1.geojson, [ava]2.geojson, ... , [ava]n.geojson as input layers
+	* Under merged, click the ellipses and select “Save to File”, navigate to avas folder and save as [ava].geojson
+	* Once merge is complete, double check that the attribute table for the new layer contains tabs for the original and the update
+	* The merge will have added extra fields at the bottom, delete these using the Delete Field tool in the attribute table menu (or Ctrl+L)
+7. Delete [ava]1.geojson and [ava]2.geojson from the avas folder
  
-###Notes
+### Notes
 
-If the name of the AVA changes, this should be reflected in the name field.  The ava_id should have the most recent ava_id followed by the appended date if applicable.
+If the name of the AVA changes, this should be reflected in the name field.  The `ava_id` field should have the most recent AVA ID followed by the appended date if applicable.
 
 If the approved maps change but the boundary stays the same for any length (follows the same features on different maps) match the older boundaries to the new and make note of the in the used maps field: “Border matched to YYYY-MM-DD revision border where applicable”
 
