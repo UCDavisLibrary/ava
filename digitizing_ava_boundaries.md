@@ -124,7 +124,7 @@ The AVA Project team has made a [Video](https://drive.google.com/open?id=0B9xw97
 
 ![alt text](https://github.com/UCDavisLibrary/ava/blob/master/images/Example_AVA_Coombsville.PNG "Example of a completed AVA boundary")
 
-### Adding Historical AVA Boundaries
+## Adding Historical AVA Boundaries
 This project currently is only creating the boundaries described in the Issues tab of our repository, however, we anticipate beginning to add historical boundaries in the near future.  Historical boundaries should be submitted to the history-example branch.  This is how we anticipate dealing with those boundaries.
 
 We will retain our current structure of having one .geojson file for each named AVA.
@@ -134,12 +134,36 @@ Within the file for an AVA, we will create polygons for each official boundary r
  * `removed`: the date the **AVA** was terminated
  * `valid_start`: the date the **boundary** officially began
  * `valid_end`: the last date the **boundary** was in use (typically the day before the next revision took effect)
- * 'ava_id': for non-current boundaries, append and underscore and the date for the 'valid_start' in YYYYMMDD format.  Example: redwood_valley_19970221
+ * `ava_id`: for non-current boundaries, append and underscore and the date for the 'valid_start' in YYYYMMDD format.  Example: redwood_valley_19970221
+ * `petitioner` and `cfr_author`:  The boundary update will most likely have a different petitioner and author, which can be found in the CFR document 
+ * `cfr_revision_history`: the most updated version can be found on the e-CFR website, underneath the boundary instruction.  Example: [T.D. ATF-128, 48 FR 14375, Apr. 4, 1983, as amended by T.D. TTB-163, 85 FR 60361, Sept. 25, 2020]. Each revision should have the CFR history up to that revision (first version will and after the first date)
  
- We will process the data to offer the avas.geojson file with only the current polygons, but the historical boundaries will be available as well.
- 
- An example of completed AVAs with historical boundaries can be found in the Redwood Valley and Outer Coastal Plains AVA boundary in the [history-example Branch](https://github.com/UCDavisLibrary/ava/tree/history-example) of this repository.
+### Instructions for creating and merging:
 
+1. First, load the AVA into QGIS and use the boundary description field to figure out which revision it is.  Load the approved maps for this revision and CHECK THE BOUNDARY NOW, as any edits made later on will have to be made to all copies.
+2. Find the AVA in the avas folder and make however many copies as there are revisions.  Rename the files to something like [AVA]1.geojson, [AVA]2.geojson, ... , [AVA]n.geojson
+4. Open the Federal Register for each revision.  The easiest way is through HeinOnline (requires UCD Library VPN), input volume and page from the revision history strings given in the history issue	
+5. For each revision:
+	* Make updates to the boundary following the methods described in “Digitizing the Boundary” above
+	* Edit the attribute tables of both layers (fields described above)
+6. When editing is complete, use the merge tool to combine layers:
+	* Open with Vector —> Data Management Tools —>  Merge Vector Layers
+	* Select [AVA]1.geojson, [AVA]2.geojson, ... , [AVA]n.geojson as input layers
+	* Under merged, click the ellipses and select “Save to File”, navigate to avas folder and save as [AVA].geojson
+	* Once merge is complete, double check that the attribute table for the new layer contains tabs for the original and the update
+	* The merge will have added extra fields at the bottom, delete these using the Delete Field tool in the attribute table menu (or Ctrl+L)
+7. Delete [AVA]1.geojson, [AVA]2.geojson, ... , [AVA]n.geojson from the avas folder
+ 
+### Notes
+
+If the name of the AVA changes, this should be reflected in the name field.  The `ava_id` field should have the most recent AVA ID followed by the appended date if applicable.
+
+If the approved maps change but the boundary stays the same for any length (follows the same features on different maps) match the older boundaries to the new and make note of the in the used maps field: “Border matched to YYYY-MM-DD revision border where applicable”
+
+
+To see an example, check the closed issues for any "[AVA] History" issues.  These AVA's histories have been completed and can be viewed in the master branch.  
+
+We will process the data to offer the avas.geojson file with only the current polygons, but the historical boundaries will be available as well.
 
 ## Submit your changes to the AVA GitHub Repository
 1.	In GitHub for Desktop, you should see a list of changes you’ve made to the files.  Fill in the Summary and Description fields at the bottom of the window and then click the Commit button.  https://guides.github.com/activities/forking/#making-changes 
