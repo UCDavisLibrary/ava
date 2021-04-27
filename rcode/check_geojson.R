@@ -22,7 +22,7 @@ for(i in 1:length(avas)){
   if(isTRUE(CW)){
     
   rev <- st_reverse(ava)
-  st_write(rev, avas[i], append = FALSE)
+  st_write(rev, avas[i], delete_dsn = TRUE)
     
   }
   
