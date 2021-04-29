@@ -108,6 +108,8 @@ Version 1.0 will be released once all of the AVAs in California are completed an
 
 [Elijah Stockwell](https://github.com/elistockwell) (Student Employee, DataLab, Starting October 2020)
 
+[Kelley Chu](https://github.com/kelleych) (Intern, DataLab, Starting April 2021)
+
 **Consultants:**
 
 [Jennifer Harbster](https://www.library.ucdavis.edu/author/jennifer-jj-harbster/) (Librarian, Research Support Services)
