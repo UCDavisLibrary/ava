@@ -32,7 +32,7 @@ Electronic Code of Federal Regulations (ECFR)'s [Approved American Viticultural 
 
     i. For example, one of the Approved Maps for the Coombsville AVA is listed as “Napa Quadrangle, California-Napa Co., 1951, Photorevised 1980”.  For this map, select the Napa map with a date of 1951 and edition of 1980.  
     
-    ii. In the event that the specific year for the Approved Map is not available, you may need to download one or two maps that are of a similar age and determine which has the landmarks indicated in the description.
+    ii. In the event that the specific year for the Approved Map is not available, first check the USGS store: https://store.usgs.gov/filter-products?page=1.  If it is not available there, you may need to download a map (or multiple smaller maps) that are of a similar age in the same area.
     
 7. Click the GEOTIFF download option for the map edition closest to the Approved Map listed in the federal documents.
 8. Save the file to your local computer.  The file saved will be a zipped folder containing GeoTIFF files.
