@@ -1,3 +1,8 @@
+---
+layout: default
+title: Data
+---
+
 # Data
 
 ## How to download the data

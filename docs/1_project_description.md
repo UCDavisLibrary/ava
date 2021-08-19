@@ -1,3 +1,8 @@
+---
+layout: default
+title: Introduction
+---
+
 # Introduction
 
 ## Project Description
