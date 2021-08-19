@@ -1,8 +1,7 @@
 ---
 layout: default
+title: home
 nav_order: 1
 ---
 
-This will be the documentation for the American Viticulture Areas Digitizing Project... easier to navigate, easier to read, easier to use.
-
-It is still a work in progress.
+The goals of the American Viticultural Areas Digitizing Project is to produce spatial data from each of the official American Viticultural Areas boundary descriptions accepted and published by the TTB.  The methods we use to create the data are documented so that the data is reproducable and usable for scientific and social science research.
