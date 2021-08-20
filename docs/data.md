@@ -56,7 +56,7 @@ You can use the green download button on the Code tab of the [GitHub repository]
 
 ### Download individual files
 You can download single .geojson files by:
-1. On the Code tab on the left (not the green Code button on the right), navigate to the file you would like to download, and click on the file name.
+1. On the [GitHub repository](https://github.com/UCDavisLibrary/ava), click on the Code tab on the left (not the green Code button on the right), navigate to the file you would like to download, and click on the file name.
 1. Click the Download button, which will take you to a page that displays the text of the document.
 1. Right click anywhere on the page, and select "Save as..." 
 1. Save the file where you would like to keep it.  You may need to remove an additional .txt extension that may get automatically added to the file name.  You file extension should be .geojson
