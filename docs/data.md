@@ -49,11 +49,24 @@ sameas	| text | (optional) linked data URIs for terms that are identical to this
 Any record with no data should use null (not N/A or blank).
 
 ## How to download the data
+The data is avaiable from our [GitHub repository](https://github.com/UCDavisLibrary/ava).
+
+### Download the whole repository
+You can use the green download button on the Code tab of the [GitHub repository](https://github.com/UCDavisLibrary/ava) to download all of the files in this repository or you can fork this repository.  
+
+### Download individual files
+You can download single .geojson files by:
+1. On the Code tab on the left (not the green Code button on the right), navigate to the file you would like to download, and click on the file name.
+1. Click the Download button, which will take you to a page that displays the text of the document.
+1. Right click anywhere on the page, and select "Save as..." 
+1. Save the file where you would like to keep it.  You may need to remove an additional .txt extension that may get automatically added to the file name.  You file extension should be .geojson
 
 ## Suggested Citation
 
+American Viticultural Areas Digitizing Project Team. 2021. `[file name]`. https://github.com/UCDavisLibrary/ava Accessed `[date accessed]`.
+
 ## License
-The licence for this data is [Creative Commons CC0](https://creativecommons.org/share-your-work/public-domain/cc0/). We encourage citation of this dataset when it is used in academic works.
+The licence for this data is [Creative Commons CC0](https://creativecommons.org/share-your-work/public-domain/cc0/). We encourage citation of this dataset, especially when it is used in academic works.
 
 ## Disclaimer
 The American Viticulture Areas (AVA) Project data is provided for educational purposes only. Data and materials may not be accurate or complete, and are provided as-is, without warranties of any kind. Please note that while every effort was made to digitize the data from the maps designated in the official descriptions of the boundaries from the Alcohol and Tobacco Tax and Trade Bureau, some substitutions were made and are noted in the attribute table.
