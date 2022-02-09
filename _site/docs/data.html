@@ -1,0 +1,177 @@
+<h1 id="data">Data</h1>
+
+<h2 id="files-available">Files Available</h2>
+
+<h3 id="current-ava-boundaries">Current AVA Boundaries</h3>
+<p>The avas.geojson file contains all of the AVA boundaries that were currently in use at the time the file was created.  This is the file that most people will want to download.</p>
+
+<h3 id="historical-ava-boundaries">Historical AVA Boundaries</h3>
+<p>AVA boundaries can change over time through a petition process to revise the boundaries.  The avas_historic.geojson file contains only boundaries that are no longer in use.</p>
+
+<h3 id="all-ava-boundaries">All AVA Boundaries</h3>
+<p>The avas_allboundaries.geojson file contains all of the AVA boundaries that have ever been defined by the TTB, including current and historical boundaries.</p>
+
+<h3 id="individual-ava-boundaries">Individual AVA Boundaries</h3>
+<p>Boundaries are available for each official AVA.  The file contains the most recent boundary definition as well as any previous versions of the boundary that were amended through the revision process.  Files are named with the AVA’s name follwed by .geojson, for example, adelaida_district.geojson</p>
+
+<h2 id="attribute-definitions">Attribute Definitions</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>identifier</th>
+      <th>type</th>
+      <th>description</th>
+      <th>example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ava_id</td>
+      <td>text</td>
+      <td>a unique identifier for each AVA polygon</td>
+      <td>leona_valley</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>text</td>
+      <td>the legal name given to the AVA; an identifier for each AVA</td>
+      <td>Leona Valley</td>
+    </tr>
+    <tr>
+      <td>aka</td>
+      <td>text</td>
+      <td>(optional) other names, including historical names, and terms used for the AVA</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>created</td>
+      <td>date</td>
+      <td>YYYY-MM-DD format; the date of the first publication creating the AVA</td>
+      <td>2017-06-01</td>
+    </tr>
+    <tr>
+      <td>removed</td>
+      <td>date</td>
+      <td>(optional) YYYY-MM-DD format; the date the AVA designation was removed from an area</td>
+      <td>2017-06-01</td>
+    </tr>
+    <tr>
+      <td>county</td>
+      <td>text</td>
+      <td>the county, or list of counties separated by a pipe, in which the AVA exists</td>
+      <td>Los Angeles|Ventura</td>
+    </tr>
+    <tr>
+      <td>state</td>
+      <td>text</td>
+      <td>the state, or list of states separated by a pipe, using the two-letter postal abbreviation, in which the AVA exists</td>
+      <td>CA|NV</td>
+    </tr>
+    <tr>
+      <td>within</td>
+      <td>text</td>
+      <td>(if applicable) used for smaller AVAs that fit inside of larger AVAs; the larger AVA that this AVA sits inside</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>contains</td>
+      <td>text</td>
+      <td>(if applicable) used for larger AVAs that contain smaller AVAs; the smaller AVAs that fit inside this AVA</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>petitioner</td>
+      <td>text</td>
+      <td>the name of the person who initiated the petition and their affiliation separated by a comma</td>
+      <td>Jane Smith, Smith Family Wineries</td>
+    </tr>
+    <tr>
+      <td>cfr_author</td>
+      <td>text</td>
+      <td>the name of the TTB employee that authored the proposed and/or final rules in the Federal Register; typically found near the end of the document</td>
+      <td>Bob Jones</td>
+    </tr>
+    <tr>
+      <td>cfr_index</td>
+      <td>decimal number</td>
+      <td>the number code that indicates where the final rule document can be found; typically, it is in the section heading of the CFR entry online</td>
+      <td>9.212</td>
+    </tr>
+    <tr>
+      <td>cfr_revision_history</td>
+      <td>text</td>
+      <td>the string of text citing the documents that currently apply to this boundary definition</td>
+      <td>[T.D. TTB-71, 73 FR 64202, Oct. 29, 2008]</td>
+    </tr>
+    <tr>
+      <td>approved_maps</td>
+      <td>text</td>
+      <td>the approved maps listed for the boundary defintion</td>
+      <td>(1) Ritter Ridge, Calif., 1958; Photorevised 1974; (2) Sleepy Valley, CA, 1995; (3) Del Sur, CA, 1995; and (4) Lake Hughes, CA, 1995.</td>
+    </tr>
+    <tr>
+      <td>boundary_description</td>
+      <td>text</td>
+      <td>the official boundary description</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>used_maps</td>
+      <td>text</td>
+      <td>the maps the digitizer used to digitize the boundary</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>valid_start</td>
+      <td>date</td>
+      <td>YYYY-MM-DD format; the date this boundary revision began (applies only if there were revisions to the boundary)</td>
+      <td>2017-06-01</td>
+    </tr>
+    <tr>
+      <td>valid_end</td>
+      <td>date</td>
+      <td>YYYY-MM-DD format; the last date this revision was valid (applies only if there were revisions to the boundary)</td>
+      <td>2017-06-01</td>
+    </tr>
+    <tr>
+      <td>lcsh</td>
+      <td>text</td>
+      <td>(optional) Library of Congress Subject Heading; Generally UCD Library staff has filled these in and will add them as new subject headings are approved</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>sameas</td>
+      <td>text</td>
+      <td>(optional) linked data URIs for terms that are identical to this AVA</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Any record with no data should use null (not N/A or blank).</p>
+
+<h2 id="how-to-download-the-data">How to download the data</h2>
+<p>The data is avaiable from our <a href="https://github.com/UCDavisLibrary/ava">GitHub repository</a>.</p>
+
+<h3 id="download-the-whole-repository">Download the whole repository</h3>
+<p>You can use the green download button on the Code tab of the <a href="https://github.com/UCDavisLibrary/ava">GitHub repository</a> to download all of the files in this repository or you can fork this repository.</p>
+
+<h3 id="download-individual-files">Download individual files</h3>
+<p>You can download single .geojson files by:</p>
+<ol>
+  <li>On the <a href="https://github.com/UCDavisLibrary/ava">GitHub repository</a>, click on the Code tab on the left (not the green Code button on the right), navigate to the file you would like to download, and click on the file name.</li>
+  <li>Click the Download button, which will take you to a page that displays the text of the document.</li>
+  <li>Right click anywhere on the page, and select “Save as…”</li>
+  <li>Save the file where you would like to keep it.  You may need to remove an additional .txt extension that may get automatically added to the file name.  You file extension should be .geojson</li>
+</ol>
+
+<h2 id="suggested-citation">Suggested Citation</h2>
+
+<p>American Viticultural Areas Digitizing Project Team. 2021. <code class="language-plaintext highlighter-rouge">[file name]</code>. https://github.com/UCDavisLibrary/ava Accessed <code class="language-plaintext highlighter-rouge">[date accessed]</code>.</p>
+
+<h2 id="license">License</h2>
+<p>The licence for this data is <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">Creative Commons CC0</a>. We encourage citation of this dataset, especially when it is used in academic works.</p>
+
+<h2 id="disclaimer">Disclaimer</h2>
+<p>The American Viticulture Areas (AVA) Project data is provided for educational purposes only. Data and materials may not be accurate or complete, and are provided as-is, without warranties of any kind. Please note that while every effort was made to digitize the data from the maps designated in the official descriptions of the boundaries from the Alcohol and Tobacco Tax and Trade Bureau, some substitutions were made and are noted in the attribute table.</p>
