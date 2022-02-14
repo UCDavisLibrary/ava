@@ -103,6 +103,6 @@ Myles, C.C., M.M. Tobias, & I. McKinnon. 2020. “‘A big fish in a small pond�
 
 Bizou Wine's ["Mapping Our Wines"](http://www.bizouwines.com/mapping-our-wines)
 
-Have you used the AVA project in your work?  Please let us know! mmtobias [at] ucdavis.edu
+Have you used the AVA project in your work?  Please let us know! mmtobias@ucdavis.edu
 
 
