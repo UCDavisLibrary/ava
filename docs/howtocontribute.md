@@ -17,7 +17,8 @@ Write a comment for your chosen AVA that you are working on the boundary. Michel
 
 ### Digitizing Boundaries
 
-See [methods](methods) section.
+New AVAs and boundary updates for existing AVAs are added to the Federal Register.  Our web scraping code checks this document regularly, and each new AVA or boundary revision is given it's own issue.  If you see one of these issues not yet assigned to a contributor or partner organization, and not labeleled "In Progress", you are encouraged to digitize it!  Comment on the issue that you would like to work on and one of our team members will assign it to you.  You may then digitize the new AVA following our digitizing [methods](methods).
+
 
 ### Quality Control
 
