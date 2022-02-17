@@ -1,8 +1,8 @@
-I"ﬂ<h1 id="about">About</h1>
+I"Õ<h1 id="about">About</h1>
 
 <h2 id="contributors">Contributors</h2>
 
-<p>A complete list of contributors for each AVA in the dataset can be found <a href="C:\Users\elist\Documents\GitHub\ava\contributors.csv">here</a></p>
+<p>A complete list of GitHub contributors for each AVA in the dataset can be found <a href="insert path to contributors.csv">here</a></p>
 
 <h2 id="institutions">Institutions</h2>
 
@@ -94,6 +94,6 @@
 
 <p>Bizou Wine‚Äôs <a href="http://www.bizouwines.com/mapping-our-wines">‚ÄúMapping Our Wines‚Äù</a></p>
 
-<p>Have you used the AVA project in your work?  Please let us know! mmtobias [at] ucdavis.edu</p>
+<p>Have you used the AVA project in your work?  Please <a href="contact">let us know!</a></p>
 
 :ET

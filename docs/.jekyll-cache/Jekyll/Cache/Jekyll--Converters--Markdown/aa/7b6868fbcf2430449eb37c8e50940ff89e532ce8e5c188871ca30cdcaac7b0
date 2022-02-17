@@ -1,4 +1,4 @@
-I"<h1 id="how-to-contribute">How to Contribute</h1>
+I"<h1 id="how-to-contribute">How to Contribute</h1>
 
 <h2 id="getting-started">Getting Started</h2>
 
@@ -11,7 +11,7 @@ Write a comment for your chosen AVA that you are working on the boundary. Michel
 
 <h3 id="digitizing-boundaries">Digitizing Boundaries</h3>
 
-<p>See <a href="methods.md">methods</a> section.</p>
+<p>New AVAs and updated boundaries to old AVAs are added to the Federal Register.  Our web scraping code checks this document regularly, and each new AVA or boundary revision is given it’s own issue.  If you see one of these issues not yet assigned to a contributor or partner organization, and not labeleled “In Progress”, you are encouraged to digitize it!  Comment on the issue that you would like to work on and one of our team members will assign you the issue.  You may then digitize the new AVA following our digitizing <a href="methods">methods</a>.</p>
 
 <h3 id="quality-control">Quality Control</h3>
 
@@ -25,7 +25,7 @@ Write a comment for your chosen AVA that you are working on the boundary. Michel
   <li>Check that
     <ul>
       <li>the Used Maps were the most appropriate to use.  If not, load up other maps.</li>
-      <li>the attribute table for the boundary file is complete and follows our standard.  Note that State and County use \| “pipe” as the separator.</li>
+      <li>the attribute table for the boundary file is complete and follows our standard.  Note that State and County use | (pipe) as the separator.</li>
       <li>the boundary follows the description as best it can.  Make changes as necessary.</li>
     </ul>
   </li>
