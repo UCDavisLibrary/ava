@@ -106,5 +106,23 @@
     "content": " ",
     "url": "http://localhost:4000/visualization.html",
     "relUrl": "/visualization.html"
+  },"18": {
+    "doc": "Webmap",
+    "title": "Webmap attempt",
+    "content": "UC Davis Campus Cats Map | . ",
+    "url": "http://localhost:4000/webmap.html#webmap-attempt",
+    "relUrl": "/webmap.html#webmap-attempt"
+  },"19": {
+    "doc": "Webmap",
+    "title": "UC Davis Campus Cats Map",
+    "content": "This webmap shows the locations of UC Davis campus community cats. ",
+    "url": "http://localhost:4000/webmap.html",
+    "relUrl": "/webmap.html"
+  },"20": {
+    "doc": "Webmap",
+    "title": "Webmap",
+    "content": " ",
+    "url": "http://localhost:4000/webmap.html",
+    "relUrl": "/webmap.html"
   }
 }
