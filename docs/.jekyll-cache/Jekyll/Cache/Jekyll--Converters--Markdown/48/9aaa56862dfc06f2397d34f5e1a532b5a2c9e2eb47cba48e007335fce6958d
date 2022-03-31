@@ -1,0 +1,240 @@
+I"�Q<h1 id="methods">Methods</h1>
+
+<h2 id="digitizing-methods">Digitizing Methods</h2>
+
+<h3 id="resources">Resources:</h3>
+<p><a href="http://heinonline.org/HOL/Index?collection=fedreg&amp;set_as_cursor=clear">Hein Online Federal Register Library</a> (UC Davis affiliates may need to log in to the campus VPN to get access)</p>
+
+<p><a href="https://www.govinfo.gov/">GovInfo</a> - free online source for government documents</p>
+
+<p>Wine Institute’s list of <a href="https://www.wineinstitute.org/resources/avas">documents establishing the original AVA boundaries</a></p>
+
+<p>Alcohol and Tobacco Tax and Trade Bureau’s (TTB) list of <a href="https://www.ttb.gov/wine/us_by_ava.shtml">currently established AVAs</a></p>
+
+<p>Electronic Code of Federal Regulations (ECFR)’s <a href="https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&amp;SID=371db32ecca6629af6dccad2a39d7833&amp;mc=true&amp;n=sp27.1.9.c">Approved American Viticultural Areas</a> - has the boundary descriptions, but not the full document</p>
+
+<h3 id="review-the-available-federal-register-document-for-your-ava-of-interest">Review the available Federal Register document for your AVA of interest</h3>
+<ol>
+  <li>Search the Hein Online Federal Register Library for the name of your chosen AVA (the text search box is at the top of the page near the logo).  Many of the documents you will need are available there.</li>
+  <li>Check the TTB’s list linked above for a citation of the revision history of the AVA found at the bottom of the page in brackets.  Hardcopies of the Federal Register documents are also available in the UC Davis Library.</li>
+</ol>
+
+<h3 id="download-the-approved-maps">Download the Approved Maps</h3>
+<p><em>Note</em> Google Chrome browser has occasionally had difficulties downloading files from topoView, resulting in an error message saying “Failed - Network error”.  If this happens, try another browser.  Microsoft Edge has worked well in the past.</p>
+<ol>
+  <li>Go to the USGS National Geologic Map Database’s topoView: https://ngmdb.usgs.gov/maps/TopoView/viewer</li>
+  <li>On the right side of the map in the side panel, select the scale of the Approved Map.</li>
+  <li>Zoom into the general region of the AVA, and the names of the maps will appear inside the index bounding boxes.  Alternatively you can search for the name of the approved map with the Map Name search at the top of the side panel.</li>
+  <li>Select the map of interest by clicking inside the box.</li>
+  <li>
+    <p>In the lower section of the side panel, a dialog box should appear with details about the map you selected and the maps that are available.  Identify the option with date and edition that corresponds to the Approved Map listed in the Federal Register document.  Note that TopoView lists the date the original map was created and the year it was printed, NOT the revision year. If you really want to be sure you’re getting the exact map, you can preview the map by downloading the .jpg or .pdf option and then look at the lower right corner of the map for the revision information.</p>
+
+    <p>i. For example, one of the Approved Maps for the Coombsville AVA is listed as “Napa Quadrangle, California-Napa Co., 1951, Photorevised 1980”.  For this map, select the Napa map with a date of 1951 and edition of 1980.</p>
+
+    <p>ii. In the event that the specific year for the Approved Map is not available, first check the USGS store: https://store.usgs.gov/filter-products?page=1.  If it is not available there, you may need to download a map (or multiple smaller maps) that are of a similar age in the same area.</p>
+  </li>
+  <li>Click the GEOTIFF download option for the map edition closest to the Approved Map listed in the federal documents.</li>
+  <li>Save the file to your local computer.  The file saved will be a zipped folder containing GeoTIFF files.</li>
+  <li>Navigate to the folder where you saved the file.  Right click the file and select “Extract All”.  Browse to the folder you would like to unzip the folder to, then click the “Extract” button.  The new unzipped folder should contain 4 files.</li>
+  <li>Repeat all the substeps for Step 2 for each of the Approved Maps needed for your AVA before you move on to the digitizing process in Step 3.</li>
+</ol>
+
+<p>Further assistance in interpreting which scale of map to use can be found in the <a href="https://pubs.usgs.gov/fs/2002/0015/report.pdf">USGS’ Map Scales Report</a>.</p>
+
+<p>The AVA Project team has made a <a href="https://drive.google.com/open?id=0B9xw97DGLpqAVEpYTzhfWm00TTg">Video</a> of the process of downloading the Approved Maps.  The video uses the older topoView interface, but the general procedure is the same.</p>
+
+<h3 id="get-the-most-recent-project-files-from-github">Get the most recent project files from GitHub</h3>
+<p>We’ll describe how to do this with the GitHub for Desktop tool, but you may use the tool of your choice.  We’ll also assume you’ve already set up your GitHub account and the GitHub for Desktop program.:</p>
+<ol>
+  <li>Fork the AVA repository: https://github.com/UCDavisLibrary/ava (this link will change if the repository gets moved to the UC Davis GitHub account).  Details about how to fork a repository and work with it in GitHub Desktop are here: https://guides.github.com/activities/forking/</li>
+  <li>Open GitHub for Desktop</li>
+  <li>Select the forked AVA repository on the left sides of the window.</li>
+  <li>In your computer’s file navigation system, navigate to your GitHub folder and open the AVAs folder.  Inside the folder for AVAs that haven’t been completed, find the AVA you want to work on and move the .geojson file to the “avas” folder.</li>
+</ol>
+
+<p><strong><em>After your pull request is accepted OR it’s been a while since you’ve updated your fork</em></strong> Once you’ve set up your fork, you’ll need to update it regularly to make sure you have all the current files.  There is unfortunately no way to do this with the GitHub Desktop tool, but it’s not too complicated to update it.</p>
+<ol>
+  <li>Open GitHub Desktop</li>
+  <li>Click on your fork to open it.</li>
+  <li>Right click on the name of the fork and select “Open Command Prompt” or “Open in Git Shell” (depending on the version you have the text will be different).  A command line shell will open.  The path before the &gt; should be where you store your data (probably the GitHub folder on your computer).</li>
+  <li>You will now run a few commands to update your fork (<a href="https://gist.github.com/CristinaSolana/1885435">reference</a>).
+    <ol>
+      <li>The first time you’ll need to set an upstream repository for your fork:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git remote add upstream git://github.com/UCDavisLibrary/ava.git
+</code></pre></div>        </div>
+      </li>
+      <li>Now you’ll fetch any changes:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git fetch upstream
+</code></pre></div>        </div>
+      </li>
+      <li>Finally, you’ll update your folder with the changes you just fetched:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git pull upstream master
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<p><strong><em>When things go wrong</em></strong> In the event that your fork gets too messy (such as you have too many differences in your fork and you can’t sort it out), you can do a <strong>hard reset</strong> to remove everything from your fork and replace it with what is on the UC Davis AVA repository.</p>
+<ol>
+  <li>Copy any data you’ve been working on into a folder not affected by git.</li>
+  <li>Run a few lines of code to reset your repository:
+    <ol>
+      <li>The first time you’ll need to set an upstream repository for your fork:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git remote add upstream git://github.com/UCDavisLibrary/ava.git
+</code></pre></div>        </div>
+      </li>
+      <li>Now the reset:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git fetch upstream
+ git checkout master
+ git reset --hard upstream/master  
+ git push origin master --force
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+  <li>Finally, move any data you’ve been working on back into it’s folder.  Now you can do a pull request like you normally would.</li>
+</ol>
+
+<h3 id="set-up-your-project-file">Set Up Your Project File:</h3>
+<ol>
+  <li>In your file browser, move the geojson file for your chosen AVA (for example, coombsville.geojson) from the “tbd” (stands for “to be determined”) folder to the “avas” folder.</li>
+  <li>Open QGIS</li>
+  <li>Load data:
+    <ul>
+      <li>avas.geojson - for reference and snapping to shared boundaries</li>
+      <li>Your AVA geojson file - the file you will edit; example: coombsville.geojson</li>
+      <li>Approved Maps</li>
+    </ul>
+  </li>
+  <li>Set Project Projection
+    <ul>
+      <li>Open the Project Properties (Project menu → Project Properties)</li>
+      <li>Set the Coordinate Reference System to NAD83 (EPSG:4269)</li>
+    </ul>
+  </li>
+  <li>Set Snapping
+    <ul>
+      <li>In the Layers Panel (Table of Contents), select the all.geojson layer.</li>
+      <li>Open the Snapping Options (Settings menu → Snapping Options)</li>
+      <li>Set Layer Selection to “Current Layer” (the all.geojson layer you selected earlier in the Layers Panel), Snap To “To Vertex and Segment”, Tolerance to 20 Pixels (adjust this as needed), and finally check the boxes for “Enable topological editing” and “Enable snapping on intersection”.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>The AVA Project team has made a <a href="https://drive.google.com/open?id=0B9xw97DGLpqATk9sTUFiM2ZuUFk">Video</a> of the process of setting up your project file.</p>
+
+<h3 id="digitizing-the-boundary">Digitizing the Boundary:</h3>
+<p>Each AVA has a template generated automatically and placed at the centroid of the county that the AVA resides in.</p>
+<ol>
+  <li>Toggle Editing on for the new AVA GeoJSON file.</li>
+  <li>You have two options for digitizing the boundary:
+    <ol>
+      <li>Add new polygon with the Add Feature tool. Digitize the boundary adding vertices according to the Federal Register Boundary description at a scale sufficient to identify the features needed from the topoquads.  You can switch between the Add Feature tool and navigating tools as needed.  Right click to finish.  Finally, delete the triangle template.</li>
+      <li>Add nodes to the triangle moving them to the places described in the boundary description.</li>
+    </ol>
+  </li>
+  <li>Some things to keep in mind:
+    <ul>
+      <li>Note that as you near the edge of a map, you may need to turn off or reorder some of the maps to adjust for the white edges of the scanned maps that obscure the maps underneath.</li>
+      <li>If the AVA you are digitizing is very close to another that has already been digitized, read the boundary descriptions for both and determine if they share a boundary.  If they share a boundary, make sure you snap your vertices to the vertices of the other boundary.</li>
+      <li>Pay close attention to the wording describing the boundaries.  Some require a straight line between points and use language like “the next point is a straight line to the peak at 1700 feet”.  Others require you to digitize along a feature and use language like “follow along Cold Creek until it crosses J Street”.</li>
+    </ul>
+  </li>
+  <li>When you are done digitizing, fill out the attribute data based on the text of the official Federal Register documents.  The definitions of the attributes are found in the <a href="https://github.com/UCDavisLibrary/ava/blob/master/README.md">README.md file</a>.  <em>Note:</em> Contributors using QGIS 3.x have reported an error saving .geojson files.  It appears as if QGIS does not save changes to geojson files, however changes to files get saved in a file with the extension .geojson.tmp in the same folder as the original .geojson file.  Remove the original .geojson file and change the extension of the .geojson.tmp to simply be .geojson.  Open this file in QGIS to make sure it is readable.  This solution solves the majority of the issues created by this bug.</li>
+  <li>Save Layer Edits.</li>
+  <li>Toggle Editing off.</li>
+</ol>
+
+<h2 id="historical-boundary-methods">Historical Boundary Methods</h2>
+<p>This project currently is only creating the boundaries described in the Issues tab of our repository, however, we anticipate beginning to add historical boundaries in the near future.  Historical boundaries should be submitted to the history-example branch.  This is how we anticipate dealing with those boundaries.</p>
+
+<p>We will retain our current structure of having one .geojson file for each named AVA.</p>
+
+<p>Within the file for an AVA, we will create polygons for each official boundary revision as recorded by the TTB and described in the CFR documents.  We will use the current attribute table structure to indicate when each polygon was in use.  Attributes recorded for each polygon will indicate:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">created</code>: the date the <strong>AVA</strong> officially began</li>
+  <li><code class="language-plaintext highlighter-rouge">removed</code>: the date the <strong>AVA</strong> was terminated</li>
+  <li><code class="language-plaintext highlighter-rouge">valid_start</code>: the date the <strong>boundary</strong> officially began</li>
+  <li><code class="language-plaintext highlighter-rouge">valid_end</code>: the last date the <strong>boundary</strong> was in use (typically the day before the next revision took effect)</li>
+  <li><code class="language-plaintext highlighter-rouge">ava_id</code>: for non-current boundaries, append and underscore and the date for the ‘valid_start’ in YYYYMMDD format.  Example: redwood_valley_19970221</li>
+  <li><code class="language-plaintext highlighter-rouge">petitioner</code> and <code class="language-plaintext highlighter-rouge">cfr_author</code>:  The boundary update will most likely have a different petitioner and author, which can be found in the CFR document</li>
+  <li><code class="language-plaintext highlighter-rouge">cfr_revision_history</code>: the most updated version can be found on the e-CFR website, underneath the boundary instruction.  Example: [T.D. ATF-128, 48 FR 14375, Apr. 4, 1983, as amended by T.D. TTB-163, 85 FR 60361, Sept. 25, 2020]. Each revision should have the CFR history up to that revision (first version will and after the first date)</li>
+</ul>
+
+<h3 id="instructions-for-creating-and-merging">Instructions for creating and merging:</h3>
+
+<ol>
+  <li>First, load the AVA into QGIS and use the boundary description field to figure out which revision it is.  Load the approved maps for this revision and CHECK THE BOUNDARY NOW, as any edits made later on will have to be made to all copies.</li>
+  <li>Find the AVA in the avas folder and make however many copies as there are revisions.  Rename the files to something like [AVA]1.geojson, [AVA]2.geojson, … , [AVA]n.geojson</li>
+  <li>Open the Federal Register for each revision.  The easiest way is through HeinOnline (requires UCD Library VPN), input volume and page from the revision history strings given in the history issue</li>
+  <li>For each revision:
+    <ul>
+      <li>Make updates to the boundary following the methods described in “Digitizing the Boundary” above</li>
+      <li>Edit the attribute tables of both layers (fields described above)</li>
+    </ul>
+  </li>
+  <li>When editing is complete, use the merge tool to combine layers:
+    <ul>
+      <li>Open with Vector —&gt; Data Management Tools —&gt;  Merge Vector Layers</li>
+      <li>Select [AVA]1.geojson, [AVA]2.geojson, … , [AVA]n.geojson as input layers</li>
+      <li>Under merged, click the ellipses and select “Save to File”, navigate to avas folder and save as [AVA].geojson</li>
+      <li>Once merge is complete, double check that the attribute table for the new layer contains tabs for the original and the update</li>
+      <li>The merge will have added extra fields at the bottom, delete these using the Delete Field tool in the attribute table menu (or Ctrl+L)</li>
+    </ul>
+  </li>
+  <li>Delete [AVA]1.geojson, [AVA]2.geojson, … , [AVA]n.geojson from the avas folder</li>
+</ol>
+
+<h3 id="notes">Notes</h3>
+
+<p>If the name of the AVA changes, this should be reflected in the name field.  The <code class="language-plaintext highlighter-rouge">ava_id</code> field should have the most recent AVA ID followed by the appended date if applicable.</p>
+
+<p>If the approved maps change but the boundary stays the same for any length (follows the same features on different maps) match the older boundaries to the new and make note of the in the used maps field: “Border matched to YYYY-MM-DD revision border where applicable”</p>
+
+<p>To see an example, check the closed issues for any “[AVA] History” issues.  These AVA’s histories have been completed and can be viewed in the master branch.</p>
+
+<p>We will process the data to offer the avas.geojson file with only the current polygons, but the historical boundaries will be available as well.</p>
+
+<h2 id="border-matching-methods">Border Matching Methods</h2>
+
+<p>In the interest of keeping the dataset clean and organized, AVAs that share a partial boundary are matched along this boundary.  In these cases, the border that is kept is the one that is of higher detail, i.e. larger scale maps.  If the two AVAs have the same level of detail, priority goes to the more recent AVA.  Some exceptions can be made, but all border matching decisions should be documented in the used maps attribute of the edited AVA.</p>
+
+<p>Border matching can be done manually with QGIS’s snapping tool, but for longer sections of boundary the border_matching.R script in the rcode folder is a much quicker solution.</p>
+
+<h2 id="submit-your-changes-to-the-ava-github-repository">Submit your changes to the AVA GitHub Repository</h2>
+<ol>
+  <li>In GitHub for Desktop, you should see a list of changes you’ve made to the files.  Fill in the Summary and Description fields at the bottom of the window and then click the Commit button.  https://guides.github.com/activities/forking/#making-changes</li>
+  <li>You should now see the “Push” button at the top of your GitHub for Desktop Screen.  Click the “Push” button to send your changes to YOUR online repository.</li>
+  <li>If you are ready to incorporate your changes into the main branch (i.e. send finished data to the UC Davis repository), submit a pull request for your fork: https://help.github.com/articles/creating-a-pull-request-from-a-fork/</li>
+  <li>If your changes are accepted, project adminsitrators will incorporated your changes and close the issue for your AVA.  If there is any problems or questions, the project administrators will contact you.</li>
+</ol>
+
+<h2 id="notes-for-pull-request-reviewers">Notes for pull request reviewers:</h2>
+<p>If a pull request cannot be merged automatically by GitHub, you can remove or modify files before you merge them into the main repository.</p>
+
+<p>Step 1: In the command line tool, from your project repository, check out a new branch and test the changes.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout -b [repository user name]-master master
+git pull https://github.com/gdmf/ava.git master
+</code></pre></div></div>
+
+<p>Step 2: Remove or modify files on your computer.</p>
+
+<p>Step 3: Commit the changes.</p>
+
+<p>Step 4: Merge the changes and update on GitHub.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout master
+git merge --no-ff [repository user name]-master
+git push origin master
+</code></pre></div></div>
+
+<p>Another Option: If you want to accept only some of the changes offered in a pull request, you will need to use the command line to <a href="https://mattstauffer.co/blog/how-to-merge-only-specific-commits-from-a-pull-request">cherry-pick</a> the commits that you want to keep.</p>
+
+<h3 id="additional-reference-material">Additional Reference Material:</h3>
+<ol>
+  <li>QGIS editing geometry manual: http://docs.qgis.org/3.4/en/docs/user_manual/working_with_vector/editing_geometry_attributes.html</li>
+  <li>Understanding the GitHub Flow: https://guides.github.com/introduction/flow/</li>
+  <li>USGS Topographic Map Symbols: https://pubs.usgs.gov/gip/TopographicMapSymbols/topomapsymbols.pdf</li>
+</ol>
+
+:ET
