@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Webmap
+title: Explore the Data
 nav_order: 11
 ---
 ## UC Davis AVA Data
