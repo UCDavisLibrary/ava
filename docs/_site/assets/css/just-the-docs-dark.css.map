@@ -3,6 +3,7 @@
 	"file": "just-the-docs-dark.css",
 	"sources": [
 		"just-the-docs-dark.scss",
+<<<<<<< HEAD
 		"../../../../AppData/Local/Temp/jekyll-remote-theme-20220331-18648-ge02dd/_sass/support/support.scss",
 		"../../../../AppData/Local/Temp/jekyll-remote-theme-20220331-18648-ge02dd/_sass/support/_variables.scss",
 		"../../../../AppData/Local/Temp/jekyll-remote-theme-20220331-18648-ge02dd/_sass/support/_functions.scss",
@@ -31,6 +32,36 @@
 		"../../../../AppData/Local/Temp/jekyll-remote-theme-20220331-18648-ge02dd/_sass/utilities/_spacing.scss",
 		"../../../../AppData/Local/Temp/jekyll-remote-theme-20220331-18648-ge02dd/_sass/print.scss",
 		"../../../../AppData/Local/Temp/jekyll-remote-theme-20220331-18648-ge02dd/_sass/custom/custom.scss"
+=======
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/support/support.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/support/_variables.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/support/_functions.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/support/mixins/mixins.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/support/mixins/_layout.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/support/mixins/_buttons.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/support/mixins/_typography.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/color_schemes/dark.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/modules.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/vendor/normalize.scss/normalize.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/base.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/layout.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/content.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/navigation.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/typography.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/labels.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/buttons.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/search.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/tables.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/code.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/utilities/utilities.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/utilities/_colors.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/utilities/_layout.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/utilities/_typography.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/utilities/_lists.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/utilities/_spacing.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/print.scss",
+		"../../../AppData/Local/Temp/jekyll-remote-theme-20220329-18408-ntzizt/_sass/custom/custom.scss"
+>>>>>>> f9d70322f0cc8721cef061ab060b1210ed582b6e
 	],
 	"sourcesContent": [
 		"\n@import \"./support/support\";\n@import \"./color_schemes/dark\";\n@import \"./modules\";\n@import \"./custom/custom\";\n\n\n",

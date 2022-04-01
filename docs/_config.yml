@@ -1,7 +1,16 @@
 title: American Viticultural Areas Digitizing Project
 description: AVA boundaries in spatial format brought to you by the UC Davis Library & UC Davis DataLab
 
-remote_theme: pmarsceill/just-the-docs
+remote_theme: just-the-docs/just-the-docs
 
 
 color_scheme: ucdcolors
+
+compress_html:
+  clippings: all
+  comments: [""]
+  endings: [html, head, body, li, dt, dd, rt, rp, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
+  profile: false
+  blanklines: false
+  ignore:
+    envs: []
