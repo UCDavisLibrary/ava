@@ -3,13 +3,15 @@ layout: default
 title: Webmap
 nav_order: 11
 ---
-## Webmap attempt
+## UC Davis AVA Data
 
 
 
 <html>
 <head>
+<!--
 <title>UC Davis Campus Cats Map</title>
+-->
 <!--Load the Leaflet CSS file-->
 <link rel="stylesheet" href="{{ '/assets/vendor/leaflet/leaflet.css' | relative_url }}">
 <!--Load the Leaflet JavaScript file-->
@@ -20,8 +22,11 @@ nav_order: 11
 <script src="{{ '/assets/plugins/hash/hash.js' | relative_url }}"></script>
 </head>
 <body>
+
+<!--
 <h1>UC Davis Campus Cats Map</h1>
 <p>This webmap shows the locations of UC Davis campus community cats.</p>
+-->
 <div class="map" id="mapid" style="width: 600px; height: 400px;"></div>
 <script src="{{ '/assets/js/campus_cats.js' | relative_url }}"></script>
 <script>
