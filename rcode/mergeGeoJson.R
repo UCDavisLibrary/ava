@@ -6,6 +6,7 @@ library(sf)
 library(dplyr)
 library(rgdal)
 library(lwgeom)
+library(geojsonsf)
 
 # probably want to change the pattern to exclude or filter after to drop the all.geojson file
 # AVAs folder contains the completed AVA boundaries
@@ -63,8 +64,13 @@ write_sf(historic.avas, dsn="avas_historic.geojson", driver="GeoJSON", delete_ds
 write_sf(allsf, dsn="avas_allboundaries.geojson", driver="GeoJSON", delete_dsn=TRUE)
 
 
+# Write JS file -----------------------------------------------------------
+
+txt<-sf_geojson(current.avas) #this isn't writing the attribute table correctly
+js=paste0("var avas =", txt)
+writeLines(js, "avas.js")
 
 
+#how long did it take?
 d <- Sys.time()
-
-d-c
+paste("This process finished in", d-c)
