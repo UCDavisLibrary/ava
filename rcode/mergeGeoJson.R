@@ -52,6 +52,7 @@ allsf <- arrange(allsf,desc(area))
 
 
 # Separate the current & historic AVAs ---------------------------------
+setwd("C:/Users/mmtobias/Documents/GitHub/ava/avas_aggregated_files")
 
 current.avas<-allsf[which(is.na(allsf$valid_end)),]
 write_sf(current.avas, dsn="avas.geojson", driver="GeoJSON", delete_dsn=TRUE)
