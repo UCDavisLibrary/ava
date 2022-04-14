@@ -8,6 +8,8 @@ library(rgdal)
 library(lwgeom)
 
 # probably want to change the pattern to exclude or filter after to drop the all.geojson file
+# AVAs folder contains the completed AVA boundaries
+# TBD folder contains the boundaries waiting to be completed - it will be empty once all of the AVAs are completed
 avas <- list.files(path="./avas", pattern = "*json$", full.names = "TRUE")
 tbd <- list.files(path="./tbd", pattern = "*json$", full.names = "TRUE")
 
@@ -17,8 +19,10 @@ gj <- c(avas, tbd)
 gj <- gj[gj != "./avas.geojson"]
 gj <- gj[gj != "./tbd/avas.geojson"]
 
-
+# mark the start time so we can calculate how long it takes to run the process
 c <- Sys.time()
+
+# gread the geojson files
 vectsf <- lapply(gj, read_sf)
 
 #Bug, if date field has NA it's a char but valid dates are doubles, can't bind those
@@ -28,14 +32,19 @@ vectsf2 <- lapply(vectsf, function(d){
   return(d)
   })
 
+# put the polygons into one table
 allsf <- do.call(rbind, vectsf2)
 
+# replace N/A with NA
 allsf <- mutate_if(allsf, is.character, gsub, pattern="N/A", replacement=NA) 
+
+# replace blanks with NA in the valid_end column
 allsf$valid_end[allsf$valid_end=='']<-NA
 
-
+# calculate the area of the polygons
 allsf$area <- st_area(allsf)
 
+# arrange the polygons so the smaller ones are on top
 allsf <- arrange(allsf,desc(area))
 
 #write_sf(allsf, dsn="avas.geojson", driver="GeoJSON", delete_dsn=TRUE)
