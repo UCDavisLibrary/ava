@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 
 <head>
-<title>UC Davis Campus Cats Map</title>
+<title>AVA MAP </title>
+<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-<script src="./leaflet.timeline.js"></script>
+
+<!-- leaflet geojson vt  -->
+<script src="https://unpkg.com/geojson-vt@3.2.0/geojson-vt.js"></script>
+
+<script src="leaflet-geojson-vt.js"></script>
+
 </head>
 
 <body>
 
 <h1> AVA Map </h1>
 
-<p1> This webmap is currently under construction. It currently contains the avas for AR, AZ, and CA </p1>
+<p1> This webmap is currently under construction. </p1>
 
-<div id="mapid" style="width: 600px; height: 400px;"></div>
+<div id="avas" style="width: 600px; height: 400px;"></div>
 
-<script src="AR_avas.geojson" type="text/javascript"></script>
+<script src="avas.js"></script>
 
 <script>
 
 //add an empty map called "map" to the page
-var map = L.map('mapid', {
+var map = L.map('avas', {
 	center: [40.02, -100.88],
 	zoom: 4
 	});
@@ -35,8 +43,13 @@ var Stamen_TonerLite = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/to
 });
 map.addLayer(Stamen_TonerLite);
 
-
-
+L.geoJSON(avas, {
+    style: function (feature) {
+        return {color: feature.properties.color};
+    }
+}).bindPopup(function (layer) {
+    return layer.feature.properties.description;
+}).addTo(map);
 
 </script>
 
