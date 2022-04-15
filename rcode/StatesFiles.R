@@ -11,9 +11,9 @@ library(zip)
 #setwd(working.directory)
 
 #set temp directory
-temp.directory<-"C:/Users/mmtobias/Downloads/avas_by_state"
+#temp.directory<-"C:/Users/mmtobias/Downloads/avas_by_state"
 
-avas<-geojson_read("avas.geojson", what="sp")
+avas<-geojson_read("./avas_aggregated_files/avas.geojson", what="sp")
 
 #List of states
 states<-c('AR', 'AZ', 'CA', 'CO', 'CT', 'GA', "HI", 'IA', 'ID', 'IL', 'IN', 'KY', 'LA', 'MA', 'MD', 'MI', 'MN', 'MO', 'MS', 'NC', 'NJ', 'NM', 'NY', 'OH', 'OR', 'PA', 'RI', 'TN', 'TX', 'VA', 'WA', 'WI', 'WV')
@@ -29,15 +29,15 @@ for (i in 1:length(states)){
   geojson_write(state.avas, file=paste(".\\avas_by_state\\", file.name, ".geojson", sep=""), overwrite=TRUE)
   
   #write the shapefile bits to the avas_by_state folder in the temp directory (mine is my downloads folder)
-  writeOGR(state.avas, dsn=temp.directory, layer=file.name, driver="ESRI Shapefile", overwrite_layer=TRUE)
+  #writeOGR(state.avas, dsn=temp.directory, layer=file.name, driver="ESRI Shapefile", overwrite_layer=TRUE)
   
   #zip the files in the temp directory 
-  setwd(temp.directory) #temporarily set the working directory to the temporary folder
+  #setwd(temp.directory) #temporarily set the working directory to the temporary folder
   
-  zip(zipfile=paste(working.directory, "\\avas_by_state\\", file.name, "_shapefile.zip", sep=""), files=list.files(temp.directory, full.names=FALSE), recurse=FALSE)
+  #zip(zipfile=paste(working.directory, "\\avas_by_state\\", file.name, "_shapefile.zip", sep=""), files=list.files(temp.directory, full.names=FALSE), recurse=FALSE)
   
   #remove the shp bits so the next loop starts with an empty folder
-  file.remove(list.files(temp.directory, full.names = TRUE))
+  #file.remove(list.files(temp.directory, full.names = TRUE))
   
-  setwd(working.directory) #reset the working directory to the working directory
+  #setwd(working.directory) #reset the working directory to the working directory
 }
