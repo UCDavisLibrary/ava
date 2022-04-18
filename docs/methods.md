@@ -73,42 +73,6 @@ We’ll describe how to do this with the GitHub for Desktop tool, but you may us
 3.	Select the forked AVA repository on the left sides of the window.
 4.	In your computer’s file navigation system, navigate to your GitHub folder and open the AVAs folder.  Inside the folder for AVAs that haven’t been completed, find the AVA you want to work on and move the .geojson file to the “avas” folder.
 
-***After your pull request is accepted OR it's been a while since you've updated your fork*** Once you've set up your fork, you'll need to update it regularly to make sure you have all the current files.  There is unfortunately no way to do this with the GitHub Desktop tool, but it's not too complicated to update it.
-1. Open GitHub Desktop
-1. Click on your fork to open it.
-1. Right click on the name of the fork and select "Open Command Prompt" or "Open in Git Shell" (depending on the version you have the text will be different).  A command line shell will open.  The path before the > should be where you store your data (probably the GitHub folder on your computer).
-1. You will now run a few commands to update your fork ([reference](https://gist.github.com/CristinaSolana/1885435)).
-    1. The first time you'll need to set an upstream repository for your fork:
-    ```
-        git remote add upstream git://github.com/UCDavisLibrary/ava.git
-    ```
-        
-    2. Now you'll fetch any changes:
-    ```
-        git fetch upstream
-    ```
-    
-    3. Finally, you'll update your folder with the changes you just fetched:
-    ```
-        git pull upstream master
-    ```
-
-***When things go wrong*** In the event that your fork gets too messy (such as you have too many differences in your fork and you can't sort it out), you can do a **hard reset** to remove everything from your fork and replace it with what is on the UC Davis AVA repository. 
-1. Copy any data you've been working on into a folder not affected by git. 
-2. Run a few lines of code to reset your repository:
-    1. The first time you'll need to set an upstream repository for your fork:
-    ```
-        git remote add upstream git://github.com/UCDavisLibrary/ava.git
-    ```
-    
-    2. Now the reset:
-    ```
-    git fetch upstream
-    git checkout master
-    git reset --hard upstream/master  
-    git push origin master --force
-    ```
-3. Finally, move any data you've been working on back into it's folder.  Now you can do a pull request like you normally would.
 
 
 ### Set Up Your Project File:
@@ -174,16 +138,16 @@ Within the file for an AVA, we will create polygons for each official boundary r
 	* The merge will have added extra fields at the bottom, delete these using the Delete Field tool in the attribute table menu (or Ctrl+L)
 7. Delete [AVA]1.geojson, [AVA]2.geojson, ... , [AVA]n.geojson from the avas folder
  
-### Quality Control
+### Quality Control Methods
 
-As we near the colmpletion of the current boundaries, it is now time to begin checking each boundary for a second time against the official description and the approved maps.
+For quality control, each boundary for a second time against the official description and the approved maps. Having a second (or even third) check each boundary ensures that the data matches as closely to the offical description as we can make it.
 
 The process should proceed as follows:
 1. Pick a boundary to check.
 1. Comment in the issue for that boundary that you are reviewing that boundary.
 1. Load the boundary's .geojson file and the list of Used Maps into QGIS.
 1. Check that
-  * the Used Maps were the most appropriate to use.  If not, load up other maps.
+  * the Used Maps were the best match for the official Approved Maps.  If not, load up other maps. New options may now be available that weren't at the time the boundary was initially digitized.
   * the attribute table for the boundary file is complete and follows our standard.  Note that State and County use \| (pipe) as the separator.
   * the boundary follows the description as best it can.  Make changes as necessary.
 5. Update the Used Maps column to add any additional resources you used.  Whenever possible, please only use the Approved Maps.
