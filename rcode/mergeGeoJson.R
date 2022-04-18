@@ -78,4 +78,4 @@ writeLines(js, "avas.js")
 
 #how long did it take?
 d <- Sys.time()
-paste("This process finished in", d-c)
+paste("This process finished in", d-c, "seconds.")
