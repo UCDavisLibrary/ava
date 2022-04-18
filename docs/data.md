@@ -7,18 +7,24 @@ nav_order: 2
 # Data
 
 ## Files Available
+The AVA Digitizing Project makes data for the AVA boundaries available in several convenient collections on our [GitHub Repository](). All data are in .geojson format, a open, text-based format usable in GIS program, as well as R and Python.
 
-### Current AVA Boundaries
+### Data Collections
+Collections of data are available in the `avas_aggregated_files` folder on the GitHub repository
+
+#### Current AVA Boundaries
 The avas.geojson file contains all of the AVA boundaries that were currently in use at the time the file was created.  This is the file that most people will want to download.
 
-### Historical AVA Boundaries
+Current boundaries for individual states can be found int he `avas_by_state` folder.
+
+#### Historical AVA Boundaries
 AVA boundaries can change over time through a petition process to revise the boundaries.  The avas_historic.geojson file contains only boundaries that are no longer in use.
 
-### All AVA Boundaries
+#### All AVA Boundaries
 The avas_allboundaries.geojson file contains all of the AVA boundaries that have ever been defined by the TTB, including current and historical boundaries.
 
 ### Individual AVA Boundaries
-Boundaries are available for each official AVA.  The file contains the most recent boundary definition as well as any previous versions of the boundary that were amended through the revision process.  Files are named with the AVA's name follwed by .geojson, for example, adelaida_district.geojson
+Boundaries are available for each official AVA in the `avas` folder.  The individual files contain the most recent boundary definition as well as any previous versions of the boundary that were amended through the revision process, if applicable.  Files are named with the AVA's name followed by .geojson, for example, adelaida_district.geojson
 
 
 ## Attribute Definitions
@@ -52,14 +58,14 @@ Any record with no data should use null (not N/A or blank).
 The data is avaiable from our [GitHub repository](https://github.com/UCDavisLibrary/ava).
 
 ### Download the whole repository
-You can use the green download button on the Code tab of the [GitHub repository](https://github.com/UCDavisLibrary/ava) to download all of the files in this repository or you can fork this repository.  
+You can use the green **Code** button on the Code tab of the [GitHub repository](https://github.com/UCDavisLibrary/ava) to download all of the files in this repository by choosing the "Download ZIP" option or you can fork this repository to your own GitHub account using the **Fork** button.  
 
 ### Download individual files
 You can download single .geojson files by:
 1. On the [GitHub repository](https://github.com/UCDavisLibrary/ava), click on the Code tab on the left (not the green Code button on the right), navigate to the file you would like to download, and click on the file name.
-1. Click the Download button, which will take you to a page that displays the text of the document.
+1. Click the **Raw** button, which will take you to a page that displays the raw text of the document.
 1. Right click anywhere on the page, and select "Save as..." 
-1. Save the file where you would like to keep it.  You may need to remove an additional .txt extension that may get automatically added to the file name.  You file extension should be .geojson
+1. Save the file where you would like to keep it.  **NOTE:** You may need to remove an additional .txt extension that may get automatically added to the file name.  You file extension should be .geojson
 
 ## Suggested Citation
 
