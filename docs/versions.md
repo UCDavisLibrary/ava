@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Versions/Release Notes
-nav_order: 9
+nav_order: 7
 ---
 
 # Versions
