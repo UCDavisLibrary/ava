@@ -36,3 +36,29 @@ These are notes that were removed from the documentation. It's important informa
     git push origin master --force
     ```
 3. Finally, move any data you've been working on back into it's folder.  Now you can do a pull request like you normally would.
+
+
+
+
+## Notes for pull request reviewers:
+If a pull request cannot be merged automatically by GitHub, you can remove or modify files before you merge them into the main repository.
+
+Step 1: In the command line tool, from your project repository, check out a new branch and test the changes.
+```
+git checkout -b [repository user name]-master master
+git pull https://github.com/gdmf/ava.git master
+```
+
+Step 2: Remove or modify files on your computer.
+
+Step 3: Commit the changes.
+
+Step 4: Merge the changes and update on GitHub.
+```
+git checkout master
+git merge --no-ff [repository user name]-master
+git push origin master
+```
+
+Another Option: If you want to accept only some of the changes offered in a pull request, you will need to use the command line to [cherry-pick](https://mattstauffer.co/blog/how-to-merge-only-specific-commits-from-a-pull-request) the commits that you want to keep.
+
