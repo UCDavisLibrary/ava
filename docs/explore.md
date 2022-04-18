@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Explore the Data
-nav_order: 11
+nav_order: 9
 ---
 ## Explore the UC Davis AVA Data
 
