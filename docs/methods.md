@@ -1,31 +1,50 @@
 ---
 layout: default
 title: Methods
-nav_order: 5
+nav_order: 4
 ---
 
 # Methods
+The goal of the AVA Digitizing Project's methods is to replicate the offical boundary, adhering as closely as possible to the approved maps and offical boundary description. Deviations are only made when necessary. Outside data sources should only be used as a last ersort, when no other option is available. All data sources used to create any boundary are documented. All input datasources are public domain or open licensed so we can maintain the open license of our AVA dataset. Contributors agree to uphold these standards.
 
+## Teamwork
+Given the number and geographic distribution of contributors to this dataset, we have developed methods to help us work together.
+
+### Working with the Issues List
+Start with the Issues list to find a task to work on.
+
+In the Issues section of the AVA project GitHub page, you will find an Issue for each AVA. All AVAs in need of digitizing have an issue open on the github repository. The issues are closed for AVAs as they are finished. AVAs are given labels to indicate their status. Open issues labeled as "In Progress" are currently being digitized by a contributor. Choose an AVA that does not have an "In Progress" label. Labels for partner organizations such as "UC Davis" or "UC Santa Barbara" indicate that the project coordinators expect these boundaries to be completed by the organization indicated. 
+
+In the text of each issue, you will find details of the task to be completed. 
+
+Before starting work on any issue, make a comment on the issue that you are going to start working on it. This will notify the project administrators so they can change the status to "In Progress". Add additional comments if any issues or questions arise about this particular issue. The issue for [Arroyo Seco](https://github.com/UCDavisLibrary/ava/issues/24) is a good example of the kinds of challenges and questions to track on an issue for an AVA.
 
 ## Digitizing Methods
 
-### Resources:
-[Hein Online Federal Register Library](http://heinonline.org/HOL/Index?collection=fedreg&set_as_cursor=clear) (UC Davis affiliates may need to log in to the campus VPN to get access)
+### Common Resources:
 
-[GovInfo](https://www.govinfo.gov/) - free online source for government documents
+Boundary Descriptions & Government Documents:
 
-Wine Institute’s list of [documents establishing the original AVA boundaries](https://www.wineinstitute.org/resources/avas)
+ * [Hein Online Federal Register Library](http://heinonline.org/HOL/Index?collection=fedreg&set_as_cursor=clear) (UC Davis affiliates may need to log in to the campus VPN to get access)
+ * [GovInfo](https://www.govinfo.gov/) - free online source for government documents
+ * Wine Institute’s list of [documents establishing the original AVA boundaries](https://www.wineinstitute.org/resources/avas)
+ * Alcohol and Tobacco Tax and Trade Bureau’s (TTB) list of [currently established AVAs](https://www.ttb.gov/wine/us_by_ava.shtml)
+ * Electronic Code of Federal Regulations (ECFR)'s [Approved American Viticultural Areas](https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=371db32ecca6629af6dccad2a39d7833&mc=true&n=sp27.1.9.c) - has the boundary descriptions, but not the full document
 
-Alcohol and Tobacco Tax and Trade Bureau’s (TTB) list of [currently established AVAs](https://www.ttb.gov/wine/us_by_ava.shtml)
+Maps:
 
-Electronic Code of Federal Regulations (ECFR)'s [Approved American Viticultural Areas](https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=371db32ecca6629af6dccad2a39d7833&mc=true&n=sp27.1.9.c) - has the boundary descriptions, but not the full document
+ * [USGS TopoView](https://ngmdb.usgs.gov/topoview/viewer)
+ * [USGS Store](https://store.usgs.gov/)
 
+### Digitize New Boundaries
 
-### Review the available Federal Register document for your AVA of interest  
+New AVAs and boundary updates for existing AVAs are added to the Federal Register.  Our web scraping code checks this document regularly, and each new AVA or boundary revision is given it's own issue.  If you see one of these issues not yet assigned to a contributor or partner organization, and not labeleled "In Progress", you are encouraged to digitize it!  Comment on the issue that you would like to work on and one of our team members will assign it to you.  You may then digitize the new AVA following the methods described below.
+
+#### Review the available Federal Register document for your AVA of interest  
   1. Search the Hein Online Federal Register Library for the name of your chosen AVA (the text search box is at the top of the page near the logo).  Many of the documents you will need are available there.  
   2. Check the TTB’s list linked above for a citation of the revision history of the AVA found at the bottom of the page in brackets.  Hardcopies of the Federal Register documents are also available in the UC Davis Library.  
 
-### Download the Approved Maps
+#### Download the Approved Maps
 *Note* Google Chrome browser has occasionally had difficulties downloading files from topoView, resulting in an error message saying "Failed - Network error".  If this happens, try another browser.  Microsoft Edge has worked well in the past.
 1. Go to the USGS National Geologic Map Database’s topoView: https://ngmdb.usgs.gov/maps/TopoView/viewer 
 2. On the right side of the map in the side panel, select the scale of the Approved Map.
@@ -47,7 +66,7 @@ Further assistance in interpreting which scale of map to use can be found in the
 The AVA Project team has made a [Video](https://drive.google.com/open?id=0B9xw97DGLpqAVEpYTzhfWm00TTg) of the process of downloading the Approved Maps.  The video uses the older topoView interface, but the general procedure is the same.
 
  
-### Get the most recent project files from GitHub 
+#### Get the most recent project files from GitHub 
 We’ll describe how to do this with the GitHub for Desktop tool, but you may use the tool of your choice.  We’ll also assume you’ve already set up your GitHub account and the GitHub for Desktop program.:
 1.	Fork the AVA repository: https://github.com/UCDavisLibrary/ava (this link will change if the repository gets moved to the UC Davis GitHub account).  Details about how to fork a repository and work with it in GitHub Desktop are here: https://guides.github.com/activities/forking/ 
 2.	Open GitHub for Desktop
@@ -155,6 +174,23 @@ Within the file for an AVA, we will create polygons for each official boundary r
 	* The merge will have added extra fields at the bottom, delete these using the Delete Field tool in the attribute table menu (or Ctrl+L)
 7. Delete [AVA]1.geojson, [AVA]2.geojson, ... , [AVA]n.geojson from the avas folder
  
+### Quality Control
+
+As we near the colmpletion of the current boundaries, it is now time to begin checking each boundary for a second time against the official description and the approved maps.
+
+The process should proceed as follows:
+1. Pick a boundary to check.
+1. Comment in the issue for that boundary that you are reviewing that boundary.
+1. Load the boundary's .geojson file and the list of Used Maps into QGIS.
+1. Check that
+  * the Used Maps were the most appropriate to use.  If not, load up other maps.
+  * the attribute table for the boundary file is complete and follows our standard.  Note that State and County use \| (pipe) as the separator.
+  * the boundary follows the description as best it can.  Make changes as necessary.
+5. Update the Used Maps column to add any additional resources you used.  Whenever possible, please only use the Approved Maps.
+1. Post any questions or discussion points on the issue for the boundary you are reviewing.
+1. Submit a pull request for changes you made - please submit each boundary in it's own pull request.  Or, if the boundary and attribute table don't need edits, comment on the Issue for the boundary that you've checked it and it doesn't need edits.
+
+
 ### Notes
 
 If the name of the AVA changes, this should be reflected in the name field.  The `ava_id` field should have the most recent AVA ID followed by the appended date if applicable.
