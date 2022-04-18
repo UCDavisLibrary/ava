@@ -33,7 +33,10 @@ nav_order: 5
 
 [Elijah Stockwell](https://github.com/elistockwell) (Student Employee, DataLab, Starting October 2020)
 
-[Kelley Chu](https://github.com/kelleych) (Intern, DataLab, Starting April 2021)
+[Kelley Chu](https://github.com/kelleych) (Intern, DataLab, April 2021 - August 2021)
+
+[Erika Lopez](https://github.com/erklopez) (Student Employee, DataLab, Starting July 2021)
+
 
 **Consultants:**
 
