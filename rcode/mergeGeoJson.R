@@ -55,7 +55,7 @@ allsf <- arrange(allsf,desc(area))
 
 
 # Separate the current & historic AVAs ---------------------------------
-setwd("C:/Users/mmtobias/Documents/GitHub/ava/avas_aggregated_files")
+setwd("./avas_aggregated_files")
 
 current.avas<-allsf[which(is.na(allsf$valid_end)),]
 write_sf(current.avas, dsn="avas.geojson", driver="GeoJSON", delete_dsn=TRUE)
@@ -70,6 +70,7 @@ write_sf(allsf, dsn="avas_allboundaries.geojson", driver="GeoJSON", delete_dsn=T
 
 #txt<-sf_geojson(current.avas) #this isn't writing the attribute table correctly
 #text<-geojson_read("avas.geojson")
+setwd('..') #move back to the ava folder
 text<-readLines("avas.geojson")
 text<-paste(text, collapse = "")
 js=paste0("var avas = ", text)
