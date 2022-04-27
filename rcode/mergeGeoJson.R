@@ -73,7 +73,7 @@ write_sf(allsf, dsn="avas_allboundaries.geojson", driver="GeoJSON", delete_dsn=T
 text<-readLines("avas.geojson")
 text<-paste(text, collapse = "")
 js=paste0("var avas = ", text)
-writeLines(js, "avas.js")
+writeLines(js, "./docs/web_map/avas.js")
 
 
 #how long did it take?
