@@ -7,5 +7,5 @@ nav_order: 9
 
 Data visualizations and an interactive web map are coming soon!
 
-
+<iframe src="web_map/Webmap.html" style="width: 500px; height: 400px"></iframe>
 
