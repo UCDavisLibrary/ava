@@ -1,7 +1,0 @@
-I"ì<h1 id="visualizations">Visualizations</h1>
-
-<h3 id="interactive-webmap">Interactive Webmap</h3>
-<script src="/../avas_aggregated_files/avas.js"></script>
-
-<iframe src="web_map/Webmap.html" style="width: 800px; height: 600px"></iframe>
-:ET
