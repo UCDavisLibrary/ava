@@ -9,3 +9,8 @@
 .doc
 
 .DS_Store
+
+# Jekyll build files
+docs/_site
+docs/.jekyll-cache
+docs/.jekyll-metadata
