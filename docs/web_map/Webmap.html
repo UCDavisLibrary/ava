@@ -50,7 +50,7 @@ map.addLayer(Stamen_TonerLite);
 
 L.geoJSON(avas, {
     style: function (feature) {
-        return {color: '#990F02', weight: .75};
+        return {color: '#a95667', weight: .75};
     }
 }).bindTooltip(function (layer) {
     return "<b>Name: </b>" + layer.feature.properties.name + "<br><b>Date Created: </b>" + layer.feature.properties.created;
