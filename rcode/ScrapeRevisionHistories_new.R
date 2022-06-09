@@ -23,7 +23,6 @@ title27_v1<- which(update.frame$title_versions.title==27) #Returns the row in wh
 # but in the future if any changes to the row are made this line will prevent it from returning the incorrect data.
 last_update<- update.frame$title_versions.last_updated[title27_v1] #last_update corresponds to the last date in which the title 27 was updated
 
-
 # JSON from Latest Date ---------------------------------------------------
 
 url_api<- paste0('https://www.ecfr.gov/api/versioner/v1/structure/', last_update, '/title-27.json')#calls the api for the last date updated json hierarchy
@@ -47,7 +46,7 @@ subpartC<-subpartC[2:262,] #getting rid of general section 9.21
 # Working with XML from API -----------------------------------------------
 
 
-url_xml<- paste0('https://www.ecfr.gov/api/versioner/v1/full/', last_update, '/title-27.xml?chapter=I&subchapter=A&part=9')#calls the api for the last date updated xml
+url_xml<- paste0('https://www.ecfr.gov/api/versioner/v1/full/', last_update, '/title-27.xml?part=9&subpart=C')#calls the api for the last date updated xml
 
 XML_API<- read_xml(url_xml) #reads the xml from the API call
 
