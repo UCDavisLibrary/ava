@@ -1,0 +1,3 @@
+# Archived Documentation
+
+This folder contains the original documentation that was written and maintained from 2017 to 2022. In 2022, the team rewrote the documentation and moved it to our [Documentation Website](https://ucdavislibrary.github.io/ava/) to make the information easier to access for people who are unfamiliar with GitHub.  We have archived this original documentation for reference, but it will probably not be useful for anyone outside of the team that maintains this project. 
