@@ -50,20 +50,22 @@ url_xml<- paste0('https://www.ecfr.gov/api/versioner/v1/full/', last_update, '/t
 
 XML_API<- read_xml(url_xml) #reads the xml from the API call
 
-XML_CITA<-xml_find_all(XML_API, './/CITA')%>%xml_text()%>%as_data_frame() # gets all the CITA (revision strings) from the XML
+XML_CITA<-xml_find_all(XML_API, './/CITA|.//SECAUTH')%>%xml_text()%>%as_tibble() # gets all the CITA (revision strings) from the XML and 9.126 which has a 'secauth' divisor 
 
 #The reason why I did not use the XML to find the names is that the xml class head is used for the names as well as other variables on the file, so it would require extra cleaning
-
+XML_CITA<-XML_CITA[1:nrow(subpartC),]
 
 # CFR Revision Data Frame -------------------------------------------------
 
 
-CFR_current_CITA<-data.frame(subpartC$label_level, subpartC$label_description, XML_CITA$value) #creates df with current cfr ava section name and revision string
-colnames(CFR_current_CITA)<-c('section', 'ava_name','revision_string_current')#changes the names of the columns to maje more sense
+current_cita<-data.frame(subpartC$label_level, subpartC$label_description, XML_CITA$value) #creates df with current cfr ava section name and revision string
+colnames(current_cita)<-c('section', 'ava_name','revision_string_current')#changes the names of the columns to maje more sense
 
 # NOTE: revision string and CITA are used interchangeable on this script because the class for the xml nodes corresponding to the revision strings are CITA
 
-CFR_current_CITA$ava_name<-gsub(".","",CFR_current_CITA$ava_name, fixed = TRUE) #removes period to be able to match the CFR data frame with the geojson data frame by name of the ava
+current_cita$ava_name<-gsub(".","",current_cita$ava_name, fixed = TRUE) #removes period to be able to match the CFR data frame with the geojson data frame by name of the ava
+
+current_cita$ava_name<-gsub("AVA","",current_cita$ava_name, fixed = TRUE) #removes period to be able to match the CFR data frame with the geojson data frame by name of the ava
 
 # CITA from our geojson file -----------------------------------------------------
 
@@ -71,14 +73,28 @@ avas_geojson<-fromJSON("./avas_aggregated_files/avas.geojson")#reads the geojson
 
 avas_complete_df<-avas_geojson$features$properties #contains a data_fram of all the ava info inside of the geojson
 
-cfr_rev_strings<- avas_complete_df[,c(2, 13)] #data frame which contatins only the name and the revision string
+rev_stings<- avas_complete_df[,c(2, 13)] #data frame which contatins only the name and the revision string
 
-lapply(compared_revisions$revision_string_current, str_trim(compared_revisions$revision_string_current,))
-###FIND out how to remove the spaces at the end to compare the strings
 
-# Comparing the CFR_current_CITA with our cfr_rev_strings -----------------
+# Cleaning names and rev strings ------------------------------------------
 
-compared_revisions<-merge(CFR_current_CITA,cfr_rev_strings, by.x="ava_name", by.y="name", all.x = TRUE)
+rev_stings$name<-gsub("'","'",rev_stings$name, fixed = TRUE) 
+#changes the quotation mark to fit with the quotation mark the cfr uses
+rev_stings$name<-gsub("AVA","",rev_stings$name, fixed = TRUE)%>% str_trim()
+#removes the AVA from the names + gets rid of whitespaces at the end
+rev_stings$name<-gsub(".","",rev_stings$name, fixed = TRUE)
+#removes period to be able to match the CFR data frame with the geojson data frame by name of the ava
+rev_stings$name<-gsub(",","",rev_stings$name, fixed = TRUE)
+#removes comma to be able to match the CFR data frame with the geojson data frame by name of the ava
+current_cita$ava_name<-gsub(",","",current_cita$ava_name)%>%str_trim()
+
+# Comparing the current_cita with our rev_stings -----------------
+
+compared_revisions<-merge(rev_stings,current_cita, by.x="name", by.y="ava_name", all.x = TRUE)
+
+compared_revisions$revision_string_current<-gsub(" ","",compared_revisions$revision_string_current, fixed = TRUE)# remove spaces from our revision strings
+compared_revisions$cfr_revision_history<-gsub(" ", "", compared_revisions$cfr_revision_history, fixed = TRUE) # remove spaces from the cfr revision strings
+order(compared_revisions$section, increasing= TRUE)
 
 for (i in 1:261){
   if (is.na(compared_revisions$cfr_revision_history[[i]])){
@@ -91,5 +107,11 @@ for (i in 1:261){
     compared_revisions$sameas_cfr_string[[i]]= 'FALSE'
   }
 }     
+#west sonoma and obispo? 
+false_rows<-which(compared_revisions$sameas_cfr_string==FALSE) #returns the number of rows with the avas that need updating
 
-ifelse(compared_revisions$cfr_revision_history==compared_revisions$revision_string_current[i],"Yes","No")
+nonmatching<-compared_revisions[false_rows,] %>% as.data.frame() #returns the avas that need updating
+
+nonmatching$sameas_cfr_string<-as.character(nonmatching$sameas_cfr_string)
+
+write.csv(x=nonmatching, file="./avas_aggregated_files/need_updating_avas.csv", row.names = FALSE)
