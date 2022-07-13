@@ -71,7 +71,7 @@ write_sf(allsf, dsn="avas_allboundaries.geojson", driver="GeoJSON", delete_dsn=T
 #txt<-sf_geojson(current.avas) #this isn't writing the attribute table correctly
 #text<-geojson_read("avas.geojson")
 setwd('..') #move back to the ava folder
-text<-readLines("avas.geojson")
+text<-readLines("./avas_aggregated_files/avas.geojson")
 text<-paste(text, collapse = "")
 js=paste0("var avas = ", text)
 writeLines(js, "./docs/web_map/avas.js")
