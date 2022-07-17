@@ -12,6 +12,7 @@ library(httr)
 library(jsonlite)
 library(tidyverse)
 library(purrr)
+library(geojsonio)
 
 
 # Last Updated API Return -------------------------------------------------
@@ -71,14 +72,24 @@ current_cita$ecfr_name<-gsub("AVA","",current_cita$ecfr_name, fixed = TRUE) #rem
 
 avas <- list.files(path="./avas", pattern = "*json$", full.names = "TRUE") #lists to the avas path
 
-rev_strings<-data.frame(matrix(ncol = 3, nrow = 0))
+rev_strings_ideb<-data.frame(matrix(ncol = 3, nrow = 0))
 
 for (l in 1:length(avas)){
-  x<-read_json(avas[l])
-  y<-x$features[[1]]$properties
-  z<-data.frame(y$name, y$cfr_revision_history,y$cfr_index)
-  rev_strings<-rbind.data.frame(rev_strings,z)
-}
+  x<-geojson_sf(avas[l])
+  if (nrow(x)>1){
+  z<-which.max(x$valid_start)
+  }
+  else{
+    z<- 1
+  }
+  y<-data.frame(x$name[z], x$cfr_revision_history[z],x$cfr_index[z], x$ava_id[z])
+  rev_strings_ideb<-rbind.data.frame(rev_strings_ideb,y)
+} 
+#Gets every individual file into a dataframe, each row corresponds to a different ava revision, with the last one being the most recent.
+#The if statement is necessary to find the most recent date for the valid_star which consequencially outputs the most recent cfr_revision_history, if there are not more than one ava_id, then the for loop defaults to 1.
+#made the dataframe outputted be called rev_strins_ideb to make it human readeable in case any output is weird, comapared to rev_strings, ideb has the ava_id to be identifiable by eye.  
+
+rev_strings<-rev_strings_ideb[,1:3]
 
 colnames(rev_strings)<-c('geo_name', 'cfr_revision_history', 'cfr_index') 
 #geo_name refers to the name found in the geojson files, cfr_revision_history and cfr_index are also from the geojson files
@@ -97,7 +108,11 @@ current_cita$ecfr_name<-gsub(",","",current_cita$ecfr_name)%>%str_trim()
 current_cita$section<-gsub("§","",current_cita$section)%>%str_trim()
 # New Avas  ---------------------------------------------------------------
 
-new_avas<-current_cita[nrow(rev_strings):nrow(XML_CITA),]
+if(nrow(XML_CITA)>nrow(rev_strings)){
+  new_avas<-current_cita[nrow(rev_strings):nrow(XML_CITA),]
+  } else {
+  new_avas<-data.frame(matrix(ncol = 3, nrow = 0))
+  }
 
 # Comparing the current_cita with our rev_strings -----------------
 
@@ -119,6 +134,7 @@ for (i in 1:nrow(compared_revisions)){
   }
 }
 
+
 # Non-matched output ------------------------------------------------------
 
 false_rows<-which(compared_revisions$sameas_cfr_string==FALSE) #returns the number of rows with the avas that need updating
@@ -126,5 +142,24 @@ false_rows<-which(compared_revisions$sameas_cfr_string==FALSE) #returns the numb
 nonmatching<-compared_revisions[false_rows,] %>% as.data.frame() #returns the avas that need updating
 
 nonmatching$sameas_cfr_string<-as.character(nonmatching$sameas_cfr_string) #making sure that they are a character type so it can be outputted as a csv files
+
+for (i in 1:nrow(nonmatching)){
+  if(nonmatching[i,3]=="MISSING"){
+    nonmatching$comments[i]<- "This ava is missing, check whether this is a ecfr mistake or a new ava."
+  }
+  else if(nonmatching[i,5]=="MISSING"){
+    nonmatching$comments[i]<- "This ava is missing, check whether this is a ecfr mistake or a new ava."
+  }
+  else{
+    a<- str_replace_all(nonmatching[i,3], "[^[A-Za-z,.0-9]]", "") %>% str_replace_all(.,"[ ]+", "") #cfr_revision_history, removing special characters "[]" from string and assigning variable a
+    b<-str_replace_all(nonmatching[i,5], "[^[A-Za-z,.0-9]]", "") %>% str_replace_all(.,"[ ]+", "")# revision_string_eCFR, remove special characters "[]" ~~~ b
+    if(nchar(a)<nchar(b)){
+      nonmatching$difference[i]<-gsub(a,"",b, perl=TRUE)
+      nonmatching$comments[i]<-""}
+    else{
+      nonmatching$difference[i]<-gsub(b,"",a, perl=TRUE)
+      nonmatching$comments[i]<-"revision_string_eCFR<or=cfr_revision_history, either ecfr mistake or difference in single characters"}
+    }
+}
 
 write.csv(x=nonmatching, file="./avas_aggregated_files/need_updating_avas.csv", row.names = FALSE)
