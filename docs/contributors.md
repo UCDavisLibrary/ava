@@ -31,11 +31,13 @@ nav_order: 5
 
 [David Li](https://github.com/davidkli) (Student Employee, DataLab, October 2019 - July 2020)
 
-[Elijah Stockwell](https://github.com/elistockwell) (Student Employee, DataLab, Starting October 2020)
+[Elijah Stockwell](https://github.com/elistockwell) (Student Employee, DataLab, October 2020 - June 2022)
 
 [Kelley Chu](https://github.com/kelleych) (Intern, DataLab, April 2021 - August 2021)
 
-[Erika Lopez](https://github.com/erklopez) (Student Employee, DataLab, Starting July 2021)
+[Sebastian Lopez](https://github.com/erklopez) (Student Employee, DataLab, Starting July 2021)
+
+[Alison Wong](https://github.com/alisonsnwong) (Student Employee, DataLab, Starting July 2022)
 
 
 **Consultants:**
