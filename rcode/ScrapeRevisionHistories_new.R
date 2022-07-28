@@ -70,7 +70,7 @@ current_cita$ecfr_name<-gsub("AVA","",current_cita$ecfr_name, fixed = TRUE) #rem
 
 # avas from our geojson file -----------------------------------------------------
 
-avas <- list.files(path="./avas", pattern = "*json$", full.names = "TRUE") #lists to the avas path
+avas <- list.files(path="../avas", pattern = "*json$", full.names = "TRUE") #lists to the avas path
 
 rev_strings_ideb<-data.frame(matrix(ncol = 3, nrow = 0))
 
@@ -162,4 +162,8 @@ for (i in 1:nrow(nonmatching)){
     }
 }
 
-write.csv(x=nonmatching, file="./avas_aggregated_files/need_updating_avas.csv", row.names = FALSE)
+nonmatching_output<- nonmatching[(which(nchar(nonmatching$comments)==0)),c(1:5,7)]
+
+write.csv(new_avas, file="../reports/new_avas.csv", row.names = FALSE)
+
+write.csv(x=nonmatching_output, file="../reports/need_updating_avas.csv", row.names = FALSE)
