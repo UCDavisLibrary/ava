@@ -1,8 +1,0 @@
-{
-"type": "FeatureCollection",
-"name": "paulsell_valley",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "ava_id": null, "name": "delete later", "aka": null, "created": null, "removed": null, "county": null, "state": null, "within": null, "contains": null, "petitioner": null, "cfr_author": null, "cfr_index": null, "cfr_revision_history": null, "approved_maps": null, "boundary_description": null, "used_maps": null, "valid_start": null, "valid_end": null, "lcsh": null, "sameas": null }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -123.020117170043633, 38.632403888595533 ], [ -122.887020805621091, 38.629048518063875 ], [ -122.954128216254304, 38.702307441338462 ], [ -123.020117170043633, 38.632403888595533 ] ] ] } }
-]
-}
