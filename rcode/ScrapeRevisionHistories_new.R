@@ -77,7 +77,8 @@ rev_strings_ideb<-data.frame(matrix(ncol = 3, nrow = 0))
 for (l in 1:length(avas)){
   x<-geojson_sf(avas[l])
   if (nrow(x)>1){
-  z<-which.max(x$valid_start)
+  for(u in 1:nrow(x)){x$nchar[u]<-nchar(x$ava_id[u])}
+  z<-which.min(x$nchar)
   }
   else{
     z<- 1
