@@ -110,10 +110,12 @@ current_cita$section<-gsub("§","",current_cita$section)%>%str_trim()
 # New Avas  ---------------------------------------------------------------
 
 if(nrow(XML_CITA)>nrow(rev_strings)){
-  new_avas<-current_cita[nrow(rev_strings):nrow(XML_CITA),]
+  comp<-setdiff(current_cita$section, rev_strings$cfr_index)
+  new_avas<-current_cita[which(current_cita$section==comp),]
   } else {
   new_avas<-data.frame(matrix(ncol = 3, nrow = 0))
   }
+
 
 # Comparing the current_cita with our rev_strings -----------------
 
