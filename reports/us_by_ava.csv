@@ -1,12 +1,3 @@
-create table ava_list (
-cfr text primary key,
-state text,
-name text,
-county text,
-within text,
-contains text);
-
-copy ava_list from stdin with csv header;
 cfr,state,name,county,within,contains
 9.97,AZ,Sonoita,Santa Cruz,,
 9.259,AZ,Willcox,Cochise|Graham,,
@@ -197,7 +188,7 @@ cfr,state,name,county,within,contains
 9.182,OR,Ribbon Ridge,Yamhill,Chehalem Mountains|Willamette Valley,
 9.249,OR,The Rocks District of Milton-Freewater,Umatilla,Columbia Valley|Walla Walla Valley,
 9.132,OR,Rogue Valley,Jackson|Josephine,Southern Oregon,Applegate Valley
-9.179,OR,Southern Oregon,Douglas|Jackson|Josephine,,Applegate Valley|Elkton Oregon|"Red Hill Douglas County, Oregon|Rogue Valley|Umpqua Valley"
+9.179,OR,Southern Oregon,Douglas|Jackson|Josephine,,Applegate Valley|Elkton Oregon|Red Hill Douglas County Oregon|Rogue Valley|Umpqua Valley
 9.89,OR,Umpqua Valley,Douglas,Southern Oregon,Elkton Oregon|Red Hill Douglas County Oregon
 9.90,OR,Willamette Valley,Benton|Clackamas|Lane|Linn|Marion|Multnomah|Polk|Washington|Yamhill,,Chehalem Mountains|Dundee Hills|Eola-Amity Hills|McMinnville|Ribbon Ridge|Yamhill-Carlton
 9.183,OR,Yamhill-Carlton,Washington|Yamhill,Willamette Valley,
@@ -247,4 +238,3 @@ cfr,state,name,county,within,contains
 9.234,GA|NC,Upper Hiwassee Highlands,,,
 9.216,IL|IA|MN|WI,Upper Mississippi River Valley,,,Lake Wisconsin (WI)
 9.91,OR|WA,Walla Walla Valley,,Columbia Valley,The Rocks District of Milton–Freewater (OR)
-\.
