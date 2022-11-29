@@ -123,5 +123,3 @@ change <- subset(old_vs_new, old_vs_new$change == "Different", select = c(ava_id
 
 # Final df that shows output
 change
-
-# 1:45hr
