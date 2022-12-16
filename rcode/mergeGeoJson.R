@@ -16,7 +16,8 @@ library(readr)
 avas <- list.files(path="./avas", pattern = "*json$", full.names = "TRUE")
 tbd <- list.files(path="./tbd", pattern = "*json$", full.names = "TRUE")
 
-gj <- c(avas, tbd)
+#gj <- c(avas, tbd)
+gj<- avas #we no longer need to include the TBD boundaries in the aggregated files. This line is awkward, but I want to keep the original structure in case we need it later. "gj" is short for geojson.
 
 # exclude the all.geojson file... probably a more elegant way to do this, but this works:
 gj <- gj[gj != "./avas.geojson"]
@@ -49,6 +50,7 @@ allsf$area <- st_area(allsf)
 
 # arrange the polygons so the smaller ones are on top
 allsf <- arrange(allsf,desc(area))
+allsf <- allsf[,-22]
 
 #write_sf(allsf, dsn="avas.geojson", driver="GeoJSON", delete_dsn=TRUE)
 #geojson_write(allsf, file="avas-sf.geojson", overwrite=TRUE, convert_wgs84 = TRUE)
