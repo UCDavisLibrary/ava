@@ -73,7 +73,6 @@ write_sf(historic.avas, dsn="avas_historic.geojson", driver="GeoJSON", delete_ds
 
 write_sf(allsf, dsn="avas_allboundaries.geojson", driver="GeoJSON", delete_dsn=TRUE)
 
-
 # Write JS file for Web Map-----------------------------------------------------------
 
 #txt<-sf_geojson(current.avas) #this isn't writing the attribute table correctly
