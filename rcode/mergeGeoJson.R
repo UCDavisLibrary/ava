@@ -31,8 +31,12 @@ vectsf <- lapply(gj, read_sf)
 
 #Bug, if date field has NA it's a char but valid dates are doubles, can't bind those
 #Option convert after reading to char, or read as char to begin with
+# converted the dates column as char 
 vectsf2 <- lapply(vectsf, function(d){
   d$created <- as.character(d$created)
+  d$removed <- as.character(d$removed)
+  d$valid_start <- as.character(d$valid_start)
+  d$valid_end <- as.character(d$valid_end)
   return(d)
   })
 
@@ -45,12 +49,14 @@ allsf <- mutate_if(allsf, is.character, gsub, pattern="N/A", replacement=NA)
 # replace blanks with NA in the valid_end column
 allsf$valid_end[allsf$valid_end=='']<-NA
 
+# ensure polygons are valif
+allsf <- st_make_valid(allsf)
+
 # calculate the area of the polygons
 allsf$area <- st_area(allsf)
 
 # arrange the polygons so the smaller ones are on top
 allsf <- arrange(allsf,desc(area))
-allsf <- allsf[,-22]
 
 #write_sf(allsf, dsn="avas.geojson", driver="GeoJSON", delete_dsn=TRUE)
 #geojson_write(allsf, file="avas-sf.geojson", overwrite=TRUE, convert_wgs84 = TRUE)
