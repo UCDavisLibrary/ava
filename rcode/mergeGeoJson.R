@@ -33,10 +33,10 @@ vectsf <- lapply(gj, read_sf)
 #Option convert after reading to char, or read as char to begin with
 # converted the dates column as char 
 vectsf2 <- lapply(vectsf, function(d){
-  d$created <- as.character(d$created)
-  d$removed <- as.character(d$removed)
-  d$valid_start <- as.character(d$valid_start)
-  d$valid_end <- as.character(d$valid_end)
+  d$created <- as.Date(d$created)
+  d$removed <- as.Date(d$removed)
+  d$valid_start <- as.Date(d$valid_start)
+  d$valid_end <- as.Date(d$valid_end)
   return(d)
   })
 
@@ -53,10 +53,10 @@ allsf$valid_end[allsf$valid_end=='']<-NA
 allsf <- st_make_valid(allsf)
 
 # calculate the area of the polygons
-allsf$area <- st_area(allsf)
+#allsf$area <- st_area(allsf)
 
 # arrange the polygons so the smaller ones are on top
-allsf <- arrange(allsf,desc(area))
+allsf <- arrange(allsf,desc(st_area(allsf)))
 
 #write_sf(allsf, dsn="avas.geojson", driver="GeoJSON", delete_dsn=TRUE)
 #geojson_write(allsf, file="avas-sf.geojson", overwrite=TRUE, convert_wgs84 = TRUE)
