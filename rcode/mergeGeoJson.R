@@ -49,8 +49,19 @@ allsf <- mutate_if(allsf, is.character, gsub, pattern="N/A", replacement=NA)
 # replace blanks with NA in the valid_end column
 allsf$valid_end[allsf$valid_end=='']<-NA
 
-# ensure polygons are valif
-allsf <- st_make_valid(allsf)
+# ensure ava is valid
+for (i in 1:nrow(allsf)) {
+  
+  # move on if the ava is valid
+  if (st_is_valid(allsf[i,]) == TRUE) {
+    next
+    
+  # if the ava is not valid, first set precision to 15 digits and then make the ava valid 
+  } else {
+    allsf[i,] <- st_set_precision(allsf[i,], 15)
+    allsf[i,] <- st_make_valid(allsf[i,])
+  }
+}
 
 # calculate the area of the polygons
 #allsf$area <- st_area(allsf)
