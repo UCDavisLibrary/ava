@@ -51,6 +51,12 @@ url_xml<- paste0('https://www.ecfr.gov/api/versioner/v1/full/', last_update, '/t
 
 XML_API<- read_xml(url_xml) #reads the xml from the API call
 
+if (nrow(XML_CITA) < nrow(subpartC)){
+  extras<-which(nchar(subpartC$label_description) <4)
+  error_sections<-subpartC[extras,] #df with possible typos or empty sections with less than 4 letters in the name
+  subpartC<-subpartC[-extras,]
+}
+
 XML_CITA<-xml_find_all(XML_API, './/CITA|.//SECAUTH')%>%xml_text()%>%as_tibble() # gets all the CITA (revision strings) from the XML and 9.126 which has a 'secauth' divisor 
 
 #The reason why I did not use the XML to find the names is that the xml class head is used for the names as well as other variables on the file, so it would require extra cleaning
@@ -106,7 +112,7 @@ rev_strings$geo_name<-gsub(".","",rev_strings$geo_name, fixed = TRUE)
 rev_strings$geo_name<-gsub(",","",rev_strings$geo_name, fixed = TRUE)
 #removes comma to be able to match the CFR data frame with the geojson data frame by name of the ava
 current_cita$ecfr_name<-gsub(",","",current_cita$ecfr_name)%>%str_trim()
-current_cita$section<-gsub("§","",current_cita$section)%>%str_trim()
+current_cita$section<-gsub("?","",current_cita$section)%>%str_trim() %>% gsub("[^0-9.]+", "", .)
 # New Avas  ---------------------------------------------------------------
 
 if(nrow(XML_CITA)>nrow(rev_strings)){
