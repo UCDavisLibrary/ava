@@ -16,7 +16,8 @@ library(readr)
 avas <- list.files(path="./avas", pattern = "*json$", full.names = "TRUE")
 tbd <- list.files(path="./tbd", pattern = "*json$", full.names = "TRUE")
 
-gj <- c(avas, tbd)
+#gj <- c(avas, tbd)
+gj<- avas #we no longer need to include the TBD boundaries in the aggregated files. This line is awkward, but I want to keep the original structure in case we need it later. "gj" is short for geojson.
 
 # exclude the all.geojson file... probably a more elegant way to do this, but this works:
 gj <- gj[gj != "./avas.geojson"]
@@ -30,8 +31,12 @@ vectsf <- lapply(gj, read_sf)
 
 #Bug, if date field has NA it's a char but valid dates are doubles, can't bind those
 #Option convert after reading to char, or read as char to begin with
+# converted the dates column as char 
 vectsf2 <- lapply(vectsf, function(d){
-  d$created <- as.character(d$created)
+  d$created <- as.Date(d$created)
+  d$removed <- as.Date(d$removed)
+  d$valid_start <- as.Date(d$valid_start)
+  d$valid_end <- as.Date(d$valid_end)
   return(d)
   })
 
@@ -44,11 +49,25 @@ allsf <- mutate_if(allsf, is.character, gsub, pattern="N/A", replacement=NA)
 # replace blanks with NA in the valid_end column
 allsf$valid_end[allsf$valid_end=='']<-NA
 
+# ensure ava is valid
+for (i in 1:nrow(allsf)) {
+  
+  # move on if the ava is valid
+  if (st_is_valid(allsf[i,]) == TRUE) {
+    next
+    
+  # if the ava is not valid, first set precision to 15 digits and then make the ava valid 
+  } else {
+    allsf[i,] <- st_set_precision(allsf[i,], 15)
+    allsf[i,] <- st_make_valid(allsf[i,])
+  }
+}
+
 # calculate the area of the polygons
-allsf$area <- st_area(allsf)
+#allsf$area <- st_area(allsf)
 
 # arrange the polygons so the smaller ones are on top
-allsf <- arrange(allsf,desc(area))
+allsf <- arrange(allsf,desc(st_area(allsf)))
 
 #write_sf(allsf, dsn="avas.geojson", driver="GeoJSON", delete_dsn=TRUE)
 #geojson_write(allsf, file="avas-sf.geojson", overwrite=TRUE, convert_wgs84 = TRUE)
@@ -64,7 +83,6 @@ historic.avas<-allsf[which(nchar(allsf$valid_end)>0),]
 write_sf(historic.avas, dsn="avas_historic.geojson", driver="GeoJSON", delete_dsn=TRUE)
 
 write_sf(allsf, dsn="avas_allboundaries.geojson", driver="GeoJSON", delete_dsn=TRUE)
-
 
 # Write JS file for Web Map-----------------------------------------------------------
 
