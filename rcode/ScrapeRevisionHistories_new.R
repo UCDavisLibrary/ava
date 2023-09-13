@@ -14,6 +14,8 @@ library(tidyverse)
 library(purrr)
 library(geojsonio)
 
+setwd("~/data_lab_/ava")
+
 
 # Last Updated API Return -------------------------------------------------
 
@@ -51,13 +53,13 @@ url_xml<- paste0('https://www.ecfr.gov/api/versioner/v1/full/', last_update, '/t
 
 XML_API<- read_xml(url_xml) #reads the xml from the API call
 
+XML_CITA<-xml_find_all(XML_API, './/CITA|.//SECAUTH')%>%xml_text()%>%as_tibble() # gets all the CITA (revision strings) from the XML and 9.126 which has a 'secauth' divisor 
+
 if (nrow(XML_CITA) < nrow(subpartC)){
-  extras<-which(nchar(subpartC$label_description) <4)
-  error_sections<-subpartC[extras,] #df with possible typos or empty sections with less than 4 letters in the name
+  extras<-which(subpartC$label_description=="xxx")
+  empty_sections<-subpartC[extras,] #df with any non-approved extras that might contain "xxx" as their current name
   subpartC<-subpartC[-extras,]
 }
-
-XML_CITA<-xml_find_all(XML_API, './/CITA|.//SECAUTH')%>%xml_text()%>%as_tibble() # gets all the CITA (revision strings) from the XML and 9.126 which has a 'secauth' divisor 
 
 #The reason why I did not use the XML to find the names is that the xml class head is used for the names as well as other variables on the file, so it would require extra cleaning
 # XML_CITA<-XML_CITA[1:nrow(rev_strings),]
@@ -76,7 +78,7 @@ current_cita$ecfr_name<-gsub("AVA","",current_cita$ecfr_name, fixed = TRUE) #rem
 
 # avas from our geojson file -----------------------------------------------------
 
-avas <- list.files(path="../avas", pattern = "*json$", full.names = "TRUE") #lists to the avas path
+avas <- list.files(path="./avas", pattern = "*json$", full.names = "TRUE") #lists to the avas path
 
 rev_strings_ideb<-data.frame(matrix(ncol = 3, nrow = 0))
 
@@ -173,6 +175,6 @@ for (i in 1:nrow(nonmatching)){
 
 nonmatching_output<- nonmatching[(which(nchar(nonmatching$comments)==0)),c(1:5,7)]
 
-write.csv(new_avas, file="../reports/new_avas.csv", row.names = FALSE)
+write.csv(new_avas, file="./reports/new_avas.csv", row.names = FALSE)
 
-write.csv(x=nonmatching_output, file="../reports/need_updating_avas.csv", row.names = FALSE)
+write.csv(x=nonmatching_output, file="./reports/need_updating_avas.csv", row.names = FALSE)
