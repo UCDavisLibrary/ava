@@ -14,6 +14,10 @@ library(tidyverse)
 library(purrr)
 library(geojsonio)
 
+
+# Replace this line's directory with your local ava folder (make sure not to select ava/avas) --------
+
+
 setwd("~/data_lab_/ava")
 
 
@@ -118,8 +122,8 @@ current_cita$section<-gsub("?","",current_cita$section)%>%str_trim() %>% gsub("[
 # New Avas  ---------------------------------------------------------------
 
 if(nrow(XML_CITA)>nrow(rev_strings)){
-  comp<-setdiff(current_cita$section, rev_strings$cfr_index)
-  new_avas<-current_cita[which(current_cita$section==comp),]
+  comp<-setdiff(subpartC$identifier, rev_strings$cfr_index)
+  new_avas<-subpartC[subpartC$identifier %in% comp,]
   } else {
   new_avas<-data.frame(matrix(ncol = 3, nrow = 0))
   }
@@ -174,6 +178,10 @@ for (i in 1:nrow(nonmatching)){
 }
 
 nonmatching_output<- nonmatching[(which(nchar(nonmatching$comments)==0)),c(1:5,7)]
+
+# Flattening dataframe for writing
+new_avas <- new_avas %>%
+  mutate(volumes = map_chr(volumes, toString))
 
 write.csv(new_avas, file="./reports/new_avas.csv", row.names = FALSE)
 
