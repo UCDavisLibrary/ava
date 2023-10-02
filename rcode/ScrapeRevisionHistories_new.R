@@ -179,6 +179,10 @@ for (i in 1:nrow(nonmatching)){
 
 nonmatching_output<- nonmatching[(which(nchar(nonmatching$comments)==0)),c(1:5,7)]
 
+# Flattening dataframe for writing
+new_avas <- new_avas %>%
+  mutate(volumes = map_chr(volumes, toString))
+
 write.csv(new_avas, file="./reports/new_avas.csv", row.names = FALSE)
 
 write.csv(x=nonmatching_output, file="./reports/need_updating_avas.csv", row.names = FALSE)
