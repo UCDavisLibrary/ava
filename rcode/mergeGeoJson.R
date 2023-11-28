@@ -7,6 +7,7 @@ library(dplyr)
 library(rgdal)
 library(lwgeom)
 library(readr)
+sf_use_s2(FALSE) # solves duplicated vertex error
 #library(geojsonio)
 #library(geojsonsf)
 
@@ -33,10 +34,10 @@ vectsf <- lapply(gj, read_sf)
 #Option convert after reading to char, or read as char to begin with
 # converted the dates column as char 
 vectsf2 <- lapply(vectsf, function(d){
-  d$created <- as.Date(d$created)
-  d$removed <- as.Date(d$removed)
-  d$valid_start <- as.Date(d$valid_start)
-  d$valid_end <- as.Date(d$valid_end)
+  d$created <- as.Date(d$created, "%m/%d/%y")
+  d$removed <- as.Date(d$removed, "%m/%d/%y")
+  d$valid_start <- as.Date(d$valid_start, "%m/%d/%y")
+  d$valid_end <- as.Date(d$valid_end, "%m/%d/%y")
   return(d)
   })
 
@@ -58,6 +59,7 @@ for (i in 1:nrow(allsf)) {
     
   # if the ava is not valid, first set precision to 15 digits and then make the ava valid 
   } else {
+    print(i)
     allsf[i,] <- st_set_precision(allsf[i,], 15)
     allsf[i,] <- st_make_valid(allsf[i,])
   }
