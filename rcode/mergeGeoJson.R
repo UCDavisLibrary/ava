@@ -4,7 +4,7 @@
 
 library(sf)
 library(dplyr)
-library(rgdal)
+#library(rgdal) - depreciated and no longer needed
 library(lwgeom)
 library(readr)
 sf_use_s2(FALSE) # solves duplicated vertex error
