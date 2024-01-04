@@ -8,49 +8,47 @@ All contributors are expected to follow the [Code of Conduct](code_of_conduct.md
 
 We have archived our older documentation for reference in the [archived_documentation](https://github.com/UCDavisLibrary/ava/tree/master/archived_documentation) folder.
 
+## File Structure
+
+The file structure for the project is:
+
+```
+archived_documentation/   Original documentation from 2017-2022
+avas/                     Individual AVA files
+avas_aggregated_files/    Aggregated AVA files
+avas_by_state/            AVA files by state
+docs/                     Supporting documents
+└── _sass/color_schemes/  Website color schemes
+└── cleaned/              Website visualizations
+└── web_map/              Map for website
+images/                   Supporting images
+rcode/                    Supporting r scripts
+reports/                  CSV results generated from r scripts
+tbd/                      Template ava file
+unofficial_boundaries/    Unofficial boundaries
+LICENSE
+NOTES.org
+Notes.md
+README.md
+code_of_conduct.md
+contributors.csv
+```
 ## [rcode](rcode) Folder Description
 
-1. AVA counties from shapefile.R
-> Purpose: This script is used for producing county field from shapefile (when info is not found in CFR).
-
-2. GettingProj4Strings.R (Not in Use)
-> Purpose: This script is used to retrieve proj.4 strings for qgis
-
-3. GuenocValley.R (Not in Use)
-> Purpose: This r script takes the compass bearings and distances from the Federal Register Document describing the Guenoc Valley AVA and turns it into a polygon.
-
-4. ScrapeRevisionHistories_new.R
-> Purpose: This r script scrapes the ECFR site for the names and revision histories for the AVAs for new AVAs to be digitized.
-
-5. StatesFiles.R
-> Purpose: This r script separates AVAs by state to make a .geojson and .shp file set for each state.
-
-6. ava_county_update.R
-> Purpose: This r script returns a list of errors in the 'county' column that need to be updated
-
-7. check_winding_order.R
-> Purpose: This script checks if the .geojsons in the avas folder are clockwise, and if so reverses them to fit the RFC 7946 standard of exterior rings = counterclockwise
-
-8. commas_to_pipes.R
-> Purpose: This r script changes commas to pipes in the county column (can be used in states too, change "county" to "state")
-
-9. find bad dates.R
-> Purpose: This r script identifies AVAs with wrong date formats
-
-10. fix_contains.R
-> Purpose: This r script replaces commas and deletes state abbr in within/contains columns
-
-11. getContributorInfo.R
-> Purpose: This script uses the data frame created in getContributors.R to return some basic analysis such as the unique contributors to the AVA GitHub, a data frame of the number of contributors to each file, and their names.
-
-12. getContributors.R
-> Purpose: This script scrapes the GitHub contributors for each file in the avas folder.
-
-13. mergeGeoJson.R
-> Purpose: This r script combines all the GeoJSON files in a folder into one file, and then writes it back to the folder.
-
-14. set_NAs_to_null.R
-> Purpose: This r script changes N/A to NA.
-
-15. visualizations_ava.R
-> Purpose: This r script creates visualizations for the website.
+| File Name               | Description                                             |
+|-------------------------|---------------------------------------------------------|
+| AVA counties from shapefile.R | Produces county field from shapefile when info is not found in CFR. |
+| GettingProj4Strings.R (Not in Use) | Retrieves proj.4 strings for QGIS. |
+| GuenocValley.R (Not in Use) | Transforms compass bearings and distances into a polygon for the Guenoc Valley AVA. |
+| ScrapeRevisionHistories_new.R | Scrapes ECFR site for AVAs' names and revision histories for new digitization. |
+| StatesFiles.R | Separates AVAs by state to generate .geojson and .shp file sets for each state. |
+| ava_county_update.R | Identifies errors in the 'county' column needing updates. |
+| check_winding_order.R | Checks if .geojsons in the avas folder have clockwise orientation and corrects them as per RFC 7946 standard. |
+| commas_to_pipes.R | Converts commas to pipes in the 'county' column (applicable to states by changing "county" to "state"). |
+| find bad dates.R | Identifies AVAs with incorrect date formats. |
+| fix_contains.R | Replaces commas and deletes state abbreviations in within/contains columns. |
+| getContributorInfo.R | Provides basic analysis on unique contributors to the AVA GitHub, contributors to each file, and their names using data from `getContributors.R`. |
+| getContributors.R | Scrapes GitHub contributors for each file in the avas folder. |
+| mergeGeoJson.R | Combines all GeoJSON files in a folder into one file and writes it back to the folder. |
+| set_NAs_to_null.R | Changes N/A to NA. |
+| visualizations_ava.R | Creates visualizations for the website. |
