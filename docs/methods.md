@@ -144,19 +144,20 @@ Border matching can be done manually with QGIS's snapping tool, but for longer s
 
 ### Quality Control Methods
 
-For quality control, each boundary for a second time against the official description and the approved maps. Having a second (or even third) check each boundary ensures that the data matches as closely to the offical description as we can make it.
+For quality control, each boundary for a second time against the official description and the approved maps. Having a second (or even third) check each boundary ensures that the data matches as closely to the official description as we can make it.
 
 The process should proceed as follows:
-1. Pick a boundary to check.
-1. Comment in the issue for that boundary that you are reviewing that boundary.
-1. Load the boundary's .geojson file and the list of Used Maps into QGIS.
-1. Check that
+1. Pick a boundary from the “Quality Control” issues to check.
+2. Comment on the issue for that boundary that you are reviewing that boundary.
+3. Load the boundary's .geojson file and the list of Used Maps from USGS National Geologic Map Database’s topoView: https://ngmdb.usgs.gov/maps/TopoView/viewer into QGIS.
+4. Check that
   * the Used Maps were the best match for the official Approved Maps.  If not, load up other maps. New options may now be available that weren't at the time the boundary was initially digitized.
   * the attribute table for the boundary file is complete and follows our standard.  Note that State and County use \| (pipe) as the separator.
-  * the boundary follows the description as best it can.  Make changes as necessary.
+  * the boundary follows the description as best it can.  Make changes as necessary by selecting the boundary and click “Zoom to layer(s)”. Toggle Editing and select the Vertex tool to edit specific vertices as needed. Remember to click Save as you make edits.
 5. Update the Used Maps column to add any additional resources you used.  Whenever possible, please only use the Approved Maps.
-1. Post any questions or discussion points on the issue for the boundary you are reviewing.
-1. Submit a pull request for changes you made - please submit each boundary in it's own pull request.  Or, if the boundary and attribute table don't need edits, comment on the Issue for the boundary that you've checked it and it doesn't need edits.
+6. Post any questions or discussion points on the issue for the boundary you are reviewing.
+7. Submit a pull request for changes you made - please submit each boundary in it's own pull request.
+  * If the boundary and attribute table don't need edits, comment on the Issue for the boundary that you've checked it and it doesn't need edits.
 
 
 ### Notes
