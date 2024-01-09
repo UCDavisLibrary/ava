@@ -114,7 +114,7 @@ We have one .geojson file for each named AVA. Within the file for an AVA, we cre
  * `removed`: the date the **AVA** was terminated
  * `valid_start`: the date the **boundary** officially began
  * `valid_end`: the last date the **boundary** was in use (typically the day before the next revision took effect)
- * `ava_id`: for non-current boundaries, append and underscore and the date for the 'valid_start' in YYYYMMDD format.  Example: redwood_valley_19970221
+ * `ava_id`: for non-current boundaries, append, and underscore and the date for the 'valid_start' in YYYYMMDD format.  Example: redwood_valley_19970221
  * `petitioner` and `cfr_author`:  The boundary update will most likely have a different petitioner and author, which can be found in the CFR document 
  * `cfr_revision_history`: the most updated version can be found on the e-CFR website, underneath the boundary instruction.  Example: [T.D. ATF-128, 48 FR 14375, Apr. 4, 1983, as amended by T.D. TTB-163, 85 FR 60361, Sept. 25, 2020]. Each revision should have the CFR history up to that revision (first version will and after the first date)
  
@@ -130,8 +130,8 @@ Here is one option for adding historical boundaries to an existing AVA boundary.
 6. When editing is complete, use the merge tool to combine layers:
 	* Open with Vector —> Data Management Tools —>  Merge Vector Layers
 	* Select [AVA]1.geojson, [AVA]2.geojson, ... , [AVA]n.geojson as input layers
-	* Under merged, click the ellipses and select “Save to File”, navigate to avas folder and save as [AVA].geojson
-	* Once merge is complete, double-check that the attribute table for the new layer contains tabs for the original and the update
+	* Under merged, click the ellipses and select “Save to File”, navigate to the avas folder and save as [AVA].geojson
+	* Once the merge is complete, double-check that the attribute table for the new layer contains tabs for the original and the update
 	* The merge will have added extra fields at the bottom, delete these using the Delete Field tool in the attribute table menu (or Ctrl+L)
 7. Delete [AVA]1.geojson, [AVA]2.geojson, ... , [AVA]n.geojson from the avas folder
  
@@ -139,7 +139,7 @@ Here is one option for adding historical boundaries to an existing AVA boundary.
 
 In the interest of keeping the dataset clean and organized, AVAs that share a partial boundary are matched along this boundary.  In these cases, the border that is kept is the one that is of higher detail, i.e. larger-scale maps.  If the two AVAs have the same level of detail, priority goes to the more recent AVA.  For AVAs with revisions that update maps but keep the same borders, all versions should be matched to the most recent map.  Some exceptions can be made, but all border-matching decisions should be documented in the used maps attribute of the edited AVA.  
 
-Border matching can be done manually with QGIS's snapping tool, but for longer sections of boundary, it is best to copy/paste coordinates between the GeoJSON files. To locate the start and end points of the section of border, add vertices here that are far enough away from the rest of the AVA that the latitude or longitude is at least a full decimal degree away from any other point in the AVA (for example, if the latitude of AVA is between 34 and 35 degrees North, create a point at either 33 or 36).  Then you can ctrl+F the GeoJSON file with this coordinate (include the decimal or you will get a lot of returns, so "33." or "36.").  Do this for the start and end of the section, and now you can select every coordinate in between.  Occasionally, the start of the polygon (first coordinate in the GeoJSON) will be inside the section being matched, in which case the section will be split between the beginning of the coordinate list and the end, with the rest of the polygon in between.  Also be aware of the order of coordinates, or direction of winding.  If two avas share a boundary but don't overlap, then the matched borders are going in opposite directions, and you will have to change the winding order of one of them using st_reverse in R before copy-pasting coordinates.  Make sure to undo the reverse after, all AVAs should be wound counterclockwise (see rcode/check_winding_order.R).
+Border matching can be done manually with QGIS's snapping tool, but for longer sections of boundary, it is best to copy/paste coordinates between the GeoJSON files. To locate the start and end points of the section of the border, add vertices here that are far enough away from the rest of the AVA that the latitude or longitude is at least a full decimal degree away from any other point in the AVA (for example, if the latitude of AVA is between 34 and 35 degrees North, create a point at either 33 or 36).  Then you can ctrl+F the GeoJSON file with this coordinate (include the decimal or you will get a lot of returns, so "33." or "36.").  Do this for the start and end of the section, and now you can select every coordinate in between.  Occasionally, the start of the polygon (first coordinate in the GeoJSON) will be inside the section being matched, in which case the section will be split between the beginning of the coordinate list and the end, with the rest of the polygon in between.  Also be aware of the order of coordinates, or direction of winding.  If two avas share a boundary but don't overlap, then the matched borders are going in opposite directions, and you will have to change the winding order of one of them using st_reverse in R before copy-pasting coordinates.  Make sure to undo the reverse after, all AVAs should be wound counterclockwise (see rcode/check_winding_order.R).
 
 
 ### Quality Control Methods
@@ -149,14 +149,14 @@ For quality control, each boundary for a second time against the official descri
 The process should proceed as follows:
 1. Pick a boundary from the “Quality Control” issues to check.
 2. Comment on the issue for that boundary that you are reviewing that boundary.
-3. Load the boundary's .geojson file and the list of Used Maps from USGS National Geologic Map Database’s topoView: https://ngmdb.usgs.gov/maps/TopoView/viewer into QGIS.
+3. Load the boundary's .geojson file and the list of Used Maps from the USGS National Geologic Map Database’s topoView: https://ngmdb.usgs.gov/maps/TopoView/viewer into QGIS.
 4. Check that
   * the Used Maps were the best match for the official Approved Maps.  If not, load up other maps. New options may now be available that weren't at the time the boundary was initially digitized.
   * the attribute table for the boundary file is complete and follows our standard.  Note that State and County use \| (pipe) as the separator.
-  * the boundary follows the description as best it can.  Make changes as necessary by selecting the boundary and click “Zoom to layer(s)”. Toggle Editing and select the Vertex tool to edit specific vertices as needed. Remember to click Save as you make edits.
+  * the boundary follows the description as best it can.  Make changes as necessary by selecting the boundary and clicking “Zoom to layer(s)”. Toggle Editing and select the Vertex tool to edit specific vertices as needed. Remember to click Save as you make edits.
 5. Update the Used Maps column to add any additional resources you used.  Whenever possible, please only use the Approved Maps.
 6. Post any questions or discussion points on the issue for the boundary you are reviewing.
-7. Submit a pull request for changes you made - please submit each boundary in it's own pull request.
+7. Submit a pull request for changes you made - please submit each boundary in its own pull request.
   * If the boundary and attribute table don't need edits, comment on the Issue for the boundary that you've checked it and it doesn't need edits.
 
 
@@ -170,11 +170,11 @@ To see an example of boundaries with revisions, see the closed issues for any is
 
 
 
-## Submiting your changes to the AVA GitHub Repository
+## Submitting your changes to the AVA GitHub Repository
 1.	In GitHub for Desktop, you should see a list of changes you’ve made to the files.  Fill in the Summary and Description fields at the bottom of the window and then click the Commit button.  https://guides.github.com/activities/forking/#making-changes 
 2.  You should now see the "Push" button at the top of your GitHub for Desktop Screen.  Click the "Push" button to send your changes to YOUR online repository.
 2.	If you are ready to send finished data to the UC Davis repository, submit a pull request for your fork: https://help.github.com/articles/creating-a-pull-request-from-a-fork/ 
-3.  The project administrators will review your changes and if your changes are accepted, project adminsitrators will incorporated your changes and close the issue you were working on.  If there is any problems or questions, the project administrators will contact you.
+3.  The project administrators will review your changes and if your changes are accepted, project administrators will incorporate your changes and close the issue you were working on.  If there are any problems or questions, the project administrators will contact you.
 
 
 ### Additional Reference Material:
