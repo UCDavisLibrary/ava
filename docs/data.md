@@ -34,7 +34,7 @@ identifier | type | description | example
 ava_id | text | a unique identifier for each AVA polygon |	leona_valley
 name | text | the legal name given to the AVA; an identifier for each AVA |	Leona Valley
 aka	| text | (optional) other names, including historical names, and terms used for the AVA | |
-created	| date | YYYY-MM-DD format; the date of the first publication creating the AVA (same date as the one in the cfr_revision_history) | 2017-06-01 |
+created	| date | YYYY-MM-DD format; the date of the first publication creating the AVA | 2017-06-01 |
 removed	| date | (optional) YYYY-MM-DD format; the date the AVA designation was removed from an area | 2017-06-01 |
 county | text | the county, or list of counties separated by a pipe, in which the AVA exists |	Los Angeles&#124;Ventura
 state	| text | the state, or list of states separated by a pipe, using the two-letter postal abbreviation, in which the AVA exists | CA&#124;NV
