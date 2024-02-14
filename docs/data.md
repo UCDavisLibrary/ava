@@ -7,7 +7,7 @@ nav_order: 2
 # Data
 
 ## Files Available
-The AVA Digitizing Project makes data for the AVA boundaries available in several convenient collections on our [GitHub Repository](). All data are in .geojson format, a open, text-based format usable in GIS program, as well as R and Python.
+The AVA Digitizing Project makes data for the AVA boundaries available in several convenient collections on our [GitHub Repository](). All data are in .geojson format, an open, text-based format usable in GIS programs, as well as R and Python.
 
 ### Data Collections
 Collections of data are available in the `avas_aggregated_files` folder on the GitHub repository
@@ -15,7 +15,7 @@ Collections of data are available in the `avas_aggregated_files` folder on the G
 #### Current AVA Boundaries
 The avas.geojson file contains all of the AVA boundaries that were currently in use at the time the file was created.  This is the file that most people will want to download.
 
-Current boundaries for individual states can be found int he `avas_by_state` folder.
+Current boundaries for individual states can be found in the `avas_by_state` folder.
 
 #### Historical AVA Boundaries
 AVA boundaries can change over time through a petition process to revise the boundaries.  The avas_historic.geojson file contains only boundaries that are no longer in use.
@@ -43,11 +43,11 @@ contains	| text | (if applicable) used for larger AVAs that contain smaller AVAs
 petitioner	| text | the name of the person who initiated the petition and their affiliation separated by a comma | Jane Smith, Smith Family Wineries
 cfr_author | text | the name of the TTB employee that authored the proposed and/or final rules in the Federal Register; typically found near the end of the document | Bob Jones	
 cfr_index | decimal number | the number code that indicates where the final rule document can be found; typically, it is in the section heading of the CFR entry online|	9.212
-cfr_revision_history | text | the string of text citing the documents that currently apply to this boundary definition |	[T.D. TTB-71, 73 FR 64202, Oct. 29, 2008]
-approved_maps | text | the approved maps listed for the boundary defintion |(1) Ritter Ridge, Calif., 1958; Photorevised 1974; (2) Sleepy Valley, CA, 1995; (3) Del Sur, CA, 1995; and (4) Lake Hughes, CA, 1995.
+cfr_revision_history | text | the string of text citing the documents currently applicable to this boundary definition |	[T.D. TTB-71, 73 FR 64202, Oct. 29, 2008]
+approved_maps | text | the approved maps listed for the boundary definition |(1) Ritter Ridge, Calif., 1958; Photorevised 1974; (2) Sleepy Valley, CA, 1995; (3) Del Sur, CA, 1995; and (4) Lake Hughes, CA, 1995.
 boundary_description | text | the official boundary description |
 used_maps	| text | the maps the digitizer used to digitize the boundary |
-valid_start | date | YYYY-MM-DD format; the date this boundary revision began (applies only if there were revisions to the boundary) | 2017-06-01 |
+valid_start | date | YYYY-MM-DD format; the date this boundary revision began; typically, it is found in the document as the effective date | 2017-06-01 |
 valid_end | date | YYYY-MM-DD format; the last date this revision was valid (applies only if there were revisions to the boundary) | 2017-06-01 |
 lcsh	| text | (optional) Library of Congress Subject Heading; Generally UCD Library staff has filled these in and will add them as new subject headings are approved |
 sameas	| text | (optional) linked data URIs for terms that are identical to this AVA |
@@ -55,7 +55,7 @@ sameas	| text | (optional) linked data URIs for terms that are identical to this
 Any record with no data should use null (not N/A or blank).
 
 ## How to download the data
-The data is avaiable from our [GitHub repository](https://github.com/UCDavisLibrary/ava).
+The data is available from our [GitHub repository](https://github.com/UCDavisLibrary/ava).
 
 ### Download the whole repository
 You can use the green **Code** button on the Code tab of the [GitHub repository](https://github.com/UCDavisLibrary/ava) to download all of the files in this repository by choosing the "Download ZIP" option or you can fork this repository to your own GitHub account using the **Fork** button.  
@@ -64,15 +64,15 @@ You can use the green **Code** button on the Code tab of the [GitHub repository]
 You can download single .geojson files by:
 1. On the [GitHub repository](https://github.com/UCDavisLibrary/ava), click on the Code tab on the left (not the green Code button on the right), navigate to the file you would like to download, and click on the file name.
 1. Click the **Raw** button, which will take you to a page that displays the raw text of the document.
-1. Right click anywhere on the page, and select "Save as..." 
-1. Save the file where you would like to keep it.  **NOTE:** You may need to remove an additional .txt extension that may get automatically added to the file name.  You file extension should be .geojson
+1. Right-click anywhere on the page, and select "Save as..." 
+1. Save the file where you would like to keep it.  **NOTE:** You may need to remove an additional .txt extension that may get automatically added to the file name.  Your file extension should be .geojson
 
 ## Suggested Citation
 
 American Viticultural Areas Digitizing Project Team. 2021. `[file name]`. https://github.com/UCDavisLibrary/ava Accessed `[date accessed]`.
 
 ## License
-The licence for this data is [Creative Commons CC0](https://creativecommons.org/share-your-work/public-domain/cc0/). We encourage citation of this dataset, especially when it is used in academic works.
+The license for this data is [Creative Commons CC0](https://creativecommons.org/share-your-work/public-domain/cc0/). We encourage citation of this dataset, especially when it is used in academic works.
 
 ## Disclaimer
 The American Viticulture Areas (AVA) Project data is provided for educational purposes only. Data and materials may not be accurate or complete, and are provided as-is, without warranties of any kind. Please note that while every effort was made to digitize the data from the maps designated in the official descriptions of the boundaries from the Alcohol and Tobacco Tax and Trade Bureau, some substitutions were made and are noted in the attribute table.
