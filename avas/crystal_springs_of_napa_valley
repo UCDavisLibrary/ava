@@ -1,8 +1,0 @@
-{
-"type": "FeatureCollection",
-"name": "template",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "ava_id": null, "name": null, "aka": null, "created": null, "removed": null, "county": null, "state": null, "within": null, "contains": null, "petitioner": null, "cfr_author": null, "cfr_index": null, "cfr_revision_history": null, "approved_maps": null, "boundary_description": null, "used_maps": null, "valid_start": null, "valid_end": null, "lcsh": null, "sameas": null }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -118.309979094818004, 39.078657935358791 ], [ -121.714707000706483, 31.36241529437536 ], [ -111.94536210491593, 31.892800043533864 ], [ -118.309979094818004, 39.078657935358791 ] ] ] } }
-]
-}
