@@ -21,7 +21,7 @@ While the creators of this project assume contributors have a good understanding
    1. If you're new to GIS or it's been a while, consider reviewing the [Intro to QGIS workshop](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS).
    1. [QGIS Training Manual](https://docs.qgis.org/3.22/en/docs/user_manual/):
       1. Working with Vector Data
-      2. Working with Rasster Data
+      2. Working with Raster Data
       3. Any other sections that are appealing or fill a learning gap
    1. GitHub (in general):  
       1. Understanding the GitHub Flow: https://guides.github.com/introduction/flow/
