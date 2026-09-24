@@ -144,7 +144,7 @@ Border matching can be done manually with QGIS's snapping tool, but for longer s
 
 ### Quality Control Methods
 
-For quality control, each boundary for a second time against the official description and the approved maps. Having a second (or even third) check each boundary ensures that the data matches as closely to the official description as we can make it.
+For quality control, check each boundary for a second time against the official description and the approved maps. Having a second (or even third) check each boundary ensures that the data matches as closely to the official description as we can make it.
 
 The process should proceed as follows:
 1. Pick a boundary from the “Quality Control” issues to check.
