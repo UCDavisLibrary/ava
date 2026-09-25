@@ -22,7 +22,7 @@ This plot visualizes the number of AVAs each state contains. The color category 
 This plot compares the number of AVAs California has compared to all other states ("Others Summed").  
 <iframe src="visualizations/ca_others_summed.html" style="width: 600px; height: 800px"></iframe>
 
-This plot shows the top 10 largest states by area, using the Albers equal area projection.
+This plot shows the top 10 largest AVAs by area, using the Albers equal area projection.
 <iframe src="visualizations/ava_area" style="width: 700px; height: 500px"></iframe>
 
 This plot visualizes the % of ava area within each state, using the Albers equal area projection.
